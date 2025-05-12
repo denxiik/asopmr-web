@@ -33,11 +33,26 @@
     </nav>
 
     <button class="colabora-button">COLABORA</button>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        ☰
+    </button>
 </header>
 
 <body>
     <!-- HOME SECTION (home) -->
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navBar = document.querySelector('.nav-bar');
+    const colaboraButton = document.querySelector('.colabora-button'); // Select the button
+
+    menuToggle.addEventListener('click', function() {
+        navBar.classList.toggle('active');
+        colaboraButton.classList.toggle('active');
+    });
+});
     </script>
 
 </body>
