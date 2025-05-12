@@ -91,11 +91,12 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center;
 }
 
 .site-header button.colabora-button:hover {
-    background-color: var(--darker-oranje-aso);
+    transform: scale(1.05);
 }
 
 .nav-bar {
