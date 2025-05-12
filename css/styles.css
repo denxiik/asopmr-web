@@ -24,10 +24,10 @@ body {
 ------------------------- */
 .site-header {
     background-color: var(--green-aso);
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 3rem;
 }
 
 .logo-language-container {
@@ -40,13 +40,14 @@ body {
 }
 
 .logo {
-    padding-left: 2rem;
-    height: 3rem;
+    padding-left: 4rem;
+    height: 5rem;
 }
 
 .nav-button-container {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-bar ul {
@@ -66,12 +67,14 @@ body {
 }
 
 .nav-bar a {
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 0.5rem 0;
+    margin: 1rem;
     transition: color 0.3s ease;
+    text-align: center;
 }
 
 .nav-bar a:hover {
@@ -96,7 +99,7 @@ body {
 }
 
 .nav-bar {
-    margin-right: 1rem;
+    margin-left: auto;
 }
 
 .nav-bar li a {
@@ -115,7 +118,7 @@ body {
 }
 
 /* Small devices (phones, 768px and down) */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .site-header {
         flex-wrap: nowrap;
         position: relative;
@@ -202,6 +205,7 @@ body {
 
     .site-header button.colabora-button {
         background-color: var(--green-aso);
+        display: none;
         text-decoration: none;
         color: #FFFFFF;
         font-size: 1.2rem;
