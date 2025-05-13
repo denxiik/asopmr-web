@@ -7,6 +7,7 @@
     <title>AsoPMR</title>
     <link rel="icon" href="../img/asoPMR-logo-rounded.png">
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Hreflang tags (for SEO) -->
@@ -22,7 +23,7 @@
         </a>
     </div>
 
-    
+
 
     <!-- Mobile Menu Button -->
     <button class="menu-toggle" aria-label="Abrir menú">
@@ -31,38 +32,57 @@
 
     <!-- Navigation Bar -->
     <nav class="nav-bar">
-    <ul>
-        <li><a href="#">Nosotros</a></li>
-        <li class="dropdown">
-            <a href="#">Soluciones</a>
-            <ul class="dropdown-content">
-                <li><a href="#">Instituciones</a></li>
-                <li><a href="#">Socios</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Hazte socio</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li class="colaborate-nav-bar"><a href="#">Colabora</a></li>
-    </ul>
-</nav>
-<button class="colaborate-button">COLABORA</button>
+        <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li class="dropdown">
+                <a href="#">Soluciones</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Instituciones</a></li>
+                    <li><a href="#">Socios</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Hazte socio</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li class="colaborate-nav-bar"><a href="#">Colabora</a></li>
+        </ul>
+    </nav>
+    <button class="colaborate-button">COLABORA</button>
 
 </header>
 
 <body>
     <!-- HOME SECTION (home) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navBar = document.querySelector('.nav-bar');
-    const colaborateNavBar = document.querySelector('.colaborate-nav-bar');
+    <section class="home">
+        <h1 class="title">
+            Impulsando la autonomía e </br>
+            inclusión de personas con</br>
+            movilidad reducida
+        </h1>
+        <img src="../img/home_title.png" alt="Persona con movilidad reducida en metro" class="image">
+        <h1 class="subtitle">
+            En ASOPMR damos voz a</br>
+            tus necesidades para</br>
+            construir una movilidad</br>
+            inclusiva, conectándote</br>
+            con instituciones</br>
+            y trabajando juntos hacia</br>
+            un futuro sin barreras.
+        </h1>
+        </section>
+        <img src="../img/logo_fourth_part.png" alt="Logo AsoPMR recortado" class="fourth-part-logo">
 
-    menuToggle.addEventListener('click', function() {
-        navBar.classList.toggle('active');
-        colaborateNavBar.classList.toggle('active');
-    });
-});
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navBar = document.querySelector('.nav-bar');
+            const colaborateNavBar = document.querySelector('.colaborate-nav-bar');
+
+            menuToggle.addEventListener('click', function () {
+                navBar.classList.toggle('active');
+                colaborateNavBar.classList.toggle('active');
+            });
+        });
     </script>
 
 </body>

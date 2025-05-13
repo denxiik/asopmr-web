@@ -1,0 +1,109 @@
+@import url('basic.css');
+
+/* -------------------------
+    HOME SECTION (home)
+------------------------- */
+.home {
+    display: flex;
+    min-height: calc(100vh);
+    background-color: var(--green-aso);
+    position: relative;
+    color: var(--green-aso);
+    margin-bottom: 10rem;
+}
+
+
+.title {
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    font-size: 3em;
+    color: var(--white);
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+.fourth-part-logo {
+    position: absolute;
+    padding: auto;
+    bottom: 40%;
+    left: 75%;
+    width: 6rem;
+    height: auto;
+}
+
+.subtitle {
+    position: absolute;
+    padding: auto;
+    bottom: 10%;
+    left: 55%;
+    font-size: 1.8em;
+    color: var(--light-green-aso);
+    font-weight: 100;
+}
+
+.home .image {
+    position: absolute;
+    padding: auto;
+    bottom: -10%;
+    width: 50%;
+    height: 70%;
+}
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+    .home {
+        min-height: auto; 
+        margin-bottom: 0rem;
+        align-items: center; 
+        gap: 20px; 
+        display: flex;
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    .title {
+        position: static;
+        text-align: center;
+        font-size: 2.2rem;
+        transform: none;
+        margin-bottom: 1rem; 
+    }
+
+    .fourth-part-logo {
+        display: none;
+    }
+
+    .home .image {
+        position: static; 
+        width: 80%;
+        height: auto;
+        margin-bottom: 1rem;
+        padding: 0; 
+        left: auto;
+        right: auto; 
+    }
+
+    .subtitle {
+        position: static;
+        text-align: center;
+        font-size: 1.8rem; 
+        transform: none;
+        margin-top: 0;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 1080px) {
+    .title {
+        font-size: 4em;
+    }
+
+    .subtitle {
+        font-size: 2.2em;
+    }
+
+    .fourth-part-logo {
+        width: 8rem;
+    }
+}
