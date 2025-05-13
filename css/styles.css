@@ -58,13 +58,13 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
 .nav-bar li {
     margin-right: 1rem;
-    position: relative; 
+    position: relative;
 }
 
 .nav-bar li:first-child {
@@ -93,7 +93,7 @@ body {
     top: 100%;
     left: 0;
     background-color: var(--green-aso);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 150px;
     border-radius: 5px;
@@ -159,7 +159,7 @@ body {
     margin-left: auto;
 }
 
-/* Small devices (phones, 768px and down) */
+/* Small devices (phones, 1080px and down) */
 @media (max-width: 1080px) {
     .site-header {
         flex-wrap: nowrap;
@@ -240,6 +240,10 @@ body {
     }
 
     .colaborate-nav-bar.active {
-    display: block;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: none !important;
 }
 }
