@@ -22,6 +22,13 @@
         </a>
     </div>
 
+    
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        ☰
+    </button>
+
     <!-- Navigation Bar -->
     <nav class="nav-bar">
     <ul>
@@ -36,15 +43,11 @@
         <li><a href="#">Blog</a></li>
         <li><a href="#">Hazte socio</a></li>
         <li><a href="#">Contacto</a></li>
+        <li class="colaborate-nav-bar"><a href="#">Colabora</a></li>
     </ul>
 </nav>
+<button class="colaborate-button">COLABORA</button>
 
-    <button class="colabora-button">COLABORA</button>
-
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Abrir menú">
-        ☰
-    </button>
 </header>
 
 <body>
@@ -53,11 +56,11 @@
         document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navBar = document.querySelector('.nav-bar');
-    const colaboraButton = document.querySelector('.colabora-button'); // Select the button
+    const colaborateNavBar = document.querySelector('.colaborate-nav-bar');
 
     menuToggle.addEventListener('click', function() {
         navBar.classList.toggle('active');
-        colaboraButton.classList.toggle('active');
+        colaborateNavBar.classList.toggle('active');
     });
 });
     </script>
