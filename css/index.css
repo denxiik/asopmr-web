@@ -8,7 +8,6 @@
     min-height: calc(100vh);
     background-color: var(--green-aso);
     position: relative;
-    color: var(--green-aso);
     margin-bottom: 10rem;
 }
 
@@ -34,8 +33,8 @@
 .home .subimage {
     position: absolute;
     padding: auto;
-    bottom: 20%;
-    left: 70%;
+    bottom: 8%;
+    left: 65%;
     width: 20rem;
     height: auto;
 }
@@ -43,9 +42,27 @@
 /* -------------------------
     SUBHOME SECTION (subhome)
 ------------------------- */
-
 .subhome {
     display: flex;
+    min-height: calc(50vh);
+}
+
+.subhome .title {
+    position: static;
+    color: var(--green-aso);
+    margin-left: 8%;
+    margin-top: 8%;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.subhome .image {
+    position: absolute;
+    padding-left: 20rem;
+    width: 58rem;
+    height: auto;
+    right: 0%;
+    max-width: 75%;
 }
 
 
@@ -68,7 +85,7 @@
     .home .title {
         position: static;
         text-align: center;
-        font-size: 2.2rem;
+        font-size: 2rem;
         transform: none;
         margin-bottom: 1rem;
     }
@@ -86,17 +103,63 @@
     .home .subimage {
         position: static;
         margin-top: 1rem;
+        right: 0%;
+        width: 10rem;
+    }
+
+    /* -------------------------
+        SUBHOME SECTION (subhome)
+    ------------------------- */
+    .subhome {
+        align-items: center;
+        flex-direction: column;
+    }
+    .subhome .title {
+        position: static;
+        text-align: center;
+        margin-left: 0%;
+        margin-top: 8%;
+        font-size: 1.8rem;
+        font-weight: 100;
+    }
+
+    .subhome .image {
+        position: static;
+        padding-left: 0rem;
+        width: 58rem;
+        height: auto;
+        padding-top: 2rem;
+        max-width: 75%;
     }
 }
 
 /* Large devices (desktops, 768px and up) */
 @media (min-width: 1080px) {
+    /* -------------------------
+        HOME SECTION (home)
+    ------------------------- */
     .home .title {
         font-size: 4em;
     }
 
     .home .subimage {
         width: 25rem;
-        bottom: 15%;
+        bottom: 10%;
+    }
+
+    /* -------------------------
+        SUBHOME SECTION (subhome)
+    ------------------------- */
+    .subhome {
+        display: flex;
+        min-height: calc(50vh);
+    }
+
+    .subhome .title {
+        font-size: 2rem;
+    }
+
+    .subhome .image {
+        max-width: 70%;
     }
 }

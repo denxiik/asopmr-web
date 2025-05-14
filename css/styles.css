@@ -101,6 +101,7 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    font-weight: 50;
 }
 
 .dropdown-content li a:hover {
@@ -111,15 +112,15 @@
     display: none;
 }
 
-/* "COLABORA" Button Styling (sin cambios) */
+/* "COLABORA" Button Styling */
 .site-header button.colaborate-button {
     background-color: var(--oranje-aso);
     color: var(--white);
     border: none;
-    padding: 12px 25px;
-    letter-spacing: 2px;
+    padding: 8px 30px;
+    letter-spacing: 7px;
     border-radius: 25px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
