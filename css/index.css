@@ -13,97 +13,90 @@
 }
 
 
-.title {
+.home .title {
     position: absolute;
     top: 1%;
     left: 10%;
-    font-size: 3em;
+    font-size: 3rem;
     color: var(--white);
     font-weight: 100;
     letter-spacing: 3px;
-}
-
-.fourth-part-logo {
-    position: absolute;
-    padding: auto;
-    bottom: 40%;
-    left: 75%;
-    width: 6rem;
-    height: auto;
-}
-
-.subtitle {
-    position: absolute;
-    padding: auto;
-    bottom: 10%;
-    left: 55%;
-    font-size: 1.8em;
-    color: var(--light-green-aso);
-    font-weight: 100;
 }
 
 .home .image {
     position: absolute;
     padding: auto;
     bottom: -10%;
-    width: 50%;
+    width: 60%;
     height: 70%;
 }
 
+.home .subimage {
+    position: absolute;
+    padding: auto;
+    bottom: 20%;
+    left: 70%;
+    width: 20rem;
+    height: auto;
+}
+
+/* -------------------------
+    SUBHOME SECTION (subhome)
+------------------------- */
+
+.subhome {
+    display: flex;
+}
+
+
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
+
+    /* -------------------------
+        HOME SECTION (home)
+    ------------------------- */
     .home {
-        min-height: auto; 
+        min-height: auto;
         margin-bottom: 0rem;
-        align-items: center; 
-        gap: 20px; 
+        align-items: center;
+        gap: 20px;
         display: flex;
-        flex-direction: column; 
-        padding: 20px; 
+        flex-direction: column;
+        padding: 20px;
     }
 
-    .title {
+    .home .title {
         position: static;
         text-align: center;
         font-size: 2.2rem;
         transform: none;
-        margin-bottom: 1rem; 
-    }
-
-    .fourth-part-logo {
-        display: none;
+        margin-bottom: 1rem;
     }
 
     .home .image {
-        position: static; 
+        position: static;
         width: 80%;
         height: auto;
         margin-bottom: 1rem;
-        padding: 0; 
+        padding: 0;
         left: auto;
-        right: auto; 
+        right: auto;
     }
 
-    .subtitle {
+    .home .subimage {
         position: static;
-        text-align: center;
-        font-size: 1.8rem; 
-        transform: none;
-        margin-top: 0;
+        margin-top: 1rem;
     }
 }
 
 /* Large devices (desktops, 768px and up) */
 @media (min-width: 1080px) {
-    .title {
+    .home .title {
         font-size: 4em;
     }
 
-    .subtitle {
-        font-size: 2.2em;
-    }
-
-    .fourth-part-logo {
-        width: 8rem;
+    .home .subimage {
+        width: 25rem;
+        bottom: 15%;
     }
 }
