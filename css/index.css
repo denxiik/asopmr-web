@@ -190,7 +190,11 @@
     .service-benefits .title {
         font-size: 1.2rem;
     }
-    
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
     .grid-item h3 {
         font-size: 0.8em;
     }
