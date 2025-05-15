@@ -5,6 +5,7 @@
 ------------------------- */
 .home {
     display: flex;
+    flex-direction: column;
     min-height: calc(110vh);
     background-color: var(--green-aso);
     position: relative;
@@ -13,19 +14,25 @@
 
 
 .home .title {
-    position: absolute;
-    top: 1%;
-    left: 10%;
+    position: static;
+    margin-top: 1%;
+    margin-left: 10%;
     font-size: 3rem;
     color: var(--white);
     font-weight: 100;
     letter-spacing: 3px;
 }
 
+.home .images {
+    display: flex;
+    position: static;
+    margin-top: 3rem;
+}
+
 .home .image {
-    position: absolute;
+    position: static;
     padding: auto;
-    bottom: -10%;
+    margin-bottom: -3rem;
     width: 60%;
     height: auto;
 }
@@ -199,17 +206,17 @@
     }
 
     .home .title {
-        position: static;
         text-align: center;
         font-size: 2rem;
-        transform: none;
-        margin-bottom: 1rem;
+    }
+
+    .home .images {
+        flex-direction: column;
+        align-items: center;
     }
 
     .home .image {
-        position: static;
         width: 80%;
-        height: auto;
         margin-bottom: 1rem;
         padding: 0;
         left: auto;
@@ -218,6 +225,8 @@
 
     .home .subimage {
         position: static;
+        left: 0%;
+        bottom: 1rem;
         margin-top: 1rem;
         right: 0%;
         width: 10rem;
@@ -276,6 +285,10 @@
 
     .home .title {
         font-size: 4em;
+    }
+
+    .home .images {
+        margin-top: 4rem;
     }
 
     .home .subimage {
