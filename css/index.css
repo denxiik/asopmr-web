@@ -1,4 +1,4 @@
-@import url('basic.css');
+@import url('styles.css');
 
 /* -------------------------
     HOME SECTION (home)
@@ -27,7 +27,7 @@
     padding: auto;
     bottom: -10%;
     width: 60%;
-    height: 70%;
+    height: auto;
 }
 
 .home .subimage {
@@ -44,7 +44,7 @@
 ------------------------- */
 .subhome {
     display: flex;
-    min-height: calc(50vh);
+    min-height: calc(40vh);
 }
 
 .subhome .title {
@@ -52,17 +52,69 @@
     color: var(--green-aso);
     margin-left: 8%;
     margin-top: 8%;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 100;
 }
 
 .subhome .image {
     position: absolute;
     padding-left: 20rem;
-    width: 58rem;
+    width: 70%;
     height: auto;
     right: 0%;
     max-width: 75%;
+}
+
+/* -------------------------
+    SERVICE-BENEFITS SECTION (service-benefits)
+------------------------- */
+.service-benefits {
+    display: flex;
+    padding-top: 20%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.service-benefits .title {
+    width: 100%;
+    font-size: 2rem;
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--dark-oranje-aso);
+    color: var(--white);
+}
+
+.grid-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.grid-item h3 {
+    flex-shrink: 0;
+    padding: 2rem;
+    height: 6rem;
+    color: var(--white);
+    background-color: var(--light-orange-aso);
+    font-size: 1.2em;
+    margin-top: auto;
+}
+
+.grid-item-center h3 {
+    background-color: var(--slightly-darker-orange-aso);
 }
 
 
@@ -114,6 +166,7 @@
         align-items: center;
         flex-direction: column;
     }
+
     .subhome .title {
         position: static;
         text-align: center;
@@ -126,15 +179,26 @@
     .subhome .image {
         position: static;
         padding-left: 0rem;
-        width: 58rem;
+        width: 60%;
         height: auto;
         padding-top: 2rem;
-        max-width: 75%;
+    }
+
+    /* -------------------------
+        SERVICE-BENEFITS SECTION (service-benefits)
+    ------------------------- */
+    .service-benefits .title {
+        font-size: 1.2rem;
+    }
+    
+    .grid-item h3 {
+        font-size: 0.8em;
     }
 }
 
 /* Large devices (desktops, 768px and up) */
 @media (min-width: 1080px) {
+
     /* -------------------------
         HOME SECTION (home)
     ------------------------- */
@@ -156,10 +220,10 @@
     }
 
     .subhome .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .subhome .image {
-        max-width: 70%;
+        width: 65%;
     }
 }
