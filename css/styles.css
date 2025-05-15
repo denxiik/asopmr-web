@@ -78,3 +78,18 @@ body {
     background-color: #fff;
     color: #333;
 }
+
+button {
+    background-color: var(--green-aso);
+    color: var(--white);
+    border: none;
+    padding: 8px 30px;
+    letter-spacing: 7px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font: borna;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center;
+}
