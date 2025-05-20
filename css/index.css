@@ -197,7 +197,6 @@
 .park4dis-sample .download-park4dis .button {
     margin-top: 3rem;
     width: fit-content;
-
 }
 
 .park4dis-sample .download-park4dis .button:hover {
@@ -354,6 +353,46 @@
     font-size: 1.3rem;
 }
 
+/* -------------------------
+    PARK4DIS ADMIN SECTION (park4dis-admin)
+------------------------- */
+.park4dis-admin {
+    display: flex;
+    padding: 10% 5%;
+}
+
+.park4dis-admin img {
+    padding-top: 5%;
+    width: 50%;
+}
+
+.park4dis-admin .content {
+    padding: 0 5%;
+}
+
+.park4dis-admin .content h1 {
+    color: var(--dark-oranje-aso);
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.park4dis-admin .content h1 strong {
+    font-weight: 900;
+}
+
+.park4dis-admin .content h2 {
+    padding: 10% 0;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.park4dis-admin .content button {
+    margin-top: 10%;
+    font-size: 1.2rem;
+    width: fit-content;
+}
+
+
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
 
@@ -450,8 +489,8 @@
 @media (max-width: 1080px) {
 
     /* -------------------------
-    HOME SECTION (home)
-------------------------- */
+        HOME SECTION (home)
+    ------------------------- */
     .home {
         min-height: calc(80vh);
     }
@@ -539,6 +578,36 @@
 
     .transform-munitipality .feature-list .feature-item p {
         font-size: 1rem;
+    }
+
+    /* -------------------------
+        PARK4DIS ADMIN SECTION (park4dis-admin)
+    ------------------------- */
+    .park4dis-admin {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .park4dis-admin img {
+        width: 60%;
+    }
+
+    .park4dis-admin .content {
+        padding: 0 10%;
+    }
+
+    .park4dis-admin .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .park4dis-admin .content h2 {
+        padding: 5% 0;
+        font-size: 1rem;
+    }
+
+    .park4dis-admin .content button {
+        font-size: 0.8rem;
     }
 }
 
