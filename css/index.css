@@ -276,6 +276,26 @@
     z-index: 0;
 }
 
+/* -------------------------
+    OUR GOAL SECTION (our-goal)
+------------------------- */
+.our-goal {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-goal .title {
+    height: calc(60vh);
+    font-size: 2.2rem;
+    padding: 8% 8%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green-aso);
+}
+
+.our-goal .title h1 {
+    font-weight: 100;
+}
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
@@ -360,6 +380,13 @@
         font-size: 0.8em;
         padding: 2rem 0rem;
     }
+
+    /* -------------------------
+    OUR GOAL SECTION (our-goal)
+------------------------- */
+    .our-goal .title {
+       font-size: 1rem;
+    }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
@@ -407,6 +434,14 @@
     .park4dis-sample .draw {
         visibility: hidden;
     }
+
+    /* -------------------------
+    OUR GOAL SECTION (our-goal)
+------------------------- */
+    .our-goal .title {
+        font-size: 1.5rem;
+    }
+
 }
 
 /* Large devices (desktops, 1080px and up) */
