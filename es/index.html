@@ -146,10 +146,18 @@
                 </div>
             </div>
 
-            <button class="download-park4dis-button">DESCARGAR &#8594</button>
+            <div class="download-park4dis">
+                <button class="button">
+                    DESCARGAR &#8594
+                </button>
+                <div class="images">
+                    <img src="../img/index/google-play.png" alt="Icono de descarga para Android">
+                    <img src="../img/index/app-store.png" alt="Icono de descarga para IOS">
+                </div>
+            </div>
         </div>
 
-        <div class="images">
+        <div class="draw">
             <img src="../img/index/park4dis-phone-example.png" alt="Captura de pantalla de ">
             <canvas id="center-circle"></canvas>
             <canvas id="bottom-left-circle"></canvas>
@@ -240,7 +248,7 @@
             const verticalOffset = 0; // Adjust vertical positioning if needed
             const paddingVertical = 10; // Add vertical padding
 
-            let y = centerY - (Math.ceil(ctx.measureText(text).width / (radius * 2 - 2 * paddingVertical)) * lineHeight) / 2 + verticalOffset + paddingVertical/2;
+            let y = centerY - (Math.ceil(ctx.measureText(text).width / (radius * 2 - 2 * paddingVertical)) * lineHeight) / 2 + verticalOffset + paddingVertical / 2;
 
             for (let n = 0; n < words.length; n++) {
                 const testLine = line + words[n] + ' ';

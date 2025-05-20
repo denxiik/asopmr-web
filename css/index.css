@@ -189,12 +189,39 @@
     font-size: 1rem;
 }
 
-.park4dis-sample .download-park4dis-button {
-    margin-top: 3rem;
+.park4dis-sample .download-park4dis {
     margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.park4dis-sample .images {
+.park4dis-sample .download-park4dis .button {
+    margin-top: 3rem;
+    width: fit-content;
+
+}
+
+.park4dis-sample .download-park4dis .button:hover {
+    transform: none;
+}
+
+.park4dis-sample .download-park4dis .images {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.park4dis-sample .download-park4dis .images img {
+    padding: 10px 5px;
+    width: 10rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.park4dis-sample .download-park4dis .images img:hover {
+    transform: scale(1.05);
+}
+
+.park4dis-sample .draw {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +238,7 @@
     pointer-events: none;
 }
 
-.park4dis-sample .images img {
+.park4dis-sample .draw img {
     position: absolute;
     z-index: 10;
     width: 22%;
@@ -220,11 +247,11 @@
 }
 
 /* Circles */
-.park4dis-sample .images canvas {
+.park4dis-sample .draw canvas {
     position: absolute;
 }
 
-.park4dis-sample .images #center-circle {
+.park4dis-sample .draw #center-circle {
     width: 13rem;
     height: 13rem;
     top: 35%;
@@ -233,7 +260,7 @@
     z-index: 2;
 }
 
-.park4dis-sample .images #bottom-left-circle {
+.park4dis-sample .draw #bottom-left-circle {
     width: 23rem;
     height: 23rem;
     bottom: 10%;
@@ -241,7 +268,7 @@
     z-index: 1;
 }
 
-.park4dis-sample .images #bottom-cut-circle {
+.park4dis-sample .draw #bottom-cut-circle {
     width: 30rem;
     height: 30rem;
     bottom: -10rem;
@@ -353,17 +380,31 @@
         margin-left: 50%;
         transform: translate(-50%, 0%);
         max-width: 100%;
+        text-align: center;
     }
 
-    .park4dis-sample .download-park4dis-button {
+    .feature-item p {
+        text-align: start;
+    }
+
+    .park4dis-sample .download-park4dis {
         margin-top: 3rem;
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        font-size: 0.8rem;
         width: 80%;
+        align-items: center;
     }
 
-    .park4dis-sample .images {
+    .park4dis-sample .download-park4dis .button {
+        font-size: 0.8rem;
+    }
+
+    .park4dis-sample .download-park4dis .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .park4dis-sample .draw {
         visibility: hidden;
     }
 }
