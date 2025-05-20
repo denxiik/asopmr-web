@@ -6,7 +6,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh);
+    min-height: calc(40vh);
     background-color: var(--green-aso);
     position: relative;
     margin-bottom: 10rem;
@@ -26,23 +26,22 @@
 .home .images {
     display: flex;
     position: static;
-    margin-top: 3rem;
+    padding-top: -15%;
 }
 
 .home .image {
     position: static;
-    padding: auto;
-    margin-bottom: -10rem;
-    width: 60%;
-    height: auto;
+    margin-bottom: -50%;
+    width: 65%;
+    height: 40%;
 }
 
 .home .subimage {
     position: absolute;
     padding: auto;
-    bottom: 8%;
-    right: 1%;
-    width: 20rem;
+    bottom: 20%;
+    right: 10%;
+    max-width: 10rem;
     height: auto;
 }
 
@@ -324,7 +323,7 @@
     }
 
     .home .image {
-        width: 80%;
+        width: 60%;
         margin-bottom: 1rem;
         padding: 0;
         left: auto;
@@ -385,12 +384,23 @@
     OUR GOAL SECTION (our-goal)
 ------------------------- */
     .our-goal .title {
-       font-size: 1rem;
+        font-size: 1rem;
     }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
 @media (max-width: 1080px) {
+
+    /* -------------------------
+    HOME SECTION (home)
+------------------------- */
+    .home {
+        min-height: calc(80vh);
+    }
+
+    .home .image {
+        width: 50%;
+    }
 
     /* -------------------------
         PARK4DIS SECTION (park4dis-sample)
@@ -436,8 +446,8 @@
     }
 
     /* -------------------------
-    OUR GOAL SECTION (our-goal)
-------------------------- */
+        OUR GOAL SECTION (our-goal)
+    ------------------------- */
     .our-goal .title {
         font-size: 1.5rem;
     }
