@@ -41,7 +41,7 @@
     padding: auto;
     bottom: 20%;
     right: 10%;
-    max-width: 10rem;
+    max-width: 15rem;
     height: auto;
 }
 
@@ -478,8 +478,8 @@
     }
 
     /* -------------------------
-    OUR GOAL SECTION (our-goal)
-------------------------- */
+        OUR GOAL SECTION (our-goal)
+    ------------------------- */
     .our-goal .title {
         font-size: 1rem;
     }
@@ -566,8 +566,8 @@
     }
 
     .transform-munitipality .content img {
-        margin-right: 50%;
-        transform: translate(50%, 0%);
+        margin-right: auto;
+        width: 70%;
         margin-top: 10%;
         margin-bottom: 0%;
     }
@@ -607,7 +607,7 @@
     }
 
     .park4dis-admin .content button {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 }
 
