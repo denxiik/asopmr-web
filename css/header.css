@@ -23,7 +23,7 @@
     height: 5rem;
 }
 
-.nav-button-container { /* This might become redundant, adjust as needed if you have other buttons */
+.nav-button-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -31,9 +31,8 @@
 
 .nav-bar {
     margin-left: auto;
-    /* When the button is part of nav-bar, it also needs flex properties */
-    display: flex; /* Added for the button positioning */
-    align-items: center; /* Align items horizontally in the nav-bar */
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar ul {
@@ -171,7 +170,7 @@
     }
 
     .nav-bar.active {
-        display: flex; /* Changed from block to flex */
+        display: flex;
     }
 
     .nav-bar ul {
@@ -180,14 +179,14 @@
         padding: 1rem;
         list-style: none;
         margin-bottom: 0;
-        width: 100%; /* Ensure UL takes full width to center text */
+        width: 100%;
     }
 
     .nav-bar li {
         margin-right: 0;
         margin-bottom: 0.5rem;
-        width: 100%; /* Ensure LI takes full width */
-        text-align: center; /* Center text within LI */
+        width: 100%;
+        text-align: center;
     }
 
     .nav-bar li a {

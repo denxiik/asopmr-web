@@ -64,7 +64,7 @@
     --dark-oranje-aso: #ff8547;
     --white: #FFFFFF;
     --green-aso: #1E4C50;
-    --light-green-aso: #BDF24B
+    --light-green-aso: #BDF24B;
 }
 
 * {
@@ -92,6 +92,7 @@ button {
     font: borna;
     transition: transform 0.2s ease-in-out;
     transform-origin: center;
+    width: fit-content;
 }
 
 button:hover {
