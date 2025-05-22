@@ -44,10 +44,9 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Hazte socio</a></li>
             <li><a href="#">Contacto</a></li>
-            <li class="colaborate-nav-bar"><a href="#">Colabora</a></li>
         </ul>
-    </nav>
     <button class="colaborate-button">COLABORA</button>
+    </nav>
 </header>
 
 <body>
@@ -243,12 +242,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const navBar = document.querySelector('.nav-bar');
-            const colaborateNavBar = document.querySelector('.colaborate-nav-bar');
 
             // Event listeners for menu toggle(small screens)
             menuToggle.addEventListener('click', function () {
                 navBar.classList.toggle('active');
-                colaborateNavBar.classList.toggle('active');
             });
         });
 
