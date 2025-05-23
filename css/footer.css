@@ -144,13 +144,12 @@
     .site-footer .asoPMR-info .logo {
         width: 100%;
         align-self: center;
+        padding-right: 10%;
     }
 
     .site-footer .asoPMR-info .logo img {
-        width: 100%;
         content: url("../img/asoPMR-logo-white.png");
         padding: auto;
-        margin-right: 20%;
     }
 
     .site-footer .asoPMR-info button {
