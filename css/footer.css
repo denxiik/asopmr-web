@@ -150,7 +150,7 @@
         width: 100%;
         content: url("../img/asoPMR-logo-white.png");
         padding: auto;
-        padding-right: 10%;
+        margin-right: 10%;
     }
 
     .site-footer .asoPMR-info button {
