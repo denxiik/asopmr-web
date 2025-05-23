@@ -115,6 +115,13 @@
 .site-footer .policies p {
     display: block;
     padding: 0 1rem;
+}
+
+.site-footer .policies a {
+    text-decoration: none;
+}
+
+.site-footer .policies a:hover {
     text-decoration: underline;
 }
 
@@ -135,11 +142,12 @@
     }
 
     .site-footer .asoPMR-info .logo {
-        width: 95%;
+        width: 100%;
         align-self: center;
     }
 
     .site-footer .asoPMR-info .logo img {
+        width: 100%;
         content: url("../img/asoPMR-logo-white.png");
         padding: auto;
     }
@@ -171,6 +179,10 @@
     .site-footer .policies p {
         padding: 0 1em;
         text-align: center;
+    }
+    
+    .site-footer .inscribtion-info {
+        font-size: 0.6rem;
     }
 }
 
