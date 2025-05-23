@@ -17,7 +17,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 8% 0%;
+    padding: 6% 0%;
+    padding-bottom: 12%;
 }
 
 .site-footer .asoPMR-info .column {
@@ -66,10 +67,9 @@
     background-color: var(--oranje-aso);
     font-size: 100;
     letter-spacing: normal;
-    padding: 0;
+    padding: 3% 5%;
     font-size: 1.2rem;
     outline: 2px solid white;
-    padding: 5%;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
@@ -81,7 +81,7 @@
 
 .site-footer .aso-policies {
     background-color: var(--green-aso);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     width: 100%;
 }
@@ -95,33 +95,29 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .site-footer .aso-policies .policies,
 .site-footer .aso-policies .inscribtion-info {
-    margin-bottom: 1rem;
+    padding: 1%;
     max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 3%;
 }
 
-.policies p a {
-    font-size: 1.2rem;
+.site-footer .policies a {
+    font-size: 1rem;
     color: var(--white);
-    text-decoration: none;
+    align-self: center;
 }
 
-.policies p {
+.site-footer .policies p {
     display: block;
-    padding: 0 0.2rem;
+    padding: 0 1rem;
+    text-decoration: underline;
 }
 
-.policies p:not(:last-child)::after {
-    content: "|";
-    color: var(--white);
-    margin-left: 0.3rem;
-}
 
 /* Very small devices (phones, 620px and down) */
 @media (max-width: 620px) {
@@ -139,12 +135,13 @@
     }
 
     .site-footer .asoPMR-info .logo {
-        width: 100%;
+        width: 95%;
         align-self: center;
     }
 
     .site-footer .asoPMR-info .logo img {
-        content: url("../img/asoPMR-logo.png");
+        content: url("../img/asoPMR-logo-white.png");
+        padding: auto;
     }
 
     .site-footer .asoPMR-info button {
@@ -162,18 +159,18 @@
         padding-bottom: 0.5rem;
     }
 
-    .aso-policies,
-    .aso-policies .policies p a {
+    .site-footer .aso-policies,
+    .site-footer .aso-policies .policies p a {
         font-size: 0.8rem;
     }
 
-    .policies p {
-        padding: 0 1em;
-        text-align: center;
+    .site-footer .policies {
+        margin-bottom: 1rem;
     }
 
-    .policies p:not(:last-child)::after {
-        display: none;
+    .site-footer .policies p {
+        padding: 0 1em;
+        text-align: center;
     }
 }
 
