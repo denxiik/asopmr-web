@@ -10,7 +10,6 @@
 /* Styles for the upper section */
 .site-footer .asoPMR-info {
     background-color: var(--oranje-aso);
-    height: calc(50vh);
     font-size: 1rem;
 }
 
