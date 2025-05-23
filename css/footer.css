@@ -1,0 +1,187 @@
+/* -------------------------
+    FOOTER STYLES
+------------------------- */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+/* Styles for the upper section */
+.site-footer .asoPMR-info {
+    background-color: var(--oranje-aso);
+    height: calc(50vh);
+    font-size: 1rem;
+}
+
+.site-footer .asoPMR-info .asoPMR-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8% 0%;
+}
+
+.site-footer .asoPMR-info .column {
+    margin: 0% 2rem;
+    justify-content: center;
+}
+
+.site-footer .asoPMR-info .logo {
+    width: 20%;
+}
+
+.site-footer .asoPMR-info .logo img {
+    width: 50%;
+    padding-right: 0;
+}
+
+.site-footer .asoPMR-content-wrapper .contact {
+    width: 25%;
+    padding-left: 0;
+}
+
+.site-footer .asoPMR-content-wrapper .news {
+    width: 10%;
+}
+
+.site-footer .asoPMR-content-wrapper .more-info {
+    width: 20%;
+}
+
+.site-footer .asoPMR-info h1,
+.site-footer .asoPMR-info h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.site-footer .asoPMR-info h1 {
+    color: var(--green-aso);
+    padding-bottom: 1.5rem;
+}
+
+.site-footer .asoPMR-info h2 {
+    margin-top: 3%;
+}
+
+.site-footer .asoPMR-info button {
+    background-color: var(--oranje-aso);
+    font-size: 100;
+    letter-spacing: normal;
+    padding: 0;
+    font-size: 1.2rem;
+    outline: 2px solid white;
+    padding: 5%;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.site-footer .asoPMR-info button:hover {
+    transform: none;
+    color: black;
+    background-color: white;
+}
+
+.site-footer .aso-policies {
+    background-color: var(--green-aso);
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.site-footer .aso-policies {
+    padding-top: 3%;
+}
+
+.site-footer .aso-policies .policies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.site-footer .aso-policies .policies,
+.site-footer .aso-policies .inscribtion-info {
+    margin-bottom: 1rem;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 3%;
+}
+
+.policies p a {
+    font-size: 1.2rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.policies p {
+    display: block;
+    padding: 0 0.2rem;
+}
+
+.policies p:not(:last-child)::after {
+    content: "|";
+    color: var(--white);
+    margin-left: 0.3rem;
+}
+
+/* Very small devices (phones, 620px and down) */
+@media (max-width: 620px) {
+    .site-footer .asoPMR-info .asoPMR-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 1rem;
+        padding: 8% 3%;
+        font-size: 0.8rem;
+    }
+
+    .site-footer .asoPMR-info .column {
+        margin: 0;
+        text-align: center;
+    }
+
+    .site-footer .asoPMR-info .logo {
+        width: 100%;
+        align-self: center;
+    }
+
+    .site-footer .asoPMR-info .logo img {
+        content: url("../img/asoPMR-logo.png");
+    }
+
+    .site-footer .asoPMR-info button {
+        font-size: 1rem;
+    }
+
+    .site-footer .asoPMR-content-wrapper .contact,
+    .site-footer .asoPMR-content-wrapper .news,
+    .site-footer .asoPMR-content-wrapper .more-info {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .site-footer .asoPMR-info h1 {
+        padding-bottom: 0.5rem;
+    }
+
+    .aso-policies,
+    .aso-policies .policies p a {
+        font-size: 0.8rem;
+    }
+
+    .policies p {
+        padding: 0 1em;
+        text-align: center;
+    }
+
+    .policies p:not(:last-child)::after {
+        display: none;
+    }
+}
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+    .site-footer .asoPMR-info .logo img {
+        width: 70%;
+    }
+
+}

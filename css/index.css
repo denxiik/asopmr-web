@@ -396,7 +396,7 @@
 .join-community {
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
+    padding: 5% 0%;
 }
 
 .join-community .title {
@@ -688,7 +688,6 @@
         margin-top: 5%;
         margin-bottom: 0%;
     }
-
 }
 
 /* Large devices (desktops, 1080px and up) */
