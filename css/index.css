@@ -282,9 +282,7 @@
 }
 
 .our-goal .title {
-    height: calc(60vh);
     font-size: 2.2rem;
-    padding: 8% 8%;
     text-align: center;
     color: var(--white);
     background-color: var(--green-aso);
@@ -292,6 +290,7 @@
 
 .our-goal .title h1 {
     font-weight: 100;
+    margin: 8% 8%;
 }
 
 /* -------------------------
