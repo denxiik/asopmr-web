@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../css/header.css" />
+</head>
+<body>
+    <header id="header-placeholder"></header>
+    <script>
+        function loadHTML(filename, elementId) {
+            return fetch(filename)
+                .then(response => { /* ... */ return response.text(); })
+                .then(html => { document.getElementById(elementId).innerHTML = html; })
+                .catch(error => { console.error('Error loading HTML:', error); });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadHTML('common/header.html', 'header-placeholder')
+                .then(() => {
+                    console.log("Header loaded successfully.");
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    const navBar = document.querySelector('.nav-bar');
+
+                    console.log("menuToggle element:", menuToggle); // Check if it's null
+                    console.log("navBar element:", navBar);     // Check if it's null
+
+                    if (menuToggle && navBar) {
+                        menuToggle.addEventListener('click', function () {
+                            navBar.classList.toggle('active');
+                            console.log("Toggle clicked!"); // See if this fires
+                        });
+                        console.log("Menu toggle event listener attached.");
+                    } else {
+                        console.warn("Menu toggle or nav bar not found. Check your HTML structure and IDs/classes.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to load header:', error);
+                });
+        });
+    </script>
+</body>
+</html>
