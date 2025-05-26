@@ -233,6 +233,29 @@
         loadHTML('header.html', 'header-placeholder');
         loadHTML('footer.html', 'footer-placeholder');
         loadHTML('join-community.html', 'join-community-placeholder');
+
+        // Load all HTML fragments first
+        const headerPromise = loadHTML('common/header.html', 'header-placeholder');
+        const footerPromise = loadHTML('common/footer.html', 'footer-placeholder');
+        const joinCommunityPromise = loadHTML('common/join-community.html', 'join-community-placeholder');
+
+        // Wait for all necessary HTML fragments to be loaded
+        Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+                    });
+                } else {
+                    console.warn("Menu toggle or nav bar not found. Check your HTML structure and IDs/classes.");
+                }
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load:', error);
+            });
     });
 
     // Make h3 grid-items from SERVICE-BENEFITS SECTION have same height
