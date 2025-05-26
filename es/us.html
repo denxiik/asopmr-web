@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="../css/us.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/header.css" />
-
+    <!-- Hreflang tags (for SEO) -->
     <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
-<header id="header-placeholder">
-</header>
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
 
 <body>
+    <!-- HEADER SECTION (header) -->
     <section class="mission-vision">
         <div class="content">
             <div class="mission">
@@ -39,58 +39,58 @@
         </div>
     </section>
 
+    <!-- JOIN COMMUNITY SECTION (join-community) -->
     <section id="join-community-placeholder">
     </section>
-
-    <script>
-        // Function to load content from another HTML file
-        function loadHTML(filename, elementId) {
-            return fetch(filename)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById(elementId).innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error loading HTML:', error);
-                });
-        }
-
-        // Load content and then initialize scripts
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load all HTML fragments first
-            const headerPromise = loadHTML('header.html', 'header-placeholder');
-            const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-            const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
-
-            // Wait for all necessary HTML fragments to be loaded
-            Promise.all([headerPromise, footerPromise, joinCommunityPromise])
-                .then(() => {
-                    const menuToggle = document.querySelector('.menu-toggle');
-                    const navBar = document.querySelector('.nav-bar');
-
-                    if (menuToggle && navBar) {
-                        menuToggle.addEventListener('click', function () {
-                            navBar.classList.toggle('active');
-                        });
-                        console.log("Menu toggle event listener attached.");
-                    } else {
-                        console.warn("Menu toggle or nav bar not found after loading header. Check header.html content and selectors.");
-                    }
-                })
-                .catch(error => {
-                    console.error('One or more HTML fragments failed to load or process:', error);
-                });
-        });
-    </script>
-
 </body>
 
-<footer id="footer-placeholder">
-</footer>
+<!-- FOOTER SECTION (footer) -->
+<footer id="footer-placeholder"></footer>
+
+<script>
+    // Function to load content from another HTML file
+    function loadHTML(filename, elementId) {
+        return fetch(filename)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById(elementId).innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading HTML:', error);
+            });
+    }
+
+    // Load content and then initialize scripts
+    document.addEventListener('DOMContentLoaded', function () {
+        // Load all HTML fragments first
+        const headerPromise = loadHTML('header.html', 'header-placeholder');
+        const footerPromise = loadHTML('footer.html', 'footer-placeholder');
+        const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
+
+        // Wait for all necessary HTML fragments to be loaded
+        Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+                    });
+                    console.log("Menu toggle event listener attached.");
+                } else {
+                    console.warn("Menu toggle or nav bar not found after loading header. Check header.html content and selectors.");
+                }
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load or process:', error);
+            });
+    });
+</script>
 
 </html>
