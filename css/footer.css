@@ -1,4 +1,58 @@
 /* -------------------------
+    JOIN COMMUNITY SECTION (join-community)
+------------------------- */
+.join-community {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+}
+
+.join-community .title {
+    background-color: var(--green-aso);
+    color: var(--light-green-aso);
+    padding: 6% 10%;
+    padding-bottom: 12%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.join-community .title h1 {
+    font-weight: 100;
+}
+
+.join-community .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.join-community .content .subtitle {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    width: 45%;
+}
+
+.join-community .content .subtitle h2 {
+    font-weight: 100;
+    font-size: 1.8rem;
+    padding-bottom: 10%;
+}
+
+.join-community .content .subtitle .highlight {
+    color: var(--dark-oranje-aso);
+}
+
+.join-community .content img {
+    position: static;
+    margin-left: auto;
+    margin-right: 4%;
+    margin-top: -6%;
+    width: 45%;
+    z-index: 1;
+}
+
+/* -------------------------
     FOOTER STYLES
 ------------------------- */
 .site-footer {
@@ -192,4 +246,34 @@
         width: 70%;
     }
 
+}
+
+/* Mediums devices (desktops, 1080px and down) */
+@media (max-width: 1080px) {
+    /* -------------------------
+        JOIN COMMUNITY SECTION (join-community)
+    ------------------------- */
+    .join-community .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .join-community .title {
+        font-size: 1.8rem;
+        padding: 8%
+    }
+
+    .join-community .content .subtitle {
+        padding: 8%;
+        text-align: center;
+        width: auto;
+        align-items: center;
+    }
+
+    .join-community .content img {
+        margin-right: auto;
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
 }
