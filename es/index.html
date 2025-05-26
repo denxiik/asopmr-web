@@ -14,9 +14,8 @@
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
-<header id="header-placeholder">
-</header>
-
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
 
 <body>
     <!-- HOME SECTION (home) -->
@@ -212,13 +211,13 @@
     </section>
 </body>
 
-<footer id="footer-placeholder">
-</footer>
+<!-- FOOTER SECTION (footer) -->
+<footer id="footer-placeholder"></footer>
 
 <script>
     // Function to load content from another HTML file
     function loadHTML(filename, elementId) {
-        fetch(filename)
+        return fetch(filename)
             .then(response => response.text())
             .then(html => {
                 document.getElementById(elementId).innerHTML = html;
@@ -235,7 +234,6 @@
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
         const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
 
-        // Wait for all necessary HTML fragments to be loaded
         Promise.all([headerPromise, footerPromise, joinCommunityPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
@@ -246,12 +244,15 @@
                         navBar.classList.toggle('active');
                     });
                 } else {
-                    console.warn("Menu toggle or nav bar not found. Check your HTML structure and IDs/classes.");
+                    console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);
             });
+        
+        // Set equal height for h3 elements in service-benefits section
+        handleResize();
     });
 
     // Make h3 grid-items from SERVICE-BENEFITS SECTION have same height
@@ -289,7 +290,6 @@
 
         setEqualH3Height(itemsPerRow);
     }
-    document.addEventListener('DOMContentLoaded', handleResize);
     window.addEventListener('resize', handleResize);
 
 
@@ -374,5 +374,4 @@
         drawCircleWithText('bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
     });
 </script>
-
 </html>
