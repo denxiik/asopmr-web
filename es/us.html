@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AsoPMR</title>
     <link rel="icon" href="../img/asoPMR-logo-rounded.png">
-    <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/us.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -16,41 +15,9 @@
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
-<header class="site-header">
-    <div class="logo-language-container">
-        <!-- Logo -->
-        <a href="index.html" class="logo-container">
-            <img class="logo" src="../img/asoPMR-logo.png" alt="AsoPMR Logo">
-        </a>
-    </div>
-
-
-
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Abrir menú">
-        ☰
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#">Nosotros</a></li>
-            <li class="dropdown">
-                <a href="#">Soluciones</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Instituciones</a></li>
-                    <li><a href="#">Socios</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Hazte socio</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <button class="colaborate-button">COLABORA</button>
-    </nav>
-</header>
 
 <body>
+<div id="header-placeholder"></div>
     <!-- MISSION SECTION AND VISION (mission-vision) -->
     <section class="mission-vision">
         <div class="content">
@@ -108,8 +75,21 @@
     </section>
 
     <script>
+        // Function to load content from another HTML file
+        function loadHTML(filename, elementId) {
+            fetch(filename)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(elementId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
         // Load with page
         document.addEventListener('DOMContentLoaded', function () {
+            loadHTML('header.html', 'header-placeholder');
             const menuToggle = document.querySelector('.menu-toggle');
             const navBar = document.querySelector('.nav-bar');
 
@@ -117,126 +97,6 @@
             menuToggle.addEventListener('click', function () {
                 navBar.classList.toggle('active');
             });
-        });
-
-        // Make h3 grid-items from SERVICE-BENEFITS SECTION have same height
-        function setEqualH3Height(itemsPerRow) {
-            const gridContainer = document.querySelector('.grid-container');
-            const gridItems = document.querySelectorAll('.grid-item');
-
-            for (let i = 0; i < gridItems.length; i += itemsPerRow) {
-                const rowItems = Array.from(gridItems).slice(i, i + itemsPerRow);
-                let maxHeight = 0;
-                const h3Elements = [];
-
-                rowItems.forEach(item => {
-                    const h3 = item.querySelector('h3');
-                    if (h3) {
-                        h3Elements.push(h3);
-                        h3.style.height = 'auto';
-                        maxHeight = Math.max(maxHeight, h3.offsetHeight);
-                    }
-                });
-
-                h3Elements.forEach(h3 => {
-                    h3.style.height = `${maxHeight}px`;
-                });
-            }
-        }
-
-        // Handle case small screesn with two items per column
-        function handleResize() {
-            const screenWidth = window.innerWidth;
-            let itemsPerRow = 3;
-            if (screenWidth < 576) {
-                itemsPerRow = 2;
-            }
-
-            setEqualH3Height(itemsPerRow);
-        }
-        document.addEventListener('DOMContentLoaded', handleResize);
-        window.addEventListener('resize', handleResize);
-
-
-        // PARK4DIS SECTION (park4dis-sample) circles
-        function drawCircleWithText(canvasId, text, fillColor) {
-            const canvas = document.getElementById(canvasId);
-            const ctx = canvas.getContext('2d');
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const radius = Math.min(centerX, centerY) - 10; // Adjust for padding
-
-            // Clear the canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw the circle
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-            ctx.fillStyle = fillColor; // Use the passed fillColor
-            ctx.fill();
-
-            // Draw the text with line breaks and padding
-            ctx.font = `1.5rem Borna`; /* Ensure Borna font is available or use a fallback */
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = 'white';
-
-            const words = text.split(' ');
-            let line = '';
-            const lineHeight = 20; // Adjust as needed for line spacing
-            const verticalOffset = 0; // Adjust vertical positioning if needed
-            const paddingVertical = 10; // Add vertical padding
-
-            let y = centerY - (Math.ceil(ctx.measureText(text).width / (radius * 2 - 2 * paddingVertical)) * lineHeight) / 2 + verticalOffset + paddingVertical / 2;
-
-            for (let n = 0; n < words.length; n++) {
-                const testLine = line + words[n] + ' ';
-                const metrics = ctx.measureText(testLine);
-                const testWidth = metrics.width;
-
-                // Adjust the available width for text based on the circle radius and some padding
-                const availableWidth = radius * 2 - 2 * paddingVertical;
-
-                if (testWidth > availableWidth && n > 0) {
-                    ctx.fillText(line, centerX, y);
-                    line = words[n] + ' ';
-                    y += lineHeight;
-                } else {
-                    line = testLine;
-                }
-            }
-            ctx.fillText(line, centerX, y);
-        }
-
-        // Define the color once
-        const orangeAso = '#FF925C';
-        const orangeDarkAso = '#FF7733';
-
-        function resizeCanvas(canvasId) {
-            const canvas = document.getElementById(canvasId);
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-        }
-
-        // Resize canvases on load and resize
-        window.addEventListener('load', () => {
-            resizeCanvas('center-circle');
-            resizeCanvas('bottom-left-circle');
-            resizeCanvas('bottom-cut-circle');
-
-            // Call the function for each circle with its respective text and color
-            drawCircleWithText('center-circle', 'Park4Dis People', orangeAso);
-            drawCircleWithText('bottom-left-circle', '', orangeDarkAso);
-            drawCircleWithText('bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
-        });
-
-        window.addEventListener('resize', () => {
-            resizeCanvas('center-circle');
-            resizeCanvas('bottom-left-circle');
-            resizeCanvas('bottom-cut-circle');
-            drawCircleWithText('center-circle', 'Park4Dis People', orangeAso);
-            drawCircleWithText('bottom-left-circle', '', orangeDarkAso);
-            drawCircleWithText('bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
         });
     </script>
 
