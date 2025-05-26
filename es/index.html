@@ -230,14 +230,10 @@
 
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
-        loadHTML('header.html', 'header-placeholder');
-        loadHTML('footer.html', 'footer-placeholder');
-        loadHTML('join-community.html', 'join-community-placeholder');
-
         // Load all HTML fragments first
-        const headerPromise = loadHTML('common/header.html', 'header-placeholder');
-        const footerPromise = loadHTML('common/footer.html', 'footer-placeholder');
-        const joinCommunityPromise = loadHTML('common/join-community.html', 'join-community-placeholder');
+        const headerPromise = loadHTML('header.html', 'header-placeholder');
+        const footerPromise = loadHTML('footer.html', 'footer-placeholder');
+        const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
 
         // Wait for all necessary HTML fragments to be loaded
         Promise.all([headerPromise, footerPromise, joinCommunityPromise])
