@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../css/us.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- Hreflang tags (for SEO) -->
+    <link rel="stylesheet" href="../css/header.css" />
+
     <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
@@ -18,82 +19,78 @@
 </header>
 
 <body>
-    <!-- MISSION SECTION AND VISION (mission-vision) -->
     <section class="mission-vision">
         <div class="content">
             <div class="mission">
-                <h1 class="title">
-                    MISIÓN
-                </h1>
-                <h2 class="subtitle">
-                    Proporcionar servicios y tecnologías innovadoras que faciliten la movilidad inclusiva y autonomía al
-                    colectivo PMR, a nivel internacional, promoviendo el respeto de sus derechos y su inclusión social.
-                </h2>
+                <h1 class="title">MISIÓN</h1>
+                <h2 class="subtitle">Proporcionar servicios y tecnologías innovadoras que faciliten la movilidad
+                    inclusiva y autonomía al colectivo PMR, a nivel internacional, promoviendo el respeto de sus
+                    derechos y su inclusión social.</h2>
             </div>
-
             <div class="vision">
-                <h1 class="title">
-                    VISIÓN
-                </h1>
-                <h2 class="subtitle">
-                    AsoPMR aspira a ser una organización líder en la promoción de la movilidad inclusiva y sostenible
-                    para el colectivo.
-                </h2>
+                <h1 class="title">VISIÓN</h1>
+                <h2 class="subtitle">AsoPMR aspira a ser una organización líder en la promoción de la movilidad
+                    inclusiva y sostenible para el colectivo.</h2>
             </div>
         </div>
-
         <div class="images">
             <img class="up" src="../img/us/eclipse_2.webp" alt="Persona utilizando la app Park4Dis en su tablet">
             <img class="down" src="../img/us/eclipse_1.webp" alt="Persona ayudando a una persona PMR">
         </div>
     </section>
 
-    <!-- JOIN COMMUNITY SECTION (join-community) -->
     <section id="join-community-placeholder">
     </section>
+
+    <script>
+        // Function to load content from another HTML file
+        function loadHTML(filename, elementId) {
+            return fetch(filename)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(elementId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        }
+
+        // Load content and then initialize scripts
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load all HTML fragments first
+            const headerPromise = loadHTML('header.html', 'header-placeholder');
+            const footerPromise = loadHTML('footer.html', 'footer-placeholder');
+            const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
+
+            // Wait for all necessary HTML fragments to be loaded
+            Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+                .then(() => {
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    const navBar = document.querySelector('.nav-bar');
+
+                    if (menuToggle && navBar) {
+                        menuToggle.addEventListener('click', function () {
+                            navBar.classList.toggle('active');
+                        });
+                        console.log("Menu toggle event listener attached.");
+                    } else {
+                        console.warn("Menu toggle or nav bar not found after loading header. Check header.html content and selectors.");
+                    }
+                })
+                .catch(error => {
+                    console.error('One or more HTML fragments failed to load or process:', error);
+                });
+        });
+    </script>
+
 </body>
 
 <footer id="footer-placeholder">
 </footer>
-
-<script>
-    // Function to load content from another HTML file
-    function loadHTML(filename, elementId) {
-        fetch(filename)
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById(elementId).innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading HTML:', error);
-            });
-    }
-
-    // Load with page
-    document.addEventListener('DOMContentLoaded', function () {
-        // Load all HTML fragments first
-        const headerPromise = loadHTML('header.html', 'header-placeholder');
-        const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-        const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
-
-        // Wait for all necessary HTML fragments to be loaded
-        Promise.all([headerPromise, footerPromise, joinCommunityPromise])
-            .then(() => {
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navBar = document.querySelector('.nav-bar');
-
-                if (menuToggle && navBar) { 
-                    menuToggle.addEventListener('click', function () {
-                        navBar.classList.toggle('active');
-                    });
-                } else {
-                    console.warn("Menu toggle or nav bar not found. Check your HTML structure and IDs/classes.");
-                }
-            })
-            .catch(error => {
-                console.error('One or more HTML fragments failed to load:', error);
-            });
-    });
-</script>
 
 </html>
