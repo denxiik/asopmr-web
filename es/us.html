@@ -51,30 +51,30 @@
     <!-- JOIN COMMUNITY SECTION (join-community) -->
     <section id="join-community-placeholder">
     </section>
-
-    <script>
-        // Function to load content from another HTML file
-        function loadHTML(filename, elementId) {
-            fetch(filename)
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById(elementId).innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error loading HTML:', error);
-                });
-        }
-
-        // Load with page
-        document.addEventListener('DOMContentLoaded', function () {
-            loadHTML('header.html', 'header-placeholder');
-            loadHTML('footer.html', 'footer-placeholder');
-            loadHTML('join-community.html', 'join-community-placeholder');
-        });
-    </script>
 </body>
 
 <footer class="footer-placeholder">
 </footer>
+
+<script>
+    // Function to load content from another HTML file
+    function loadHTML(filename, elementId) {
+        fetch(filename)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(elementId).innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading HTML:', error);
+            });
+    }
+
+    // Load with page
+    document.addEventListener('DOMContentLoaded', function () {
+        loadHTML('header.html', 'header-placeholder');
+        loadHTML('footer.html', 'footer-placeholder');
+        loadHTML('join-community.html', 'join-community-placeholder');
+    });
+</script>
 
 </html>
