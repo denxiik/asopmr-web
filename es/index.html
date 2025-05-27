@@ -311,16 +311,16 @@
         ctx.fill();
 
         // Draw the text with line breaks and padding
-        ctx.font = `1.5rem Borna`; /* Ensure Borna font is available or use a fallback */
+        ctx.font = `1.5rem Borna`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = 'white';
 
         const words = text.split(' ');
         let line = '';
-        const lineHeight = 20; // Adjust as needed for line spacing
-        const verticalOffset = 0; // Adjust vertical positioning if needed
-        const paddingVertical = 10; // Add vertical padding
+        const lineHeight = 20;
+        const verticalOffset = 0;
+        const paddingVertical = 10;
 
         let y = centerY - (Math.ceil(ctx.measureText(text).width / (radius * 2 - 2 * paddingVertical)) * lineHeight) / 2 + verticalOffset + paddingVertical / 2;
 

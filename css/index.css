@@ -505,8 +505,7 @@
         padding-top: 8rem;
         display: flex;
         position: relative;
-        overflow: hidden;
-        padding-bottom: 10%;
+        padding-bottom: 15%;
     }
 
     .park4dis-sample .content {
@@ -521,11 +520,11 @@
     }
 
     .park4dis-sample .download-park4dis {
-        margin-top: 3rem;
         margin-left: 50%;
         transform: translate(-50%, 0%);
         width: 80%;
         align-items: center;
+        gap: 12px;
     }
 
     .park4dis-sample .download-park4dis .button {
@@ -537,7 +536,7 @@
         align-items: center;
     }
 
-    .park4dis-sample .draw {
+    .park4dis-sample .draw  {
         visibility: hidden;
     }
 
