@@ -62,12 +62,140 @@
 .mission-vision .images .down {
     position: relative;
     width: 90%;
-    bottom: -10%;
+    bottom: -5%;
     right: 15%;
+}
+
+/* -------------------------
+    VALUES SECTION (values)
+------------------------- */
+.values {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--light-gray); /* Example background color */
+}
+
+.values .header {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.values .header img {
+    width: 5%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.values .header h1 {
+    font-size: 2.8rem;
+    color: var(--dark-oranje-aso);
+    font-weight: 700;
+}
+
+/* Main grid container - now houses rows */
+.values .grid {
+    display: flex; /* Use flexbox to stack the rows vertically */
+    flex-direction: column;
+    gap: 0; /* No gap between rows */
+    margin: 0 auto;
+    border: 1px solid var(--border-color); /* Outer border for the whole grid block */
+}
+
+/* Base style for grid-item, remove individual borders here */
+.grid-item {
+    padding: 4rem;
+    text-align: left;
+    align-items: center;
+    border: none; /* Remove all individual borders from items for now */
+}
+
+/* Styles for the row containers */
+.grid-row {
+    display: grid;
+    gap: 0; /* No gap between items within a row */
+}
+
+/* Specific styles for the first row (3 columns) */
+.grid-row--three-cols {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    border-bottom: 1px solid var(--border-color); /* Bottom border for the first row */
+}
+
+/* Specific styles for the second row (2 columns) */
+.grid-row--two-cols {
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns, making each item 50% */
+}
+
+/* Border management for items within each row */
+/* Apply right border to all but the last item in a row */
+.grid-row--three-cols > .grid-item:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+}
+
+.grid-row--two-cols > .grid-item:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+}
+
+
+/* Content styles (remain unchanged) */
+.values .grid-item .number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--dark-oranje-aso);
+    margin-bottom: 0.5rem;
+}
+
+.values .grid-item .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-oranje-aso);
+    margin-bottom: 0.5rem;
+}
+
+.values .grid-item .subtitle {
+    font-size: 0.9rem;
+    color: var(--green-aso);
+    line-height: 1.5;
+}
+
+.values button {
+    margin-top: 3rem;
+}
+
+/* Very small screens (e.g., mobile phones, up to 480px) */
+@media (max-width: 580px) {
+    .values .header img {
+        width: 15%; /* Adjust image size for smaller screens */
+    }
+
+    .values .header h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .grid-row--three-cols,
+    .grid-row--two-cols {
+        grid-template-columns: 1fr; /* Single column for all rows */
+    }
+
+    /* Reset borders for all grid items */
+    .grid-item {
+        border-right: none !important; /* Override previous right borders */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to all */
+    }
+
+    /* Remove bottom border from the very last grid item of the entire grid */
+    .values .grid .grid-row:last-child .grid-item:last-child {
+        border-bottom: none;
+    }
 }
 
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {
+    /* -------------------------
+        MISSION AND VISION SECTION (mission-vision)
+    ------------------------- */
     .mission-vision {
         flex-direction: column;
         align-items: center;
@@ -106,6 +234,46 @@
         left: auto;
         right: auto;
         padding: 1rem;
+    }
+
+    /* -------------------------
+        VALUES SECTION (values)
+    ------------------------- */
+    .grid-row--three-cols {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        /* Remove specific right border for 3-col layout, manage new borders below */
+    }
+
+    /* Reset borders for grid-row--three-cols to apply new ones */
+    .grid-row--three-cols > .grid-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to all items */
+    }
+
+    /* Add right border to the first item in the first row (now 2 columns) */
+    .grid-row--three-cols > .grid-item:nth-child(odd) {
+        border-right: 1px solid var(--border-color);
+    }
+    
+    /* Remove bottom border for items in the last row of the first grid row */
+    .grid-row--three-cols > .grid-item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+
+    .grid-row--two-cols {
+        grid-template-columns: 1fr; /* Make the two-column row single column */
+    }
+
+    /* Ensure the 5th element (last in the two-cols row) takes full width */
+    .grid-row--two-cols .grid-item:last-child {
+        grid-column: 1 / -1; /* Span across all available columns */
+        border-right: none; /* Remove any lingering right border */
+    }
+    
+    /* Add bottom border to the first item in the two-cols row */
+    .grid-row--two-cols > .grid-item:first-child {
+        border-bottom: 1px solid var(--border-color);
     }
 }
 

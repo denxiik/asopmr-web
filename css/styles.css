@@ -69,6 +69,8 @@
     --white: #FFFFFF;
     --green-aso: #1E4C50;
     --light-green-aso: #BDF24B;
+    --border-color: #1E4C50;
+    --light-gray : #f7f7f7
 }
 
 * {
