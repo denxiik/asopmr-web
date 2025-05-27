@@ -240,6 +240,10 @@
         border-right: none;
         border-top: 1px solid var(--border-color)
     }
+
+    .values button {
+        max-width: 80%;
+    }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
