@@ -188,36 +188,6 @@
     font-size: 1rem;
 }
 
-.park4dis-sample .download-park4dis {
-    margin-left: 3rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.park4dis-sample .download-park4dis .button {
-    margin-top: 3rem;
-}
-
-.park4dis-sample .download-park4dis .button:hover {
-    transform: none;
-}
-
-.park4dis-sample .download-park4dis .images {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-.park4dis-sample .download-park4dis .images img {
-    padding: 10px 5px;
-    width: 10rem;
-    transition: transform 0.2s ease-in-out;
-}
-
-.park4dis-sample .download-park4dis .images img:hover {
-    transform: scale(1.05);
-}
-
 .park4dis-sample .draw {
     display: flex;
     flex-direction: column;
@@ -271,6 +241,36 @@
     bottom: -10rem;
     left: -10%;
     z-index: 0;
+}
+
+.park4dis-sample .download-park4dis {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.park4dis-sample .download-park4dis .button {
+    margin-top: 3rem;
+}
+
+.park4dis-sample .download-park4dis .button:hover {
+    transform: none;
+}
+
+.park4dis-sample .download-park4dis .images {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.park4dis-sample .download-park4dis .images img {
+    padding: 10px 5px;
+    width: 10rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.park4dis-sample .download-park4dis .images img:hover {
+    transform: scale(1.05);
 }
 
 /* -------------------------
@@ -474,6 +474,13 @@
     }
 
     /* -------------------------
+        PARK4DIS SECTION (park4dis-sample)
+    ------------------------- */
+    .park4dis-sample .content h1 {
+        font-size: 2rem;
+    }
+
+    /* -------------------------
         OUR GOAL SECTION (our-goal)
     ------------------------- */
     .our-goal .title {
@@ -499,10 +506,10 @@
         PARK4DIS SECTION (park4dis-sample)
     ------------------------- */
     .park4dis-sample {
-        padding-top: 8rem;
-        display: flex;
-        position: relative;
+        flex-direction: column;
         padding-bottom: 15%;
+        overflow: visible;
+        /* Allow overflow for better mobile layout */
     }
 
     .park4dis-sample .content {
@@ -512,98 +519,150 @@
         text-align: center;
     }
 
+    .park4dis-sample .content h1 {
+        text-align: center;
+    }
+
+    .feature-list {
+        margin-top: 2rem;
+    }
+
     .feature-item p {
         text-align: start;
+    }
+
+    .park4dis-sample .draw {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: auto;
+        justify-content: center;
+        margin-top: 2rem;
+        pointer-events: auto;
+    }
+
+    .park4dis-sample .draw img {
+        position: relative;
+        width: 60%;
+        top: auto;
+        margin-left: 0;
+        order: 1;
+    }
+
+    .park4dis-sample .draw canvas {
+        position: absolute;
+    }
+
+    .park4dis-sample .draw #center-circle {
+       position: absolute;
+        width: 70%;
+        top: 20%;
+        left: -10%;
+        transform: translate(-50%, -50%); 
+        z-index: -1;
+    }
+
+    .park4dis-sample .draw #bottom-left-circle {
+        z-index: -1;
+        position: absolute;
+        width: 70%;
+        top: 100%;
+        left: 110%;
+        transform: translate(-50%, -50%);
+    }
+
+    .park4dis-sample .draw #bottom-cut-circle {
+        visibility: hidden;
+        /* To not overlap the screen even with hidden */
+        width: 10%;
     }
 
     .park4dis-sample .download-park4dis {
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        width: 80%;
+        width: 100%;
         align-items: center;
         gap: 12px;
+        margin-top: 0rem;
     }
 
     .park4dis-sample .download-park4dis .button {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     .park4dis-sample .download-park4dis .images {
         flex-direction: column;
         align-items: center;
     }
+}
 
-    .park4dis-sample .draw  {
-        visibility: hidden;
-    }
-
-    /* -------------------------
+/* -------------------------
         OUR GOAL SECTION (our-goal)
     ------------------------- */
-    .our-goal .title {
-        font-size: 1.5rem;
-    }
+.our-goal .title {
+    font-size: 1.5rem;
+}
 
-    /* -------------------------
+/* -------------------------
         TRANSFORM MUNITIPALITY SECTION (transform-munitipality)
     ------------------------- */
-    .transform-munitipality .content {
-        display: flex;
-        flex-direction: column;
-    }
+.transform-munitipality .content {
+    display: flex;
+    flex-direction: column;
+}
 
-    .transform-munitipality .content .title {
-        padding-left: 50%;
-        transform: translate(-10%, 0%);
-        width: 60%;
-        align-items: center;
-        text-align: center;
-    }
+.transform-munitipality .content .title {
+    padding-left: 50%;
+    transform: translate(-10%, 0%);
+    width: 60%;
+    align-items: center;
+    text-align: center;
+}
 
-    .transform-munitipality .content img {
-        margin-right: auto;
-        width: 70%;
-        margin-top: 10%;
-        margin-bottom: 0%;
-    }
+.transform-munitipality .content img {
+    margin-right: auto;
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+}
 
-    .transform-munitipality .feature-list {
-        padding: 10% 10%;
-    }
+.transform-munitipality .feature-list {
+    padding: 10% 10%;
+}
 
-    .transform-munitipality .feature-list .feature-item p {
-        font-size: 1rem;
-    }
+.transform-munitipality .feature-list .feature-item p {
+    font-size: 1rem;
+}
 
-    /* -------------------------
+/* -------------------------
         PARK4DIS ADMIN SECTION (park4dis-admin)
     ------------------------- */
-    .park4dis-admin {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+.park4dis-admin {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    .park4dis-admin img {
-        width: 60%;
-    }
+.park4dis-admin img {
+    width: 60%;
+}
 
-    .park4dis-admin .content {
-        padding: 0 10%;
-    }
+.park4dis-admin .content {
+    padding: 0 10%;
+}
 
-    .park4dis-admin .content h1 {
-        font-size: 1.5rem;
-    }
+.park4dis-admin .content h1 {
+    font-size: 1.5rem;
+}
 
-    .park4dis-admin .content h2 {
-        padding: 5% 0;
-        font-size: 1rem;
-    }
+.park4dis-admin .content h2 {
+    padding: 5% 0;
+    font-size: 1rem;
+}
 
-    .park4dis-admin .content button {
-        font-size: 0.6rem;
-    }
+.park4dis-admin .content button {
+    font-size: 0.6rem;
+}
 }
 
 /* Large devices (desktops, 1080px and up) */
