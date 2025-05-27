@@ -84,7 +84,7 @@
 }
 
 .values .header img {
-    width: 5%;
+    width: 4rem;
     height: auto;
     margin-bottom: 1rem;
 }
@@ -239,11 +239,6 @@
         grid-column: 1 / -1;
         border-right: none;
         border-top: 1px solid var(--border-color)
-    }
-
-    .values button {
-        font-size: 0.8rem;
-        padding: 8px 10px;
     }
 }
 

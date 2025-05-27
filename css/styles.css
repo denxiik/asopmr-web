@@ -104,3 +104,11 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+
+/* Media query for small screens (768px and below) */
+@media (max-width: 768px) {
+    button {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+}
