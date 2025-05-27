@@ -40,8 +40,7 @@
     </section>
 
     <!-- JOIN COMMUNITY SECTION (join-community) -->
-    <section id="join-community-placeholder">
-    </section>
+    <section id="join-community-placeholder"></section>
 </body>
 
 <!-- FOOTER SECTION (footer) -->
@@ -72,7 +71,6 @@
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
         const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
 
-        // Wait for all necessary HTML fragments to be loaded
         Promise.all([headerPromise, footerPromise, joinCommunityPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
@@ -82,14 +80,16 @@
                     menuToggle.addEventListener('click', function () {
                         navBar.classList.toggle('active');
                     });
-                    console.log("Menu toggle event listener attached.");
                 } else {
-                    console.warn("Menu toggle or nav bar not found after loading header. Check header.html content and selectors.");
+                    console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
             })
             .catch(error => {
-                console.error('One or more HTML fragments failed to load or process:', error);
+                console.error('One or more HTML fragments failed to load:', error);
             });
+        
+        // Set equal height for h3 elements in service-benefits section
+        handleResize();
     });
 </script>
 
