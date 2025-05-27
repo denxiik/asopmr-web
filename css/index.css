@@ -560,7 +560,7 @@
     .park4dis-sample .draw #center-circle {
         position: absolute;
         width: 75%;
-        top: 20%;
+        top: 15%;
         left: -10%;
         transform: translate(-50%, -50%);
         z-index: -1;
@@ -569,9 +569,9 @@
     .park4dis-sample .draw #bottom-left-circle {
         z-index: -1;
         position: absolute;
-        width: 50%;
+        width: 60%;
         top: 100%;
-        left: 110%;
+        left: 90%;
         transform: translate(-50%, -50%);
     }
 

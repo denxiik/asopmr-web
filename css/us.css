@@ -73,7 +73,6 @@
     padding: 5rem 0;
     text-align: center;
     background-color: var(--light-gray);
-    /* Example background color */
 }
 
 .values .header {
@@ -98,47 +97,32 @@
 /* Main grid container - now houses rows */
 .values .grid {
     display: flex;
-    /* Use flexbox to stack the rows vertically */
     flex-direction: column;
     gap: 0;
-    /* No gap between rows */
     margin: 0 auto;
     border: 1px solid var(--border-color);
-    /* Outer border for the whole grid block */
 }
 
-/* Base style for grid-item, remove individual borders here */
 .grid-item {
     padding: 4rem;
     text-align: left;
     align-items: center;
     border: none;
-    /* Remove all individual borders from items for now */
 }
-
-/* Styles for the row containers */
 .grid-row {
     display: grid;
     gap: 0;
-    /* No gap between items within a row */
 }
 
-/* Specific styles for the first row (3 columns) */
 .grid-row--three-cols {
     grid-template-columns: repeat(3, 1fr);
-    /* 3 equal columns */
     border-bottom: 1px solid var(--border-color);
-    /* Bottom border for the first row */
 }
 
-/* Specific styles for the second row (2 columns) */
 .grid-row--two-cols {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 equal columns, making each item 50% */
 }
 
-/* Border management for items within each row */
-/* Apply right border to all but the last item in a row */
 .grid-row--three-cols>.grid-item:not(:last-child) {
     border-right: 1px solid var(--border-color);
 }
@@ -147,8 +131,6 @@
     border-right: 1px solid var(--border-color);
 }
 
-
-/* Content styles (remain unchanged) */
 .values .grid-item .number {
     font-size: 2.5rem;
     font-weight: 900;
@@ -173,9 +155,68 @@
     margin-top: 3rem;
 }
 
+/* -------------------------
+    PRESIDENT SECTION (presindet)
+------------------------- */
+.president {
+    padding-top: 10%;
+    flex-direction: column;
+}
+
+.president .head {
+    padding-left: 8%;
+}
+
+.president .head h1 {
+    font-size: 2.2rem;
+    letter-spacing: 10px;
+    font-weight: 500;
+    color: var(--dark-oranje-aso);
+}
+
+.president .head h2 {
+    padding-top: 1rem;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--green-aso);
+}
+
+.president .content {
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3%;
+}
+
+.president .content img {
+    min-width: 40%;
+    height: 40%;
+    border-radius: 250px;
+}
+
+.president .content .overview {
+    padding-left: 12%;
+}
+
+.president .content .overview {
+    padding-top: 5%;
+    color: var(--green-aso);
+    line-height: 35px;
+    font-size: 1.2rem;
+}
+
+.president .content .overview h3 {
+    font-weight: 100;
+}
+
+.president .content .overview button {
+    margin-top: 12%;
+    margin-left: 5%;
+}
+
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {
-
     /* -------------------------
         MISSION AND VISION SECTION (mission-vision)
     ------------------------- */
@@ -243,6 +284,46 @@
 
     .values button {
         max-width: 80%;
+    }
+
+    president {
+        padding-top: 5%;
+    }
+
+    .president .head {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .president .content {
+        flex-direction: column;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .president .content img {
+        min-width: unset;
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .president .content .overview {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .president .content .overview h3 {
+        padding: 0 5%;
+    }
+
+    .president .content .overview button {
+        margin-top: 5%;
+        font-size: 1.2rem;
+        padding: 8px 30px;
     }
 }
 
