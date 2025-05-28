@@ -105,6 +105,32 @@ button:hover {
     transform: scale(1.05);
 }
 
+.feature-list {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-item {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.feature-item img {
+    width: 24px;
+    height: auto;
+    align-self: self-start;
+    margin-right: 2rem;
+}
+
+.feature-item p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {
     button {

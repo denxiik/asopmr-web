@@ -163,31 +163,6 @@
     font-size: 1rem;
 }
 
-.feature-list {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.feature-item {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.feature-item img {
-    width: 24px;
-    height: auto;
-    margin-right: 2rem;
-}
-
-.feature-item p {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1rem;
-}
-
 .park4dis-sample .draw {
     display: flex;
     flex-direction: column;
