@@ -66,10 +66,14 @@
     --oranje-aso: #FF915C;
     --slightly-darker-orange-aso: #ff9d6c;
     --dark-oranje-aso: #ff8547;
+
     --white: #FFFFFF;
+
     --green-aso: #1E4C50;
     --light-green-aso: #BDF24B;
+    
     --border-color: #1E4C50;
+
     --light-gray: #f7f7f7
 }
 
@@ -85,6 +89,9 @@ body {
     color: #333;
 }
 
+/* -------------------------
+    BUTTONS
+------------------------- */
 button {
     background-color: var(--green-aso);
     color: var(--white);
@@ -105,6 +112,25 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* CONTACT BUTTON */
+.contact-button {
+    background-color: tra;
+    font-size: 100;
+    letter-spacing: normal;
+    font-size: 1.2rem;
+    outline: 2px solid white;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.contact-button:hover {
+    transform: none;
+    color: black;
+    background-color: white;
+}
+
+/* -------------------------
+    FEATURES LISTS
+------------------------- */
 .feature-list {
     margin-top: 3rem;
     display: flex;
@@ -130,6 +156,14 @@ button:hover {
     font-weight: 700;
     font-size: 1rem;
 }
+
+/* Very small devices (phones, 620px and down) */
+@media (max-width: 620px) {
+    .contact-button {
+        font-size: 1rem;
+    }
+}
+
 
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {

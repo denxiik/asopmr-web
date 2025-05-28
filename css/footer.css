@@ -42,6 +42,10 @@
     padding-left: 0;
 }
 
+.site-footer .asoPMR-content-wrapper .contact button {
+    padding: 3% 5%;
+}
+
 .site-footer .asoPMR-content-wrapper .news {
     width: 10%;
 }
@@ -63,22 +67,6 @@
 
 .site-footer .asoPMR-info h2 {
     margin-top: 3%;
-}
-
-.site-footer .asoPMR-info button {
-    background-color: var(--oranje-aso);
-    font-size: 100;
-    letter-spacing: normal;
-    padding: 3% 5%;
-    font-size: 1.2rem;
-    outline: 2px solid white;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-}
-
-.site-footer .asoPMR-info button:hover {
-    transform: none;
-    color: black;
-    background-color: white;
 }
 
 .site-footer .aso-policies {
@@ -152,10 +140,6 @@
     .site-footer .asoPMR-info .logo img {
         content: url("../img/asoPMR-logo-white.webp");
         padding: auto;
-    }
-
-    .site-footer .asoPMR-info button {
-        font-size: 1rem;
     }
 
     .site-footer .asoPMR-content-wrapper .contact,

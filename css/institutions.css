@@ -1,6 +1,131 @@
 @import url('styles.css');
 
 /* -------------------------
+    COMMON
+------------------------- */
+.servcie {
+    display: flex;
+    flex-direction: column;
+}
+
+.service .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.service .content .title {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.service .content .title h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.service .content .title h1 {
+    padding: 25px 0px;
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+.service .content .title h2 {
+    font-size: 2.2rem;
+    font-weight: 100;
+}
+
+.service .content img {
+    position: static;
+    padding-top: 4%;
+    margin-bottom: -2%;
+    width: 35%;
+    z-index: 1;
+}
+
+/* features list */
+.service .features {
+    padding-left: 12%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    padding-right: 10%;
+}
+
+.service .features .feature-item p {
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+.service .features h1 {
+    padding-top: 8%;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+/* service right image (type 1 of services) */
+.service-right-image .content .title {
+    padding-left: 10%;
+}
+
+.service-right-image .content .title h3 {
+    color: var(--dark-oranje-aso);
+}
+
+.service-right-image .content .title h1 {
+    color: var(--dark-oranje-aso);
+}
+
+.service-right-image .content .title h2 {
+    color: var(--green-aso);
+}
+
+.service-right-image .content img {
+    margin-left: auto;
+    margin-right: 8%;
+    z-index: 1;
+}
+
+.service-right-image .features {
+    background-color: #ffdfcf;
+}
+
+.service-right-image .features h1 {
+    color: var(--dark-oranje-aso);
+}
+
+/* service left image (type 2 of services) */
+.service-left-image .content .title {
+    padding-left: auto;
+    padding-right: 10%;
+}
+
+.service-left-image .content .title h3 {
+    color: var(--green-aso);
+}
+
+.service-left-image .content .title h1 {
+    color: var(--green-aso);
+}
+
+.service-left-image .content .title h2 {
+    color: var(--dark-oranje-aso);
+}
+
+.service-left-image .content img {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.service-left-image .features {
+    background-color: #e9eeee;
+}
+
+.service-left-image .features h1 {
+    color: var(--green-aso);
+}
+
+/* -------------------------
     SERVICES SECTION (services)
 ------------------------- */
 .services {
@@ -43,118 +168,79 @@
 }
 
 /* -------------------------
-    SERVICE MAPPING SECTION (service-mapping)
+    CONTACT SECTION (contact)
 ------------------------- */
-.service-mapping {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5%;
+.contact {
+    background-color: var(--green-aso);
+    align-items: center;
 }
 
-.service-mapping .content {
-    display: flex;
-    flex-direction: row;
-}
-
-.service-mapping .content .title {
-    padding-top: 8%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-    width: 45%;
-}
-
-.service-mapping .content .title h3 {
-    color: var(--dark-oranje-aso);
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.service-mapping .content .title h1 {
-    padding: 25px 0px;
-    font-size: 2.4rem;
-    font-weight: 900;
-    color: var(--dark-oranje-aso);
-}
-
-.service-mapping .content .title h2 {
-    font-size: 2.2rem;
-    color: var(--green-aso);
+.contact h1 {
+    color: var(--light-green-aso);
+    padding: 6% 12%;
+    font-size: 4rem;
     font-weight: 100;
-}
-
-.service-mapping .content img {
-    position: static;
-    margin-left: auto;
-    margin-right: 8%;
-    margin-bottom: -2%;
-    width: 35%;
-    z-index: 1;
-}
-
-.service-mapping .features {
-    background-color: #ffdfcf;
-    padding-left: 12%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    padding-right: 10%;
-}
-
-.service-mapping .features .feature-item p {
-    font-weight: 100;
-    font-size: 1.3rem;
-}
-
-.service-mapping .features h1 {
-    padding-top: 8%;
     text-align: center;
-    font-size: 2.4rem;
-    color: var(--green-aso);
 }
+
+.contact button {
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    margin-bottom: 6%;
+}
+
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
+
     /* -------------------------
-        SERVICE MAPPING SECTION (service-mapping)
+        COMMON
     ------------------------- */
-    /* -------------------------
-        SERVICE MAPPING SECTION (service-mapping)
-    ------------------------- */
-    .service-mapping .content {
+    .service .content {
+        margin-top: 5rem;
         display: flex;
         flex-direction: column;
     }
 
-    .service-mapping .content .title {
-        padding-left: 50%;
-        transform: translate(-10%, 0%);
-        width: 60%;
+    .service .content .title {
+        padding: 0% 5%;
+        margin: 0% 0%;
+        margin-bottom: 2rem;
+        width: 100%;
         align-items: center;
         text-align: center;
     }
 
-    .service-mapping .content img {
-        margin-right: auto;
+    .service .content img {
         width: 70%;
-        margin-top: 10%;
-        margin-bottom: 0%;
+        margin: 0% auto;
+        margin-bottom: 2rem;
     }
 
-    .service-mapping .features {
+    .service .features {
         padding: 10% 10%;
     }
 
-    .service-mapping .features .feature-item p {
+    .service .features .feature-item p {
         font-size: 1rem;
     }
-    
-    .service-mapping .features h1 {
+
+    .service .features h1 {
         font-size: 1.5rem;
+    }
+
+    /* -------------------------
+    CONTACT SECTION (contact)
+------------------------- */
+    .contact h1 {
+        padding: 6% 5%;
+        font-size: 2rem;
     }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
 @media (max-width: 1080px) {
+
     /* -------------------------
         SERVICES SECTION (services)
     ------------------------- */
@@ -165,7 +251,7 @@
 
     .services h1 {
         padding-left: 0%;
-        padding: 0% 10%; 
+        padding: 0% 10%;
         text-align: center;
         width: 100%;
         font-size: 2rem;
