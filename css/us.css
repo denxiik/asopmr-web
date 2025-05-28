@@ -109,6 +109,7 @@
     align-items: center;
     border: none;
 }
+
 .grid-row {
     display: grid;
     gap: 0;
@@ -216,7 +217,7 @@
 }
 
 /* -------------------------
-    DIRECTORS SECTION
+    DIRECTORS SECTION (directors)
 ------------------------- */
 .directors {
     margin-top: 10%;
@@ -270,13 +271,13 @@
 }
 
 .director-item img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  margin-bottom: 1rem;
-  mix-blend-mode: multiply;
+    max-width: 90%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1rem;
+    mix-blend-mode: multiply;
 }
 
 .anna-img {
@@ -294,9 +295,55 @@
     color: var(--dark-oranje-aso);
 }
 
+/* -------------------------
+    AWARDS SECTION (awards)
+------------------------- */
+.awards-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.awards-section h2 {
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    padding: 5% 25%;
+    color: var(--green-aso);
+}
+
+.awards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.award-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px;
+    min-width: 180px;
+    height: 10vw;
+    max-height: 180px;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.award-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {
+
     /* -------------------------
         MISSION AND VISION SECTION (mission-vision)
     ------------------------- */
@@ -417,6 +464,28 @@
         flex-direction: column;
         align-items: center;
     }
+
+    /* -------------------------
+        AWARDS SECTION (awards)
+    ------------------------- */
+    .awards-section h2 {
+        font-size: 1.5rem;
+        padding: 5%;
+    }
+
+    .awards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .award-item {
+        width: 90%;
+        max-width: 350px;
+        flex-basis: auto;
+        height: 25vw;
+        max-height: 150px;
+        min-height: 80px;
+    }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
@@ -435,5 +504,12 @@
 
     .mission-vision .content .vision .subtitle {
         font-size: 1.5rem;
+    }
+
+    /* -------------------------
+        AWARDS SECTION (awards)
+    ------------------------- */
+    .awards-section h2 {
+        padding: 5%;
     }
 }
