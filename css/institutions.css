@@ -1,0 +1,77 @@
+@import url('styles.css');
+
+/* -------------------------
+    SERVICES SECTION (services)
+------------------------- */
+.services {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.services h1 {
+    width: 55%;
+    padding-left: 8%;
+    color: var(--green-aso);
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+.services img {
+    position: static;
+    margin-left: auto;
+    width: 40%;
+    margin-bottom: -5%;
+}
+
+/* -------------------------
+    IMPROVE MOBILITY SECTION (improve-mobility)
+------------------------- */
+.improve-mobility {
+    background-color: var(--green-aso);
+    padding: 10%;
+    padding-bottom: 7%;
+}
+
+.improve-mobility h1 {
+    color: var(--light-green-aso);
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 500;
+    margin: 0 5%;
+}
+
+/* Mediums devices (desktops, 1080px and down) */
+@media (max-width: 1080px) {
+    /* -------------------------
+        SERVICES SECTION (services)
+    ------------------------- */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services h1 {
+        padding-left: 0%;
+        padding: 0% 10%; 
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .services img {
+        margin-right: auto;
+        width: 70%;
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+
+    /* -------------------------
+        IMPROVE MOBILITY SECTION (improve-mobility)
+    ------------------------- */
+    .improve-mobility h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+}
