@@ -141,14 +141,14 @@
 }
 
 .values .grid-item .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--dark-oranje-aso);
     margin-bottom: 0.5rem;
 }
 
 .values .grid-item .subtitle {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: var(--green-aso);
     line-height: 1.5;
 }
@@ -447,8 +447,10 @@
         text-align: center;
     }
 
-    .president .content .overview h3 {
+    .president .content .overview h2 {
         padding: 0 5%;
+        font-size: 1.2rem;
+        line-height: 25px;
     }
 
     .president .content .overview button {
@@ -517,5 +519,5 @@
 
 /* Large devices (desktops, 1080px and up) */
 @media (min-width: 1080px) {
-    
+
 }

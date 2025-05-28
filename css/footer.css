@@ -50,6 +50,15 @@
     width: 10%;
 }
 
+.site-footer .asoPMR-content-wrapper .news h2 u {
+    text-decoration: none;
+}
+
+.site-footer .asoPMR-content-wrapper .news h2 u:hover {
+    text-decoration: underline;
+}
+
+
 .site-footer .asoPMR-content-wrapper .more-info {
     width: 20%;
 }
