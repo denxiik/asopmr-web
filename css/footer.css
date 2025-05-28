@@ -50,11 +50,11 @@
     width: 10%;
 }
 
-.site-footer .asoPMR-content-wrapper .news h2 u {
+.site-footer .asoPMR-content-wrapper u {
     text-decoration: none;
 }
 
-.site-footer .asoPMR-content-wrapper .news h2 u:hover {
+.site-footer .asoPMR-content-wrapper u:hover {
     text-decoration: underline;
 }
 
