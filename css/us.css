@@ -514,3 +514,8 @@
         padding: 5%;
     }
 }
+
+/* Large devices (desktops, 1080px and up) */
+@media (min-width: 1080px) {
+    
+}

@@ -93,7 +93,7 @@ body {
     BUTTONS
 ------------------------- */
 button {
-    background-color: var(--green-aso);
+    background-color: transparent;
     color: var(--white);
     border: none;
     padding: 8px 30px;
@@ -114,7 +114,6 @@ button:hover {
 
 /* CONTACT BUTTON */
 .contact-button {
-    background-color: tra;
     font-size: 100;
     letter-spacing: normal;
     font-size: 1.2rem;
@@ -123,7 +122,6 @@ button:hover {
 }
 
 .contact-button:hover {
-    transform: none;
     color: black;
     background-color: white;
 }

@@ -170,12 +170,12 @@
 /* -------------------------
     CONTACT SECTION (contact)
 ------------------------- */
-.contact {
+.contact-section {
     background-color: var(--green-aso);
     align-items: center;
 }
 
-.contact h1 {
+.contact-section h1 {
     color: var(--light-green-aso);
     padding: 6% 12%;
     font-size: 4rem;
@@ -183,7 +183,7 @@
     text-align: center;
 }
 
-.contact button {
+.contact-section button {
     margin-left: 50%;
     transform: translate(-50%, 0%);
     margin-bottom: 6%;
@@ -232,7 +232,7 @@
     /* -------------------------
     CONTACT SECTION (contact)
 ------------------------- */
-    .contact h1 {
+    .contact-section h1 {
         padding: 6% 5%;
         font-size: 2rem;
     }
