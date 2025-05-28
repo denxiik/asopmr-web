@@ -230,11 +230,18 @@
     }
 
     /* -------------------------
-    CONTACT SECTION (contact)
-------------------------- */
+        CONTACT SECTION (contact)
+    ------------------------- */
     .contact-section h1 {
         padding: 6% 5%;
         font-size: 2rem;
+    }
+
+    /* -------------------------
+        IMPROVE MOBILITY SECTION (improve-mobility)
+    ------------------------- */
+    .improve-mobility {
+        margin-top: 15%;
     }
 }
 
