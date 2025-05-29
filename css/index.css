@@ -226,6 +226,7 @@
 
 .park4dis-sample .download-park4dis .button {
     margin-top: 3rem;
+    background-color: var(--green-aso);
 }
 
 .park4dis-sample .download-park4dis .button:hover {
@@ -362,6 +363,7 @@
 .park4dis-admin .content button {
     margin-top: 10%;
     font-size: 1.2rem;
+    background-color: var(--green-aso);
 }
 
 /* Small devices (phones, 768px and down) */
