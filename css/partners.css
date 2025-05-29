@@ -101,7 +101,7 @@
     background-color: var(--dark-oranje-aso);
     margin-left: 50%;
     margin-top: 10%;
-    transform: translate(-55%, 0%);
+    transform: translate(-50%, 0%);
 }
 
 /* -------------------------
@@ -195,6 +195,31 @@
     border-right: none;
 }
 
+/* -------------------------
+    PMR COURSES SECTION (PMR-courses)
+------------------------- */
+.PMR-courses {
+    background-color: var(--very-light-orange-aso);
+    padding: 5% 10%;
+    align-items: center;
+    text-align: center;
+}
+
+.PMR-courses h1 {
+    color: var(--dark-oranje-aso);
+    font-size: 2.5rem;
+}
+
+.PMR-courses h2 {
+    font-weight: 100;
+    font-size: 2rem;
+    padding: 5% 15%;
+}
+
+.PMR-courses button {
+    background-color: var(--dark-oranje-aso);
+}
+
 /* Mediums devices (desktops, 1080px and down) */
 @media (max-width: 1080px) {
 
@@ -260,6 +285,12 @@
     .service-left-image .content .feature-item p {
         text-align: left;
     }
+
+    .service-left-image .content button {
+        margin-left: auto;
+        transform: translate(0%, 0%);
+    }
+
     /* -------------------------
         TECHNOLOGY SOLUTION SECTION (technology-solution)
     ------------------------- */
@@ -279,5 +310,17 @@
 
     .technology-solution .solutions .item {
         width: 100%;
+    }
+
+    /* -------------------------
+    PMR COURSES SECTION (PMR-courses)
+------------------------- */
+    .PMR-courses h1 {
+        font-size: 2rem;
+    }
+
+    .PMR-courses h2 {
+        font-size: 1.6rem;
+        padding: 10% 0%;
     }
 }
