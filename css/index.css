@@ -317,7 +317,7 @@
 }
 
 .transform-munitipality .feature-list {
-    background-color: #ffdfcf;
+    background-color: var(--very-light-orange-aso);
     padding-left: 12%;
     padding-top: 5%;
     padding-bottom: 10%;

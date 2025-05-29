@@ -87,7 +87,7 @@
 }
 
 .service-right-image .features {
-    background-color: #ffdfcf;
+    background-color: var(--very-light-orange-aso);
 }
 
 .service-right-image .features h1 {
