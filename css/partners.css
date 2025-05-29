@@ -101,7 +101,98 @@
     background-color: var(--dark-oranje-aso);
     margin-left: 50%;
     margin-top: 10%;
-    transform: translate(-50%, 0%);
+    transform: translate(-55%, 0%);
+}
+
+/* -------------------------
+    TECHNOLOGY SOLUTION SECTION (technology-solution)
+------------------------- */
+.technology-solution {
+    background-color: var(--light-gray);
+    flex-direction: column;
+    align-items: center;
+}
+
+.technology-solution .head {
+    padding: 0% 20%;
+    padding-top: 8%;
+    text-align: center;
+}
+
+.technology-solution .head h1 {
+    color: var(--dark-oranje-aso);
+    font-size: 2.5rem;
+}
+
+.technology-solution .head h2 {
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--green-aso);
+}
+
+.technology-solution .solutions {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.technology-solution .solutions .item {
+    width: 50%;
+    border: 1px solid var(--green-aso);
+    padding: 3% 3%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.technology-solution .solutions .item .image-container {
+    width: 30%;
+    padding-bottom: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.technology-solution .solutions .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.technology-solution .solutions .item .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.technology-solution .solutions .item h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--green-aso);
+}
+
+.technology-solution .solutions .item button {
+    background-color: var(--green-aso);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.technology-solution .solutions .item:first-child {
+    border-left: none;
+}
+
+.technology-solution .solutions .item:last-child {
+    border-right: none;
 }
 
 /* Mediums devices (desktops, 1080px and down) */
@@ -168,5 +259,26 @@
 
     .newsletter .content .feature-item p {
         text-align: left;
+    }
+
+    /* -------------------------
+    TECHNOLOGY SOLUTION SECTION (technology-solution)
+------------------------- */
+    .technology-solution .head h1 {
+        font-size: 2.2rem;
+    }
+
+    .technology-solution .head h2 {
+        font-size: 1.5rem;
+    }
+
+    .technology-solution .solutions {
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technology-solution .solutions .item {
+        width: 100%;
     }
 }
