@@ -160,7 +160,7 @@
 .park4dis-sample h3 {
     margin-top: 3rem;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .park4dis-sample .draw {
@@ -304,6 +304,7 @@
 
 .transform-munitipality .content .title h3 {
     font-weight: 100;
+    font-size: 1.5rem;
 }
 
 .transform-munitipality .content img {
@@ -356,7 +357,7 @@
 
 .park4dis-admin .content h2 {
     padding: 10% 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 100;
 }
 
