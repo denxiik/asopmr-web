@@ -145,7 +145,7 @@ button:hover {
 .feature-item img {
     width: 24px;
     height: auto;
-    align-self: self-start;
+    align-self: center;
     margin-right: 2rem;
 }
 

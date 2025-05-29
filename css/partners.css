@@ -60,44 +60,44 @@
 }
 
 /* -------------------------
-    NEWSLETTER SECTION (newsletter)
+    SERVICE LEFT IMAGE SECTION (service-left-image)
 ------------------------- */
-.newsletter {
+.service-left-image {
     padding: 8%;
     display: flex;
     flex-direction: row;
 }
 
-.newsletter .image {
+.service-left-image .image {
     width: 40%;
 }
 
-.newsletter .content {
+.service-left-image .content {
     padding-left: 5%;
 }
 
-.newsletter .content h1 {
+.service-left-image .content h1 {
     color: var(--dark-oranje-aso);
-    padding-top: 1.5rem;
+    padding-top: 8%;
     font-size: 2.5rem;
     padding-bottom: 1.5rem;
 }
 
-.newsletter .content h2 {
+.service-left-image .content h2 {
     font-weight: 100;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-.newsletter .content .feature-item {
+.service-left-image .content .feature-item {
     padding-top: 5%;
 }
 
-.newsletter .content .feature-item p {
+.service-left-image .content .feature-item p {
     font-weight: 100;
     font-size: 1.3rem;
 }
 
-.newsletter .content button {
+.service-left-image .content button {
     background-color: var(--dark-oranje-aso);
     margin-left: 50%;
     margin-top: 10%;
@@ -232,38 +232,37 @@
     }
 
     /* -------------------------
-        NEWSLETTER SECTION (newsletter)
+        SERVICE LEFT IMAGE SECTION (service-left-image)
     ------------------------- */
-    .newsletter {
+    .service-left-image {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .newsletter .image {
+    .service-left-image .image {
+        padding-top: 8%;
         width: 70%;
     }
 
-
-    .newsletter .content h1 {
+    .service-left-image .content h1 {
         font-size: 2rem;
     }
 
-    .newsletter .content h2 {
+    .service-left-image .content h2 {
         font-size: 1.3rem;
     }
 
-    .newsletter .content .feature-item {
+    .service-left-image .content .feature-item {
         padding-top: 5%;
     }
 
-    .newsletter .content .feature-item p {
+    .service-left-image .content .feature-item p {
         text-align: left;
     }
-
     /* -------------------------
-    TECHNOLOGY SOLUTION SECTION (technology-solution)
-------------------------- */
+        TECHNOLOGY SOLUTION SECTION (technology-solution)
+    ------------------------- */
     .technology-solution .head h1 {
         font-size: 2.2rem;
     }
