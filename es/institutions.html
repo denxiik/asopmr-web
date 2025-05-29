@@ -279,7 +279,7 @@
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
 
-        Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+        Promise.all([headerPromise, footerPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
