@@ -133,11 +133,10 @@ button:hover {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .feature-item {
-    margin-top: 1rem;
+    padding-top: 3%;
     display: flex;
     align-items: center;
 }
