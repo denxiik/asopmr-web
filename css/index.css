@@ -183,7 +183,7 @@
 .park4dis-sample .draw img {
     position: absolute;
     z-index: 10;
-    width: 22%;
+    width: 32%;
     top: 40%;
     margin-left: -20%;
 }
@@ -193,7 +193,7 @@
     position: absolute;
 }
 
-.park4dis-sample .draw #center-circle {
+.park4dis-sample .draw #p4d-center-circle {
     width: 13rem;
     height: 13rem;
     top: 35%;
@@ -202,7 +202,7 @@
     z-index: 2;
 }
 
-.park4dis-sample .draw #bottom-left-circle {
+.park4dis-sample .draw #p4d-bottom-left-circle {
     width: 23rem;
     height: 23rem;
     bottom: 10%;
@@ -210,7 +210,7 @@
     z-index: 1;
 }
 
-.park4dis-sample .draw #bottom-cut-circle {
+.park4dis-sample .draw #p4d-bottom-cut-circle {
     width: 30rem;
     height: 30rem;
     bottom: -10rem;
@@ -219,6 +219,103 @@
 }
 
 .park4dis-sample .download-app-container {
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+/* -------------------------
+    SPOT4DIS SECTION (spot4dis-sample)
+------------------------- */
+.spot4dis-sample {
+    background-color: var(--light-gray);
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10%;
+}
+
+.spot4dis-sample .content {
+    margin-right: 10%;
+    /* Changed to margin-right */
+    max-width: 45%;
+}
+
+.spot4dis-sample h1 {
+    color: var(--green-aso);
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.spot4dis-sample h1 strong {
+    font-weight: 900;
+}
+
+.spot4dis-sample h3 {
+    margin-top: 3rem;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.spot4dis-sample .draw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    position: absolute;
+
+    /* Position the circles relative to the section */
+    top: 0;
+    right: 0;
+    /* Changed from right */
+    bottom: 0;
+    right: 50%;
+    /* Changed from left */
+    justify-content: center;
+    width: 50%;
+    pointer-events: none;
+}
+
+.spot4dis-sample .draw img {
+    position: absolute;
+    z-index: 10;
+    width: 28%;
+    top: 45%;
+    /* Changed to margin-right */
+}
+
+/* Circles */
+.spot4dis-sample .draw canvas {
+    position: absolute;
+}
+
+.spot4dis-sample .draw #s4d-center-circle {
+    width: 13rem;
+    height: 13rem;
+    top: 45%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.spot4dis-sample .draw #s4d-bottom-left-circle {
+    width: 23rem;
+    height: 23rem;
+    bottom: 10%;
+    left: -10rem;
+    z-index: 1;
+}
+
+.spot4dis-sample .draw #s4d-bottom-cut-circle {
+    width: 30rem;
+    height: 30rem;
+    bottom: -10rem;
+    right: -0%;
+    z-index: 0;
+}
+
+.spot4dis-sample .download-app-container {
     margin-left: 50%;
     transform: translate(-50%, 0%);
 }
@@ -433,6 +530,13 @@
     }
 
     /* -------------------------
+        SPOT4DIS SECTION (spot4dis-sample)
+    ------------------------- */
+    .spot4dis-sample .content h1 {
+        font-size: 2rem;
+    }
+
+    /* -------------------------
         OUR GOAL SECTION (our-goal)
     ------------------------- */
     .our-goal .title {
@@ -468,6 +572,7 @@
         margin-left: 50%;
         transform: translate(-50%, 0%);
         max-width: 100%;
+        width: 70%;
         text-align: center;
     }
 
@@ -505,16 +610,16 @@
         position: absolute;
     }
 
-    .park4dis-sample .draw #center-circle {
+    .park4dis-sample .draw #p4d-center-circle {
         position: absolute;
         width: 75%;
         top: 15%;
-        left: -10%;
+        left: 5%;
         transform: translate(-50%, -50%);
         z-index: -1;
     }
 
-    .park4dis-sample .draw #bottom-left-circle {
+    .park4dis-sample .draw #p4d-bottom-left-circle {
         z-index: -1;
         position: absolute;
         width: 60%;
@@ -523,7 +628,83 @@
         transform: translate(-50%, -50%);
     }
 
-    .park4dis-sample .draw #bottom-cut-circle {
+    .park4dis-sample .draw #p4d-bottom-cut-circle {
+        visibility: hidden;
+        /* To not overlap the screen even with hidden */
+        width: 10%;
+    }
+
+    /* -------------------------
+        SPOT4DIS SECTION (spot4dis-sample)
+    ------------------------- */
+    .spot4dis-sample {
+        flex-direction: column;
+        padding-bottom: 15%;
+        overflow: visible;
+        /* Allow overflow for better mobile layout */
+    }
+
+    .spot4dis-sample .content {
+        margin-left: 50%;
+        transform: translate(-50%, 0%);
+        max-width: 100%;
+        width: 70%;
+        text-align: center;
+    }
+
+    .spot4dis-sample .content h1 {
+        text-align: center;
+    }
+
+    .feature-list {
+        margin-top: 2rem;
+    }
+
+    .feature-item p {
+        text-align: start;
+    }
+
+    .spot4dis-sample .draw {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: auto;
+        justify-content: center;
+        margin-top: 2rem;
+        pointer-events: auto;
+    }
+
+    .spot4dis-sample .draw img {
+        position: relative;
+        width: 60%;
+        top: auto;
+        margin-left: 0;
+        order: 1;
+    }
+
+    .spot4dis-sample .draw canvas {
+        position: absolute;
+    }
+
+    .spot4dis-sample .draw #s4d-center-circle {
+        position: absolute;
+        width: 75%;
+        top: 15%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .spot4dis-sample .draw #s4d-bottom-left-circle {
+        z-index: -1;
+        position: absolute;
+        width: 60%;
+        top: 100%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .spot4dis-sample .draw #s4d-bottom-cut-circle {
         visibility: hidden;
         /* To not overlap the screen even with hidden */
         width: 10%;

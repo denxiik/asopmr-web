@@ -116,9 +116,9 @@
 
             <div class="draw">
                 <img src="../img/index/park4dis-phone-example.webp" alt="Captura de pantalla de la app Park4Dis">
-                <canvas id="center-circle"></canvas>
-                <canvas id="bottom-left-circle"></canvas>
-                <canvas id="bottom-cut-circle"></canvas>
+                <canvas id="p4d-center-circle"></canvas>
+                <canvas id="p4d-bottom-left-circle"></canvas>
+                <canvas id="p4d-bottom-cut-circle"></canvas>
             </div>
 
             <div class="download-app-container">
@@ -130,7 +130,8 @@
                         rel="noopener noreferrer">
                         <img src="../img/google-play.webp" alt="Icono de descarga para Android">
                     </a>
-                    <a href="https://apps.apple.com/es/app/park4dis/id1543884273" target="_blank" rel="noopener noreferrer">
+                    <a href="https://apps.apple.com/es/app/park4dis/id1543884273" target="_blank"
+                        rel="noopener noreferrer">
                         <img src="../img/app-store.webp" alt="Icono de descarga para IOS">
                     </a>
                 </div>
@@ -140,7 +141,7 @@
 
     <!-- TO BE DISCUSSED -->
     <!-- SPOT4DIS SECTION (park4dis-sample) -->
-    <!--section class="park4dis-sample">
+    <section class="spot4dis-sample">
         <div class="content">
             <h1>
                 <strong>Spot4Dis</strong> es una app colaborativa creada por y para personas con movilidad reducida, con
@@ -164,7 +165,8 @@
                 </div>
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
-                    <p>Envío de incidencias sobre mal uso o mal estado de las plazas, con llamada directa a la policía local o mensaje solo de texto.</p>
+                    <p>Envío de incidencias sobre mal uso o mal estado de las plazas, con llamada directa a la policía
+                        local o mensaje solo de texto.</p>
                 </div>
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
@@ -173,23 +175,28 @@
             </div>
 
             <div class="draw">
-                <img src="../img/index/park4dis-phone-example.webp" alt="Captura de pantalla de la app Park4Dis">
-                <canvas id="center-circle"></canvas>
-                <canvas id="bottom-left-circle"></canvas>
-                <canvas id="bottom-cut-circle"></canvas>
+                <img src="../img/index/spot4dis-phone-example.webp" alt="Captura de pantalla de la app Spot4Dis">
+                <canvas id="s4d-center-circle"></canvas>
+                <canvas id="s4d-bottom-left-circle"></canvas>
+                <canvas id="s4d-bottom-cut-circle"></canvas>
             </div>
 
             <div class="download-app-container">
-                <button class="button">
-                    DESCARGAR &#8594
+                <button class="button" disabled>
+                    DESCARGAR &#8594;
                 </button>
                 <div class="images">
-                    <img src="../img/index/google-play.webp" alt="Icono de descarga para Android">
-                    <img src="../img/index/app-store.webp" alt="Icono de descarga para IOS">
+                    <a href="https://play.google.com/store/apps/details?id=org.asopmr.spot4dis.android" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="../img/google-play.webp" alt="Icono de descarga para Android">
+                    </a>
+                    <a href="https://apps.apple.com/es/app/park4dis" target="_blank" rel="noopener noreferrer">
+                        <img src="../img/app-store.webp" alt="Icono de descarga para IOS">
+                    </a>
                 </div>
             </div>
         </div>
-    </section-->
+    </section>
 
     <!-- OUR GOAL SECTION (our-goal) -->
     <section class="our-goal">
@@ -414,23 +421,41 @@
 
     // Resize canvases on load and resize
     window.addEventListener('load', () => {
-        resizeCanvas('center-circle');
-        resizeCanvas('bottom-left-circle');
-        resizeCanvas('bottom-cut-circle');
+        resizeCanvas('p4d-center-circle');
+        resizeCanvas('p4d-bottom-left-circle');
+        resizeCanvas('p4d-bottom-cut-circle');
 
         // Call the function for each circle with its respective text and color
-        drawCircleWithText('center-circle', 'Park4Dis People', orangeAso);
-        drawCircleWithText('bottom-left-circle', '', orangeDarkAso);
-        drawCircleWithText('bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+        drawCircleWithText('p4d-center-circle', 'Park4Dis People', orangeAso);
+        drawCircleWithText('p4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('p4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
+        resizeCanvas('s4d-center-circle');
+        resizeCanvas('s4d-bottom-left-circle');
+        resizeCanvas('s4d-bottom-cut-circle');
+
+        // Call the function for each circle with its respective text and color
+        drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
     });
 
     window.addEventListener('resize', () => {
-        resizeCanvas('center-circle');
-        resizeCanvas('bottom-left-circle');
-        resizeCanvas('bottom-cut-circle');
-        drawCircleWithText('center-circle', 'Park4Dis People', orangeAso);
-        drawCircleWithText('bottom-left-circle', '', orangeDarkAso);
-        drawCircleWithText('bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+        resizeCanvas('p4d-center-circle');
+        resizeCanvas('p4d-bottom-left-circle');
+        resizeCanvas('p4d-bottom-cut-circle');
+        drawCircleWithText('p4d-center-circle', 'Park4Dis People', orangeAso);
+        drawCircleWithText('p4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('p4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
+        resizeCanvas('s4d-center-circle');
+        resizeCanvas('s4d-bottom-left-circle');
+        resizeCanvas('s4d-bottom-cut-circle');
+        drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
     });
 </script>
 
