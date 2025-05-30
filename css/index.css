@@ -184,7 +184,7 @@
     position: absolute;
     z-index: 10;
     width: 32%;
-    top: 40%;
+    top: 35%;
     margin-left: -20%;
 }
 
@@ -281,7 +281,7 @@
     position: absolute;
     z-index: 10;
     width: 28%;
-    top: 45%;
+    top: 40%;
     /* Changed to margin-right */
 }
 
