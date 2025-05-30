@@ -156,7 +156,7 @@
     margin-bottom: 2rem;
 }
 
-.technology-solution .solutions .item img {
+.technology-solution .solutions .item .image-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -169,22 +169,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.technology-solution .solutions .item .content  h2 {
+    font-weight: 100;
+}
+
+.technology-solution .solutions .item .content .download-app-container {
+    margin-top: auto;
 }
 
 .technology-solution .solutions .item h1 {
     margin: 0;
     font-size: 2.5rem;
     color: var(--green-aso);
-}
-
-.technology-solution .solutions .item button {
-    background-color: var(--green-aso);
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    cursor: pointer;
 }
 
 .technology-solution .solutions .item:first-child {

@@ -72,7 +72,7 @@
 
     --green-aso: #1E4C50;
     --light-green-aso: #BDF24B;
-    
+
     --border-color: #1E4C50;
 
     --light-gray: #f7f7f7
@@ -127,6 +127,43 @@ button:hover {
     background-color: white;
 }
 
+/* DONWLOAD APP BUTTON */
+.download-app-container {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.download-app-container .button {
+    margin-top: 3rem;
+    background-color: var(--green-aso);
+}
+
+.download-app-container .button:hover {
+    transform: none;
+}
+
+.download-app-container .button[disabled] {
+    cursor: default;
+}
+
+.download-app-container .images {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.download-app-container .images img {
+    padding: 10px 5px;
+    width: 10rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.download-app-container .images img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 /* -------------------------
     FEATURES LISTS
 ------------------------- */
@@ -168,5 +205,24 @@ button:hover {
     button {
         font-size: 0.8rem;
         padding: 8px 10px;
+    }
+}
+
+/* Media query for small screens (1080px and below) */
+@media (max-width: 1080px) {
+    .download-app-container {
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+        margin-top: 0rem;
+    }
+
+    .download-app-container .button {
+        font-size: 1rem;
+    }
+
+    .download-app-container .images {
+        flex-direction: column;
+        align-items: center;
     }
 }
