@@ -14,8 +14,42 @@
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
-<!-- HEADER SECTION (header) -->
-<header id="header-placeholder"></header>
+<header class="site-header">
+    <div class="logo-language-container">
+        <a href="index.html" class="logo-container">
+            <img class="logo" src="../img/asoPMR-logo.webp" alt="AsoPMR Logo">
+        </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+        ☰
+    </button>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="us.html">Nosotros</a></li>
+            <li class="dropdown">
+                <a>Soluciones</a>
+                <ul class="dropdown-content">
+                    <li><a href="index.html#park4dis-sample">Park4Dis People</a></li>
+                    <li><a href="index.html#spot4dis-sample">Spot4Dis</a></li>
+                    <li><a href="index.html#park4dis-admin">Park4Dis Admin</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a>Servicios</a>
+                <ul class="dropdown-content">
+                    <li><a href="institutions.html">Instituciones</a></li>
+                    <li><a href="partners.html">Socios</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Hazte socio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <button class="colaborate-button">COLABORA</button>
+    </nav>
+</header>
 
 <body>
     <!-- HOME SECTION (home) -->
@@ -151,7 +185,7 @@
                 claro: mejorar la movilidad urbana y hacer las ciudades más inclusivas.
                 Gracias al uso de inteligencia artificial aplicada al bien común, Spot4Dis optimiza el funcionamiento de
                 la app Park4Dis, llevándola al siguiente nivel.
-                <br>
+                <br> <br>
                 <strong> 🚀 Estamos en fase BETA </strong> y buscamos personas comprometidas que quieran probar la app y ayudarnos a
                 perfeccionarla antes del lanzamiento oficial en toda Europa.
                 Tu experiencia puede marcar la diferencia.
@@ -182,10 +216,6 @@
                 </div>
             </div>
 
-            <h3>
-                ¿Te unes al cambio?
-            </h3>
-
             <div class="draw">
                 <img src="../img/index/spot4dis-phone-example.webp" alt="Captura de pantalla de la app Spot4Dis">
                 <canvas id="s4d-center-circle"></canvas>
@@ -202,7 +232,7 @@
                         rel="noopener noreferrer">
                         <img src="../img/google-play.webp" alt="Icono de descarga para Android">
                     </a>
-                    <a href="https://apps.apple.com/es/app/park4dis" target="_blank" rel="noopener noreferrer">
+                    <a href="https://testflight.apple.com/join/8DmRZPGp" target="_blank" rel="noopener noreferrer">
                         <img src="../img/app-store.webp" alt="Icono de descarga para IOS">
                     </a>
                 </div>
@@ -452,7 +482,7 @@
         // Call the function for each circle with its respective text and color
         drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
         drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
-        drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+        drawCircleWithText('s4d-bottom-cut-circle', '¿Te unes al cambio?', orangeAso);
 
     });
 
@@ -469,7 +499,7 @@
         resizeCanvas('s4d-bottom-cut-circle');
         drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
         drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
-        drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+        drawCircleWithText('s4d-bottom-cut-circle', '¿Te unes al cambio?', orangeAso);
 
     });
 </script>

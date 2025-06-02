@@ -6,7 +6,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    min-height: calc(40vh);
+    min-height: calc(80vh);
     background-color: var(--green-aso);
     position: relative;
     margin-bottom: 10rem;
@@ -26,22 +26,22 @@
 .home .images {
     display: flex;
     position: static;
-    padding-top: -15%;
+    padding-top: 2%;
 }
 
 .home .image {
     position: static;
     margin-bottom: -50%;
-    width: 65%;
-    height: 40%;
+    width: 55%;
+    height: 30%;
 }
 
 .home .subimage {
     position: absolute;
     padding: auto;
-    bottom: 20%;
+    bottom: 10%;
     right: 10%;
-    max-width: 15rem;
+    max-width: 25rem;
     height: auto;
 }
 
@@ -50,7 +50,6 @@
 ------------------------- */
 .subhome {
     display: flex;
-    min-height: calc(30vh);
 }
 
 .subhome .title {
@@ -65,10 +64,9 @@
 .subhome .image {
     position: absolute;
     padding-left: 20rem;
-    width: 70%;
+    width: 55%;
     height: auto;
     right: 0%;
-    max-width: 75%;
 }
 
 /* -------------------------
@@ -76,7 +74,7 @@
 ------------------------- */
 .service-benefits {
     display: flex;
-    padding-top: 20%;
+    padding-top: 15%;
     justify-content: center;
     flex-direction: column;
 }
@@ -123,7 +121,7 @@
     padding: 2rem 1.5rem;
     color: var(--white);
     background-color: var(--light-orange-aso);
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 0;
 }
 
@@ -135,7 +133,7 @@
     PARK4DIS SECTION (park4dis-sample)
 ------------------------- */
 .park4dis-sample {
-    padding-top: 8rem;
+    padding-top: 5%;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -150,7 +148,7 @@
 .park4dis-sample h1 {
     color: var(--green-aso);
     font-weight: 100;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .park4dis-sample h1 strong {
@@ -158,9 +156,13 @@
 }
 
 .park4dis-sample h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.park4dis-sample .content .feature-list {
+    margin-top: 1rem;
 }
 
 .park4dis-sample .draw {
@@ -183,8 +185,8 @@
 .park4dis-sample .draw img {
     position: absolute;
     z-index: 10;
-    width: 32%;
-    top: 35%;
+    width: 230px;
+    top: 30%;
     margin-left: -20%;
 }
 
@@ -196,8 +198,8 @@
 .park4dis-sample .draw #p4d-center-circle {
     width: 13rem;
     height: 13rem;
-    top: 35%;
-    left: 50%;
+    top: 25%;
+    left: 55%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -219,8 +221,7 @@
 }
 
 .park4dis-sample .download-app-container {
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
+    margin-left: -40%;
 }
 
 /* -------------------------
@@ -228,7 +229,7 @@
 ------------------------- */
 .spot4dis-sample {
     background-color: var(--very-light-orange-aso);
-    padding-top: 8rem;
+    padding-top: 5%;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -243,19 +244,39 @@
 
 .spot4dis-sample h1 {
     font-weight: 100;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--green-aso);
 }
 
 .spot4dis-sample h1 strong {
     font-weight: 900;
-    color: var(--ve);
 }
 
 .spot4dis-sample h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.spot4dis-sample h3 strong {
+    font-weight: 900;
+}
+
+.spot4dis-sample .content .feature-list {
+    margin-top: 0.5rem;
+    flex-direction: row;
+}
+
+.spot4dis-sample .content .feature-item {
+    padding-top: 0%;
+}
+
+.spot4dis-sample .content .feature-item:not(:first-child) {
+    padding-left: 4%;
+}
+
+.spot4dis-sample .content .feature-item img {
+    margin-right: 0.3rem;
 }
 
 .spot4dis-sample .draw {
@@ -278,12 +299,8 @@
 .spot4dis-sample .draw img {
     position: absolute;
     z-index: 10;
-    width: 28%;
-    top: 40%;
-}
-
-.spot4dis-sample .content .feature-list {
-    margin-top: 1rem;
+    width: 200px;
+    top: 25%;
 }
 
 /* Circles */
@@ -294,8 +311,8 @@
 .spot4dis-sample .draw #s4d-center-circle {
     width: 13rem;
     height: 13rem;
-    top: 45%;
-    right: 50%;
+    top: 20%;
+    right: 45%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -312,13 +329,17 @@
     width: 30rem;
     height: 30rem;
     bottom: -10rem;
-    right: -0%;
+    right: -10%;
     z-index: 0;
 }
 
 .spot4dis-sample .download-app-container {
     margin-left: 50%;
     transform: translate(-50%, 0%);
+}
+
+.spot4dis-sample .download-app-container button {
+    background-color: var(--dark-oranje-aso);
 }
 
 /* -------------------------
@@ -330,7 +351,7 @@
 }
 
 .our-goal .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
     color: var(--white);
     background-color: var(--green-aso);
@@ -338,7 +359,7 @@
 
 .our-goal .title h1 {
     font-weight: 100;
-    margin: 8% 8%;
+    margin: 5% 5%;
 }
 
 /* -------------------------
@@ -552,11 +573,12 @@
         HOME SECTION (home)
     ------------------------- */
     .home {
-        min-height: calc(80vh);
+        min-height: calc(70vh);
     }
 
-    .home .image {
-        width: 50%;
+
+    .home .subimage {
+        max-width: 15rem;
     }
 
     /* -------------------------
@@ -581,11 +603,11 @@
         text-align: center;
     }
 
-    .feature-list {
+    .park4dis-sample .feature-list {
         margin-top: 2rem;
     }
 
-    .feature-item p {
+    .park4dis-sample .feature-item p {
         text-align: start;
     }
 
@@ -635,6 +657,11 @@
         width: 10%;
     }
 
+    .park4dis-sample .download-app-container {
+        margin-left: auto;
+    }
+
+
     /* -------------------------
         SPOT4DIS SECTION (spot4dis-sample)
     ------------------------- */
@@ -657,13 +684,20 @@
         text-align: center;
     }
 
-    .feature-list {
-        margin-top: 2rem;
+    .spot4dis-sample .content .feature-list {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        /* This centers the block of feature items */
     }
 
-    .feature-item p {
-        text-align: start;
+    .spot4dis-sample .content .feature-item {
+        padding-left: 4%;
+        padding-top: 2%;
+        justify-content: flex-start;
     }
+    
+
 
     .spot4dis-sample .draw {
         position: relative;
@@ -715,7 +749,7 @@
         OUR GOAL SECTION (our-goal)
     ------------------------- */
     .our-goal .title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     /* -------------------------
@@ -724,12 +758,12 @@
     .transform-munitipality .content {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .transform-munitipality .content .title {
-        padding-left: 50%;
-        transform: translate(-10%, 0%);
-        width: 60%;
+        padding-left: auto;
+        width: 90%;
         align-items: center;
         text-align: center;
     }
@@ -779,44 +813,4 @@
         font-size: 0.6rem;
     }
 
-}
-
-/* Large devices (desktops, 1080px and up) */
-@media (min-width: 1080px) {
-
-    /* -------------------------
-        HOME SECTION (home)
-    ------------------------- */
-    .home {
-        min-height: calc(110vh);
-    }
-
-    .home .title {
-        font-size: 4em;
-    }
-
-    .home .images {
-        margin-top: 4rem;
-    }
-
-    .home .subimage {
-        width: 25rem;
-        bottom: 10%;
-    }
-
-    /* -------------------------
-        SUBHOME SECTION (subhome)
-    ------------------------- */
-    .subhome {
-        display: flex;
-        min-height: calc(50vh);
-    }
-
-    .subhome .title {
-        font-size: 2.5rem;
-    }
-
-    .subhome .image {
-        width: 65%;
-    }
 }

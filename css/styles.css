@@ -101,7 +101,7 @@ button {
     letter-spacing: 7px;
     border-radius: 25px;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     font: borna;
     transition: transform 0.2s ease-in-out;
@@ -132,6 +132,7 @@ button:hover {
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .download-app-container .button {
@@ -189,7 +190,7 @@ button:hover {
 .feature-item p {
     margin: 0;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* Very small devices (phones, 620px and down) */
