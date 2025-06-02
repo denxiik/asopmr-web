@@ -318,26 +318,41 @@
     color: var(--green-aso);
 }
 
-.awards-container {
+.carousel-wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+.carousel-container {
+    width: calc(100% - 120px);
+    margin: 0 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.awards-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .award-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 200px;
-    min-width: 180px;
     height: 10vw;
     max-height: 180px;
     min-height: 100px;
     overflow: hidden;
+    padding: 10px;
 }
 
 .award-item img {
@@ -347,6 +362,69 @@
     display: block;
 }
 
+.carousel-button {
+    background-color: var(--green-aso);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+    background-color: var(--green-aso);
+}
+
+/* Media query for small screens (480px and below) */
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        width: 98%;
+    }
+
+    .carousel-container {
+        width: calc(100% - 80px);
+        margin: 0 40px;
+    }
+
+    .carousel-button {
+        padding: 6px 10px;
+        font-size: 1em;
+    }
+}
 
 /* Media query for small screens (768px and below) */
 @media (max-width: 768px) {
@@ -477,23 +555,27 @@
     /* -------------------------
         AWARDS SECTION (awards)
     ------------------------- */
-    .awards-section h2 {
-        font-size: 1.5rem;
-        padding: 5%;
+    .carousel-wrapper {
+        width: 95%;
     }
 
-    .awards-container {
-        flex-direction: column;
-        align-items: center;
+    .carousel-container {
+        width: calc(100% - 100px);
+        margin: 0 50px;
     }
 
     .award-item {
-        width: 90%;
-        max-width: 350px;
-        flex-basis: auto;
-        height: 25vw;
-        max-height: 150px;
-        min-height: 80px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-button {
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+
+    .awards-section h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -524,6 +606,4 @@
 }
 
 /* Large devices (desktops, 1080px and up) */
-@media (min-width: 1080px) {
-
-}
+@media (min-width: 1080px) {}
