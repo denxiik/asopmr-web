@@ -81,7 +81,7 @@
     </section>
 
     <!-- PARK4DIS SECTION (park4dis-sample) -->
-    <section class="park4dis-sample">
+    <section class="park4dis-sample" id="park4dis-sample">
         <div class="content">
             <h1>
                 Aparca sin complicaciones
@@ -139,40 +139,52 @@
         </div>
     </section>
 
-    <!-- TO BE DISCUSSED -->
     <!-- SPOT4DIS SECTION (park4dis-sample) -->
-    <section class="spot4dis-sample">
+    <section class="spot4dis-sample" id="spot4dis-sample">
         <div class="content">
             <h1>
-                <strong>Spot4Dis</strong> es una app colaborativa creada por y para personas con movilidad reducida, con
-                el objetivo de mejorar su movilidad en la ciudad.
+                <strong>Spot4Dis</strong> Tu ciudad, más accesible
             </h1>
 
             <h3>
-                Gracias al uso de inteligencia artificial al servicio del bien común, la app permite:
+                Spot4Dis es una app colaborativa, creada por y para personas con movilidad reducida, con un objetivo
+                claro: mejorar la movilidad urbana y hacer las ciudades más inclusivas.
+                Gracias al uso de inteligencia artificial aplicada al bien común, Spot4Dis optimiza el funcionamiento de
+                la app Park4Dis, llevándola al siguiente nivel.
+                <br>
+                <strong> 🚀 Estamos en fase BETA </strong> y buscamos personas comprometidas que quieran probar la app y ayudarnos a
+                perfeccionarla antes del lanzamiento oficial en toda Europa.
+                Tu experiencia puede marcar la diferencia.
+                <br>
+                🌍 Ciudades piloto:
             </h3>
 
             <div class="feature-list">
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
-                    <p>Identificar y validar puntos clave como aparcamientos reservados. </p>
+                    <p>Valencia</p>
                 </div>
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
-                    <p>Guía paso a paso hasta la plaza seleccionada mediante navegación integrada
-                        Normativa local resumida y accesible.
-                    </p>
+                    <p>A Coruña</p>
                 </div>
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
-                    <p>Envío de incidencias sobre mal uso o mal estado de las plazas, con llamada directa a la policía
-                        local o mensaje solo de texto.</p>
+                    <p>Badajoz</p>
                 </div>
                 <div class="feature-item">
                     <img src="../img/check-symbol.webp" alt="Marca de verificación">
-                    <p>Sugerir manualmente nuevas plazas.</p>
+                    <p>Zaragoza</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../img/check-symbol.webp" alt="Marca de verificación">
+                    <p>Génova</p>
                 </div>
             </div>
+
+            <h3>
+                ¿Te unes al cambio?
+            </h3>
 
             <div class="draw">
                 <img src="../img/index/spot4dis-phone-example.webp" alt="Captura de pantalla de la app Spot4Dis">
@@ -250,11 +262,11 @@
                 <img src="../img/check-symbol.webp" alt="Marca de verificación">
                 <p>Acceso y personalización de tecnología específica</p>
             </div>
-        </div>
+        </div>s
     </section>
 
     <!-- PARK4DIS ADMIN SECTION (park4dis-admin) -->
-    <section class="park4dis-admin">
+    <section class="park4dis-admin" id="park4dis-admin">
         <img src="../img/index/park4dis-admin.webp" alt="Pagina de administracion de Park4Dis">
 
         <div class="content">
@@ -277,8 +289,83 @@
     <section id="join-community-placeholder"></section>
 </body>
 
-<!-- FOOTER SECTION (footer) -->
-<footer id="footer-placeholder"></footer>
+<footer class="site-footer">
+    <div class="asoPMR-info">
+        <div class="asoPMR-content-wrapper">
+            <div class="logo column">
+                <img src="../img/asoPMR-logo-vertical.webp" alt="Logo vertical de AsoPMR">
+            </div>
+            <div class="contact column">
+                <a href="contact.html">
+                    <button>
+                        Contacto
+                    </button>
+                </a>
+            </div>
+
+            <div class="news column">
+                <h1>
+                    Mantente al día
+                </h1>
+
+                <div>
+                    <h2>
+                        <u>
+                            LinkedIn
+                        </u>
+                    </h2>
+                    <h2>
+                        <u>
+                            Facebook
+                        </u>
+                    </h2>
+                    <h2>
+                        <u>
+                            X-Twitter
+                        </u>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="more-info column">
+                <h1>
+                    Descubre mucho más
+                </h1>
+
+                <div>
+                    <h2>
+                        <u>
+                            Blog
+                        </u>
+                    </h2>
+                    <h2>
+                        <u>
+                            Newsletter
+                        </u>
+                    </h2>
+                    <h2>
+                        <u>
+                            Kit de prensa
+                        </u>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aso-policies">
+        <div class="policies">
+            <p><a href="#">Aviso legal</a></p>
+            <p><a href="#">Política de privacidad</a></p>
+            <p><a href="#">Política de cookies</a></p>
+            <p><a href="#">Plan de género</a></p>
+        </div>
+
+        <div class="inscribtion-info">
+            <p>Inscrita en el registro de Asociaciones de Ámbito Nacional</p>
+        </div>
+    </div>
+</footer>
 
 <script>
     // Function to load content from another HTML file
@@ -410,8 +497,11 @@
     }
 
     // Define the color once
-    const orangeAso = '#FF925C';
+    const orangeAso = '#FF915C';
     const orangeDarkAso = '#FF7733';
+
+    const greenAso = '#1E4C50';
+
 
     function resizeCanvas(canvasId) {
         const canvas = document.getElementById(canvasId);
@@ -436,7 +526,7 @@
 
         // Call the function for each circle with its respective text and color
         drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
-        drawCircleWithText('s4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
         drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
 
     });
@@ -453,7 +543,7 @@
         resizeCanvas('s4d-bottom-left-circle');
         resizeCanvas('s4d-bottom-cut-circle');
         drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
-        drawCircleWithText('s4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
         drawCircleWithText('s4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
 
     });
