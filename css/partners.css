@@ -14,14 +14,14 @@
     padding-left: 8%;
     padding-top: 8%;
     color: var(--green-aso);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 100;
 }
 
 .services img {
     position: static;
     margin-left: auto;
-    width: 40%;
+    width: 30%;
     margin-bottom: -5%;
 }
 
@@ -44,14 +44,14 @@
 .support .features h1 {
     padding-top: 5%;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-left: 3.5rem;
     color: var(--dark-oranje-aso);
 }
 
 .support .features .feature-item p {
     font-weight: 100;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .support .features .feature-item p strong {
@@ -69,7 +69,7 @@
 }
 
 .service-left-image .image {
-    width: 40%;
+    width: 30%;
 }
 
 .service-left-image .content {
@@ -79,13 +79,13 @@
 .service-left-image .content h1 {
     color: var(--dark-oranje-aso);
     padding-top: 8%;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-bottom: 1.5rem;
 }
 
 .service-left-image .content h2 {
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .service-left-image .content .feature-item {
@@ -94,7 +94,7 @@
 
 .service-left-image .content .feature-item p {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .service-left-image .content button {
@@ -121,12 +121,12 @@
 
 .technology-solution .head h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 .technology-solution .head h2 {
     padding-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 100;
     color: var(--green-aso);
 }
@@ -175,8 +175,9 @@
     height: 100%;
 }
 
-.technology-solution .solutions .item .content  h2 {
+.technology-solution .solutions .item .content h2 {
     font-weight: 100;
+    font-size: 1rem;
 }
 
 .technology-solution .solutions .item .content .download-app-container {
@@ -185,7 +186,7 @@
 
 .technology-solution .solutions .item h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--green-aso);
 }
 
@@ -209,12 +210,12 @@
 
 .PMR-courses h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 .PMR-courses h2 {
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 5% 15%;
 }
 
@@ -232,8 +233,7 @@
 }
 
 .service-right-image .image {
-    width: 40%;
-    padding-top: 3rem;
+    width: 30%;
 }
 
 .service-right-image .content {
@@ -243,7 +243,7 @@
 
 .service-right-image .content h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-bottom: 1.5rem;
 }
 
@@ -258,7 +258,7 @@
 
 .service-right-image .content .feature-item p {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 /* Mediums devices (desktops, 1080px and down) */
