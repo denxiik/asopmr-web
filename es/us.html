@@ -264,120 +264,152 @@
             });
 
         const track = document.querySelector('.awards-track');
-const items = Array.from(track.children);
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-const paginationContainer = document.querySelector('.carousel-pagination');
+        const items = Array.from(track.children);
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const paginationContainer = document.querySelector('.carousel-pagination');
 
-const totalOriginalItems = items.length;
-const maxItemsPerPage = 4;
+        const totalOriginalItems = items.length;
+        const maxItemsPerPage = 4;
 
-for (let i = totalOriginalItems - maxItemsPerPage; i < totalOriginalItems; i++) {
-    const clone = items[i].cloneNode(true);
-    track.prepend(clone);
-}
-for (let i = 0; i < maxItemsPerPage; i++) {
-    const clone = items[i].cloneNode(true);
-    track.appendChild(clone);
-}
-
-const allCarouselItems = Array.from(track.children);
-const totalCarouselItems = allCarouselItems.length;
-
-let currentIndex = maxItemsPerPage;
-
-function getItemsVisible() {
-    const width = window.innerWidth;
-    if (width <= 768) {
-        return 1;
-    } else {
-        return maxItemsPerPage;
-    }
-}
-
-const updateCarousel = (animate = true) => {
-    const itemsVisible = getItemsVisible();
-    const offsetPercentage = -(currentIndex * (100 / itemsVisible));
-
-    if (animate) {
-        track.style.transition = 'transform 0.5s ease-in-out';
-    } else {
-        track.style.transition = 'none';
-    }
-    track.style.transform = `translateX(${offsetPercentage}%)`;
-
-    updatePagination();
-};
-
-track.addEventListener('transitionend', () => {
-    if (currentIndex >= totalCarouselItems - maxItemsPerPage) {
-        currentIndex = maxItemsPerPage;
-        updateCarousel(false);
-    } else if (currentIndex < maxItemsPerPage) {
-        currentIndex = totalCarouselItems - (maxItemsPerPage * 2);
-        updateCarousel(false);
-    }
-});
-
-const goToNext = () => {
-    currentIndex++;
-    updateCarousel();
-};
-
-const goToPrev = () => {
-    currentIndex--;
-    updateCarousel();
-};
-
-prevButton.addEventListener('click', goToPrev);
-nextButton.addEventListener('click', goToNext);
-
-const createPaginationDots = () => {
-    paginationContainer.innerHTML = '';
-    const itemsVisible = getItemsVisible();
-    const numPages = Math.ceil(totalOriginalItems / itemsVisible);
-
-    for (let i = 0; i < numPages; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('pagination-dot');
-        dot.dataset.page = i;
-        dot.addEventListener('click', () => {
-            currentIndex = (i * itemsVisible) + maxItemsPerPage;
-            updateCarousel();
-        });
-        paginationContainer.appendChild(dot);
-    }
-};
-
-const updatePagination = () => {
-    createPaginationDots();
-
-    const itemsVisible = getItemsVisible();
-    let currentOriginalItemIndex = currentIndex - maxItemsPerPage;
-    if (currentOriginalItemIndex < 0) {
-        currentOriginalItemIndex += totalOriginalItems;
-    } else if (currentOriginalItemIndex >= totalOriginalItems) {
-        currentOriginalItemIndex -= totalOriginalItems;
-    }
-
-    const activePage = Math.floor(currentOriginalItemIndex / itemsVisible);
-
-    const dots = document.querySelectorAll('.pagination-dot');
-    dots.forEach((dot, index) => {
-        if (index === activePage) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
+        // Clone items for seamless looping
+        for (let i = totalOriginalItems - maxItemsPerPage; i < totalOriginalItems; i++) {
+            const clone = items[i].cloneNode(true);
+            track.prepend(clone);
         }
-    });
-};
+        for (let i = 0; i < maxItemsPerPage; i++) {
+            const clone = items[i].cloneNode(true);
+            track.appendChild(clone);
+        }
 
-updateCarousel(false);
-createPaginationDots();
+        const allCarouselItems = Array.from(track.children);
+        const totalCarouselItems = allCarouselItems.length;
 
-window.addEventListener('resize', () => {
-    updateCarousel(false);
-});
+        let currentIndex = maxItemsPerPage;
+        let autoSlideInterval;
+        const autoSlideDelay = 3000;
+
+        function getItemsVisible() {
+            const width = window.innerWidth;
+            if (width <= 768) {
+                return 1;
+            } else {
+                return maxItemsPerPage;
+            }
+        }
+
+        const updateCarousel = (animate = true) => {
+            const itemsVisible = getItemsVisible();
+            const offsetPercentage = -(currentIndex * (100 / itemsVisible));
+
+            if (animate) {
+                track.style.transition = 'transform 0.5s ease-in-out';
+            } else {
+                track.style.transition = 'none';
+            }
+            track.style.transform = `translateX(${offsetPercentage}%)`;
+
+            updatePagination();
+        };
+
+        track.addEventListener('transitionend', () => {
+            if (currentIndex >= totalCarouselItems - maxItemsPerPage) {
+                currentIndex = maxItemsPerPage;
+                updateCarousel(false);
+            } else if (currentIndex < maxItemsPerPage) {
+                currentIndex = totalCarouselItems - (maxItemsPerPage * 2);
+                updateCarousel(false);
+            }
+        });
+
+        const goToNext = () => {
+            currentIndex++;
+            updateCarousel();
+        };
+
+        const goToPrev = () => {
+            currentIndex--;
+            updateCarousel();
+        };
+
+        // Automatic sliding functionality
+        const startAutoSlide = () => {
+            stopAutoSlide(); // Clear any existing interval
+            autoSlideInterval = setInterval(goToNext, autoSlideDelay);
+        };
+
+        const stopAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+        };
+
+        // Pause on hover
+        track.addEventListener('mouseenter', stopAutoSlide);
+        track.addEventListener('mouseleave', startAutoSlide);
+
+        prevButton.addEventListener('click', () => {
+            stopAutoSlide();
+            goToPrev();
+            setTimeout(startAutoSlide, autoSlideDelay * 2);
+        });
+
+        nextButton.addEventListener('click', () => {
+            stopAutoSlide();
+            goToNext();
+            setTimeout(startAutoSlide, autoSlideDelay * 2);
+        });
+
+        const createPaginationDots = () => {
+            paginationContainer.innerHTML = '';
+            const itemsVisible = getItemsVisible();
+            const numPages = Math.ceil(totalOriginalItems / itemsVisible);
+
+            for (let i = 0; i < numPages; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('pagination-dot');
+                dot.dataset.page = i;
+                dot.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentIndex = (i * itemsVisible) + maxItemsPerPage;
+                    updateCarousel();
+                    setTimeout(startAutoSlide, autoSlideDelay * 2);
+                });
+                paginationContainer.appendChild(dot);
+            }
+        };
+
+        const updatePagination = () => {
+            createPaginationDots();
+
+            const itemsVisible = getItemsVisible();
+            let currentOriginalItemIndex = currentIndex - maxItemsPerPage;
+            if (currentOriginalItemIndex < 0) {
+                currentOriginalItemIndex += totalOriginalItems;
+            } else if (currentOriginalItemIndex >= totalOriginalItems) {
+                currentOriginalItemIndex -= totalOriginalItems;
+            }
+
+            const activePage = Math.floor(currentOriginalItemIndex / itemsVisible);
+
+            const dots = document.querySelectorAll('.pagination-dot');
+            dots.forEach((dot, index) => {
+                if (index === activePage) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+
+        // Initial setup
+        updateCarousel(false);
+        createPaginationDots();
+        startAutoSlide();
+
+        window.addEventListener('resize', () => {
+            updateCarousel(false);
+            stopAutoSlide(); 
+            startAutoSlide();
+        });
     });
 </script>
 
