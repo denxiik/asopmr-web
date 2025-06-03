@@ -148,6 +148,14 @@
     text-align: center;
 }
 
+.technology-solution .solutions .item:first-child {
+    border-left: none;
+}
+
+.technology-solution .solutions .item:last-child {
+    border-right: none;
+}
+
 .technology-solution .solutions .item .image-container {
     width: 30%;
     padding-bottom: 20%;
@@ -175,6 +183,12 @@
     height: 100%;
 }
 
+.technology-solution .solutions .item h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--green-aso);
+}
+
 .technology-solution .solutions .item .content h2 {
     font-weight: 100;
     font-size: 1rem;
@@ -182,20 +196,6 @@
 
 .technology-solution .solutions .item .content .download-app-container {
     margin-top: auto;
-}
-
-.technology-solution .solutions .item h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    color: var(--green-aso);
-}
-
-.technology-solution .solutions .item:first-child {
-    border-left: none;
-}
-
-.technology-solution .solutions .item:last-child {
-    border-right: none;
 }
 
 /* -------------------------

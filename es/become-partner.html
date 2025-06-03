@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazte socio</title>
+    <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+    <link rel="stylesheet" href="../css/become-partner.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
+</head>
+
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
+
+<body>
+    <!-- HOME SECTION (home) -->
+    <section class="home">
+        <div class="head">
+            <h1>
+                ¡Hazte socio gratuitamente!
+            </h1>
+            <h2>
+                Además de contribuir a la movilidad del colectivo PMR, disfrutarás de:
+            </h2>
+        </div>
+
+        <div class="solutions">
+            <div class="item">
+                <div class="image-container">
+                    <img src="../img/become-partners/certificate.webp" alt="Logo de Spot4Dis">
+                </div>
+                <div class="content">
+                    <h1>
+                        Beneficios exclusivos:
+                    </h1>
+                    <h2>
+                        Newsletter mensual sobre movilidad inclusiva, acceso a webinars y cursos especializados
+                    </h2>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-container">
+                    <img src="../img/become-partners/hands-up.webp" alt="Logo de Park4Dis">
+                </div>
+                <div class="content">
+                    <h1>
+                        Participación activa
+                    </h1>
+                    <h2>
+                        Tu voz y experiencia son valiosas para nuestro colectivo
+                    </h2>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="image-container">
+                    <img src="../img/become-partners/conversation.webp" alt="Logo de Park4Dis">
+                </div>
+                <div class="content">
+                    <h1>
+                        Red de apoyo
+                    </h1>
+                    <h2>
+                        Conectarás con otros miembros y profesionales comprometidos con la mejora de la movilidad
+                        inclusiva
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="register">
+    <h1>
+        Rellena el formulario de registro
+    </h1>
+    <h2>
+        Puedes hacerlo aquí o descargar el formulario en pdf y enviarlo debidamente cumplimentado a socios@asopmr.org
+    </h2>
+    <div class="button-container"> <button>
+            FORMULARIO WEB
+        </button>
+        <button>
+            FORMULARIO EN PDF
+        </button>
+    </div>
+</section>
+
+</body>
+
+<script>
+    function loadHTML(filename, elementId) {
+        return fetch(filename)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById(elementId).innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading HTML:', error);
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerPromise = loadHTML('header.html', 'header-placeholder');
+
+        Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+                    });
+                } else {
+                    console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
+                }
+            });
+    });
+</script>
+
+</html>
