@@ -15,14 +15,6 @@
     margin-left: 8%;
 }
 
-.mission-vision .content .mission .title,
-.mission-vision .content .vision .title,
-.mission-vision .content .mission .subtitle,
-.mission-vision .content .vision .subtitle {
-    font-weight: 500;
-    font-size: 1.8rem;
-}
-
 .mission-vision .content .mission .subtitle {
     padding-top: 3%;
     color: var(--green-aso);
@@ -34,7 +26,6 @@
 
 .mission-vision .content .vision .subtitle {
     padding-top: 3%;
-    font-size: 1.5rem;
     width: 80%;
     color: var(--green-aso);
     padding-bottom: 10%;
@@ -89,10 +80,8 @@
     margin-bottom: 1rem;
 }
 
-.values .header h1 {
-    font-size: 2.8rem;
+.values .header h4 {
     color: var(--dark-oranje-aso);
-    font-weight: 700;
 }
 
 /* Main grid container - now houses rows */
@@ -134,21 +123,16 @@
 }
 
 .values .grid-item .number {
-    font-size: 2.5rem;
-    font-weight: 900;
     color: var(--dark-oranje-aso);
     margin-bottom: 0.5rem;
 }
 
 .values .grid-item .title {
-    font-size: 1.8rem;
-    font-weight: 700;
     color: var(--dark-oranje-aso);
     margin-bottom: 0.5rem;
 }
 
 .values .grid-item .subtitle {
-    font-size: 1.2rem;
     color: var(--green-aso);
     line-height: 1.5;
 }
@@ -170,18 +154,14 @@
     padding-left: 8%;
 }
 
-.president .head h1 {
-    font-size: 2.2rem;
+.president .head h4 {
     letter-spacing: 10px;
-    font-weight: 500;
     color: var(--dark-oranje-aso);
 }
 
-.president .head h2 {
+.president .head h3 {
     padding-top: 1rem;
-    font-size: 2.2rem;
     letter-spacing: 2px;
-    font-weight: 500;
     color: var(--green-aso);
 }
 
@@ -194,31 +174,24 @@
 
 .president .content img {
     min-width: 40%;
-    height: 40%;
-    border-radius: 250px;
+    height:min-content;
+    border-radius: 300px;
 }
 
 .president .content .overview {
     padding-left: 12%;
-}
-
-.president .content .overview {
-    padding-top: 5%;
+    padding-top: 10%;
     color: var(--green-aso);
     line-height: 35px;
-    font-size: 1rem;
-}
-
-.president .content .overview h2 {
-    font-weight: 100;
 }
 
 .president .content .overview h3 {
-    font-weight: 100;
+    font-size: 1.5rem;
+    /* 24px / 16px = 1.5rem */
 }
 
 .president .content .overview button {
-    margin-top: 12%;
+    margin-top: 15%;
     margin-left: 5%;
     background-color: var(--green-aso);
 }
@@ -233,19 +206,11 @@
     background-color: var(--very-light-orange-aso);
 }
 
-.directors h1 {
+.directors h4 {
     padding-top: 4rem;
-    font-size: 2.5rem;
     color: var(--dark-oranje-aso);
     letter-spacing: 5px;
     margin-bottom: 0.5rem;
-    font-weight: 100;
-}
-
-.directors .title h2 {
-    font-size: 2rem;
-    color: var(--green-aso);
-    margin-top: 0;
 }
 
 .directors .grid {
@@ -291,14 +256,12 @@
     padding: 8%;
 }
 
-.director-item h3 {
-    font-size: 1.5rem;
+.director-item .paragraph-bold {
     color: var(--green-aso);
     margin-bottom: 0.5rem;
 }
 
 .director-item p {
-    font-size: 1.2rem;
     color: var(--dark-oranje-aso);
 }
 
@@ -310,9 +273,7 @@
     padding: 20px;
 }
 
-.awards-section h2 {
-    font-size: 2em;
-    font-weight: 300;
+.awards-section h4 {
     letter-spacing: 5px;
     padding: 5% 25%;
     color: var(--green-aso);
@@ -368,7 +329,6 @@
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 1.5em;
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -422,7 +382,6 @@
 
     .carousel-button {
         padding: 6px 10px;
-        font-size: 1em;
     }
 }
 
@@ -501,7 +460,7 @@
     /* -------------------------
         PRESIDENT SECTION (presindet)
     ------------------------- */
-    president {
+    .president {
         padding-top: 5%;
     }
 
@@ -531,15 +490,13 @@
         text-align: center;
     }
 
-    .president .content .overview h2 {
+    .president .content .overview h3 {
         padding: 0 5%;
-        font-size: 1.2rem;
         line-height: 25px;
     }
 
     .president .content .overview button {
         margin-top: 5%;
-        font-size: 1.2rem;
         padding: 8px 30px;
     }
 
@@ -571,39 +528,16 @@
 
     .carousel-button {
         padding: 8px 12px;
-        font-size: 1.2em;
-    }
-
-    .awards-section h2 {
-        font-size: 1.5rem;
     }
 }
 
 /* Mediums devices (desktops, 1080px and down) */
-@media (max-width: 1080px) {
+    @media (max-width: 1080px) {
 
-    /* -------------------------
-        MISSION AND VISION SECTION (mission-vision)
-    ------------------------- */
-    .mission-vision .content .mission .title,
-    .mission-vision .content .vision .title,
-    .mission-vision .content .mission .subtitle,
-    .mission-vision .content .vision .subtitle {
-        font-weight: 500;
-        font-size: 1.8rem;
+        /* -------------------------
+            AWARDS SECTION (awards)
+        ------------------------- */
+        .awards-section h4 {
+            padding: 5%;
+        }
     }
-
-    .mission-vision .content .vision .subtitle {
-        font-size: 1.5rem;
-    }
-
-    /* -------------------------
-        AWARDS SECTION (awards)
-    ------------------------- */
-    .awards-section h2 {
-        padding: 5%;
-    }
-}
-
-/* Large devices (desktops, 1080px and up) */
-@media (min-width: 1080px) {}

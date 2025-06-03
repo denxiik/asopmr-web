@@ -9,19 +9,17 @@
     flex-direction: row;
 }
 
-.services h1 {
+.services h2 {
     width: 55%;
     padding-left: 8%;
     padding-top: 8%;
     color: var(--green-aso);
-    font-size: 2.5rem;
-    font-weight: 100;
 }
 
 .services img {
     position: static;
     margin-left: auto;
-    width: 30%;
+    width: 40%;
     margin-bottom: -5%;
 }
 
@@ -41,22 +39,15 @@
     padding-right: 10%;
 }
 
-.support .features h1 {
+.support .features h3 {
     padding-top: 5%;
     text-align: left;
-    font-size: 2rem;
     padding-left: 3.5rem;
     color: var(--dark-oranje-aso);
 }
 
-.support .features .feature-item p {
-    font-weight: 100;
-    font-size: 1.3rem;
-}
-
 .support .features .feature-item p strong {
     color: var(--dark-oranje-aso);
-    font-weight: 900;
 }
 
 /* -------------------------
@@ -79,22 +70,11 @@
 .service-left-image .content h1 {
     color: var(--dark-oranje-aso);
     padding-top: 8%;
-    font-size: 2.2rem;
     padding-bottom: 1.5rem;
-}
-
-.service-left-image .content h2 {
-    font-weight: 100;
-    font-size: 1.5rem;
 }
 
 .service-left-image .content .feature-item {
     padding-top: 5%;
-}
-
-.service-left-image .content .feature-item p {
-    font-weight: 100;
-    font-size: 1rem;
 }
 
 .service-left-image .content button {
@@ -121,13 +101,10 @@
 
 .technology-solution .head h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2.2rem;
 }
 
 .technology-solution .head h2 {
     padding-top: 2rem;
-    font-size: 1.8rem;
-    font-weight: 100;
     color: var(--green-aso);
 }
 
@@ -185,13 +162,7 @@
 
 .technology-solution .solutions .item h1 {
     margin: 0;
-    font-size: 2.2rem;
     color: var(--green-aso);
-}
-
-.technology-solution .solutions .item .content h2 {
-    font-weight: 100;
-    font-size: 1rem;
 }
 
 .technology-solution .solutions .item .content .download-app-container {
@@ -210,12 +181,9 @@
 
 .PMR-courses h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2.2rem;
 }
 
 .PMR-courses h2 {
-    font-weight: 100;
-    font-size: 1.8rem;
     padding: 5% 15%;
 }
 
@@ -243,22 +211,11 @@
 
 .service-right-image .content h1 {
     color: var(--dark-oranje-aso);
-    font-size: 2rem;
     padding-bottom: 1.5rem;
-}
-
-.service-right-image .content h2 {
-    font-weight: 100;
-    font-size: 2rem;
 }
 
 .service-right-image .content .feature-item {
     padding-top: 5%;
-}
-
-.service-right-image .content .feature-item p {
-    font-weight: 100;
-    font-size: 1rem;
 }
 
 /* Mediums devices (desktops, 1080px and down) */
@@ -272,12 +229,11 @@
         align-items: center;
     }
 
-    .services h1 {
+    .services h2 {
         padding-left: 0%;
         padding: 0% 10%;
         text-align: center;
         width: 100%;
-        font-size: 2rem;
     }
 
     .services img {
@@ -290,9 +246,8 @@
     /* -------------------------
         SUPPORT SECTION (support)
     ------------------------- */
-    .support .features h1 {
+    .support .features h3 {
         padding-left: 0;
-        font-size: 2rem;
         text-align: center;
         padding-bottom: 1.5rem;
     }
@@ -311,14 +266,6 @@
         width: 70%;
     }
 
-    .service-left-image .content h1 {
-        font-size: 2rem;
-    }
-
-    .service-left-image .content h2 {
-        font-size: 1.3rem;
-    }
-
     .service-left-image .content .feature-item {
         padding-top: 5%;
     }
@@ -335,14 +282,6 @@
     /* -------------------------
         TECHNOLOGY SOLUTION SECTION (technology-solution)
     ------------------------- */
-    .technology-solution .head h1 {
-        font-size: 2.2rem;
-    }
-
-    .technology-solution .head h2 {
-        font-size: 1.5rem;
-    }
-
     .technology-solution .solutions {
         padding-top: 5%;
         display: flex;
@@ -356,12 +295,7 @@
     /* -------------------------
         PMR COURSES SECTION (PMR-courses)
     ------------------------- */
-    .PMR-courses h1 {
-        font-size: 2rem;
-    }
-
     .PMR-courses h2 {
-        font-size: 1.6rem;
         padding: 10% 0%;
     }
 
@@ -382,16 +316,6 @@
     }
 
     .service-right-image .content h1 {
-        font-size: 2rem;
         text-align: center;
-    }
-
-    .service-right-image .content h2 {
-        font-size: 2rem;
-    }
-
-    .service-right-image .content .feature-item p {
-        font-weight: 100;
-        font-size: 1.2rem;
     }
 }

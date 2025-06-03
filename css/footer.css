@@ -12,7 +12,6 @@
 /* Styles for the upper section */
 .site-footer .asoPMR-info {
     background-color: var(--oranje-aso);
-    font-size: 1rem;
 }
 
 .site-footer .asoPMR-info .asoPMR-content-wrapper {
@@ -43,7 +42,7 @@
 
 .site-footer .asoPMR-content-wrapper .contact button {
   padding: 3% 5%;
-  border: 1px solid var(--white); /* Example: 1px solid black border */
+  border: 1px solid var(--white);
 }
 
 .site-footer .asoPMR-content-wrapper .news {
@@ -63,18 +62,12 @@
     width: 20%;
 }
 
-.site-footer .asoPMR-info h1,
-.site-footer .asoPMR-info h2 {
-    font-size: 1.1rem;
-    font-weight: 100;
-}
-
-.site-footer .asoPMR-info h1 {
+.site-footer .asoPMR-info .asoPMR-content-wrapper .column .paragraph-normal {
     color: var(--green-aso);
     padding-bottom: 1.5rem;
 }
 
-.site-footer .asoPMR-info h2 {
+.site-footer .asoPMR-info .column div h2 {
     margin-top: 3%;
 }
 
@@ -106,7 +99,6 @@
 }
 
 .site-footer .policies a {
-    font-size: 1rem;
     color: var(--white);
     align-self: center;
 }
@@ -132,7 +124,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 4rem 1rem;
         padding: 8% 3%;
-        font-size: 0.8rem;
     }
 
     .site-footer .asoPMR-info .column {
@@ -149,6 +140,8 @@
     .site-footer .asoPMR-info .logo img {
         content: url("../img/asoPMR-logo-white.webp");
         padding: auto;
+        width: 70%;
+        height: fit-content;
     }
 
     .site-footer .asoPMR-content-wrapper .contact,
@@ -162,11 +155,6 @@
         padding-bottom: 0.5rem;
     }
 
-    .site-footer .aso-policies,
-    .site-footer .aso-policies .policies p a {
-        font-size: 0.8rem;
-    }
-
     .site-footer .policies {
         margin-bottom: 1rem;
     }
@@ -175,17 +163,4 @@
         padding: 0 1em;
         text-align: center;
     }
-
-    .site-footer .inscribtion-info {
-        font-size: 0.6rem;
-    }
-}
-
-/* Small devices (phones, 768px and down) */
-@media (max-width: 768px) {
-    .site-footer .asoPMR-info .logo img {
-        width: 70%;
-        height: fit-content;
-    }
-
 }

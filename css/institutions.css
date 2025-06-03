@@ -21,19 +21,7 @@
 }
 
 .service .content .title h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.service .content .title h1 {
     padding: 25px 0px;
-    font-size: 1.8rem;
-    font-weight: 900;
-}
-
-.service .content .title h2 {
-    font-size: 1.6rem;
-    font-weight: 100;
 }
 
 .service .content img {
@@ -52,15 +40,9 @@
     padding-right: 10%;
 }
 
-.service .features .feature-item p {
-    font-weight: 100;
-    font-size: 1rem;
-}
-
-.service .features h1 {
+.service .features h3 {
     padding-top: 8%;
     text-align: center;
-    font-size: 1.8rem;
 }
 
 /* service right image (type 1 of services) */
@@ -68,15 +50,15 @@
     padding-left: 10%;
 }
 
+.service-right-image .content .title .paragraph-bold {
+    color: var(--dark-oranje-aso);
+}
+
 .service-right-image .content .title h3 {
     color: var(--dark-oranje-aso);
 }
 
-.service-right-image .content .title h1 {
-    color: var(--dark-oranje-aso);
-}
-
-.service-right-image .content .title h2 {
+.service-right-image .content .title h4 {
     color: var(--green-aso);
 }
 
@@ -90,7 +72,7 @@
     background-color: var(--very-light-orange-aso);
 }
 
-.service-right-image .features h1 {
+.service-right-image .features h3 {
     color: var(--dark-oranje-aso);
 }
 
@@ -100,15 +82,15 @@
     padding-right: 10%;
 }
 
+.service-left-image .content .title .paragraph-bold {
+    color: var(--green-aso);
+}
+
 .service-left-image .content .title h3 {
     color: var(--green-aso);
 }
 
-.service-left-image .content .title h1 {
-    color: var(--green-aso);
-}
-
-.service-left-image .content .title h2 {
+.service-left-image .content .title h4 {
     color: var(--dark-oranje-aso);
 }
 
@@ -121,7 +103,7 @@
     background-color: #e9eeee;
 }
 
-.service-left-image .features h1 {
+.service-left-image .features h3 {
     color: var(--green-aso);
 }
 
@@ -134,13 +116,12 @@
     flex-direction: row;
 }
 
-.services h1 {
+.services h2 {
     width: 55%;
-    padding-left: 8%;
+    padding-left: 10%;
     padding-top: 8%;
     color: var(--green-aso);
-    font-size: 2.5rem;
-    font-weight: 100;
+    padding-bottom: 5%;
 }
 
 .services img {
@@ -159,12 +140,10 @@
     padding-bottom: 5%;
 }
 
-.improve-mobility h1 {
+.improve-mobility h4 {
     color: var(--light-green-aso);
-    font-size: 1.8rem;
     text-align: center;
     letter-spacing: 10px;
-    font-weight: 500;
     margin: 0 5%;
 }
 
@@ -178,9 +157,7 @@
 
 .contact-section h1 {
     color: var(--light-green-aso);
-    padding: 6% 12%;
-    font-size: 2.2rem;
-    font-weight: 100;
+    padding: 6% 10%;
     text-align: center;
 }
 
@@ -221,21 +198,11 @@
     .service .features {
         padding: 10% 10%;
     }
-
-    .service .features .feature-item p {
-        font-size: 1rem;
-    }
-
-    .service .features h1 {
-        font-size: 1.5rem;
-    }
-
     /* -------------------------
         CONTACT SECTION (contact)
     ------------------------- */
     .contact-section h1 {
         padding: 6% 5%;
-        font-size: 2rem;
     }
 
     /* -------------------------
@@ -257,12 +224,11 @@
         align-items: center;
     }
 
-    .services h1 {
+    .services h2 {
         padding-left: 0%;
         padding: 0% 10%;
         text-align: center;
         width: 100%;
-        font-size: 2rem;
     }
 
     .services img {
@@ -275,8 +241,7 @@
     /* -------------------------
         IMPROVE MOBILITY SECTION (improve-mobility)
     ------------------------- */
-    .improve-mobility h1 {
-        font-size: 2rem;
+    .improve-mobility h4 {
         letter-spacing: 5px;
     }
 }

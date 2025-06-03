@@ -1,5 +1,9 @@
 @import url('styles.css');
 
+h3 {
+    font-weight: 400 !important;;
+}
+
 /* -------------------------
     HOME SECTION (home)
 ------------------------- */
@@ -17,9 +21,8 @@
     position: static;
     margin-top: 1%;
     margin-left: 10%;
-    font-size: 3rem;
+    max-width: 75%;
     color: var(--white);
-    font-weight: 100;
     letter-spacing: 3px;
 }
 
@@ -41,7 +44,7 @@
     padding: auto;
     bottom: 10%;
     right: 10%;
-    max-width: 25rem;
+    max-width: 22rem;
     height: auto;
 }
 
@@ -50,6 +53,7 @@
 ------------------------- */
 .subhome {
     display: flex;
+    padding: 2% 0%;
 }
 
 .subhome .title {
@@ -57,14 +61,12 @@
     color: var(--green-aso);
     margin-left: 6%;
     margin-top: 8%;
-    font-size: 1.8rem;
-    font-weight: 100;
 }
 
 .subhome .image {
     position: absolute;
     padding-left: 20rem;
-    width: 55%;
+    width: 65%;
     height: auto;
     right: 0%;
 }
@@ -81,7 +83,6 @@
 
 .service-benefits .title {
     width: 100%;
-    font-size: 2rem;
     padding: 3rem;
     text-align: center;
     background-color: var(--dark-oranje-aso);
@@ -116,12 +117,12 @@
     display: block;
 }
 
-.grid-item h3 {
+.grid-item .paragraph-bold {
     flex-shrink: 0;
-    padding: 2rem 1.5rem;
+    padding: 2.2rem 1.5rem;
+    height: 108px;
     color: var(--white);
     background-color: var(--light-orange-aso);
-    font-size: 1.3em;
     margin-top: 0;
 }
 
@@ -145,20 +146,12 @@
     max-width: 45%;
 }
 
-.park4dis-sample h1 {
-    color: var(--green-aso);
-    font-weight: 100;
-    font-size: 2rem;
-}
-
-.park4dis-sample h1 strong {
-    font-weight: 900;
-}
-
 .park4dis-sample h3 {
+    color: var(--green-aso);
+}
+
+.park4dis-sample .paragraph-normal {
     margin-top: 2rem;
-    font-weight: 100;
-    font-size: 1.3rem;
 }
 
 .park4dis-sample .content .feature-list {
@@ -242,24 +235,12 @@
     max-width: 45%;
 }
 
-.spot4dis-sample h1 {
-    font-weight: 100;
-    font-size: 2rem;
+.spot4dis-sample h3 {
     color: var(--green-aso);
 }
 
-.spot4dis-sample h1 strong {
-    font-weight: 900;
-}
-
-.spot4dis-sample h3 {
+.spot4dis-sample .paragraph-normal {
     margin-top: 2rem;
-    font-weight: 100;
-    font-size: 1.3rem;
-}
-
-.spot4dis-sample h3 strong {
-    font-weight: 900;
 }
 
 .spot4dis-sample .content .feature-list {
@@ -351,14 +332,12 @@
 }
 
 .our-goal .title {
-    font-size: 2rem;
     text-align: center;
     color: var(--white);
     background-color: var(--green-aso);
 }
 
-.our-goal .title h1 {
-    font-weight: 100;
+.our-goal .title h2 {
     margin: 5% 5%;
 }
 
@@ -384,20 +363,12 @@
     width: 45%;
 }
 
-.transform-munitipality .content .title h2 {
+.transform-munitipality .content .title .paragraph-bold {
     color: var(--dark-oranje-aso);
-    font-size: 1.2rem;
-}
-
-.transform-munitipality .content .title h1 {
-    padding: 25px 0px;
-    font-size: 2.2rem;
-    font-weight: 100;
 }
 
 .transform-munitipality .content .title h3 {
-    font-weight: 100;
-    font-size: 1.5rem;
+    padding: 25px 0px;
 }
 
 .transform-munitipality .content img {
@@ -414,11 +385,6 @@
     padding-left: 12%;
     padding-top: 5%;
     padding-bottom: 10%;
-}
-
-.transform-munitipality .feature-list .feature-item p {
-    font-weight: 100;
-    font-size: 1.3rem;
 }
 
 /* -------------------------
@@ -438,25 +404,16 @@
     padding: 0 5%;
 }
 
-.park4dis-admin .content h1 {
+.park4dis-admin .content h3 {
     color: var(--dark-oranje-aso);
-    font-weight: 100;
-    font-size: 2rem;
 }
 
-.park4dis-admin .content h1 strong {
-    font-weight: 900;
-}
-
-.park4dis-admin .content h2 {
+.park4dis-admin .content p {
     padding: 10% 0;
-    font-size: 1.5rem;
-    font-weight: 100;
 }
 
 .park4dis-admin .content button {
     margin-top: 10%;
-    font-size: 1.2rem;
     background-color: var(--green-aso);
 }
 
@@ -478,7 +435,6 @@
 
     .home .title {
         text-align: center;
-        font-size: 2rem;
     }
 
     .home .images {
@@ -516,8 +472,6 @@
         text-align: center;
         margin-left: 0%;
         margin-top: 8%;
-        font-size: 1.2rem;
-        font-weight: 100;
     }
 
     .subhome .image {
@@ -531,38 +485,13 @@
     /* -------------------------
         SERVICE-BENEFITS SECTION (service-benefits)
     ------------------------- */
-    .service-benefits .title {
-        font-size: 1.2rem;
-    }
 
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .grid-item h3 {
-        font-size: 0.8em;
         padding: 2rem 0rem;
-    }
-
-    /* -------------------------
-        PARK4DIS SECTION (park4dis-sample)
-    ------------------------- */
-    .park4dis-sample .content h1 {
-        font-size: 2rem;
-    }
-
-    /* -------------------------
-        SPOT4DIS SECTION (spot4dis-sample)
-    ------------------------- */
-    .spot4dis-sample .content h1 {
-        font-size: 2rem;
-    }
-
-    /* -------------------------
-        OUR GOAL SECTION (our-goal)
-    ------------------------- */
-    .our-goal .title {
-        font-size: 1rem;
     }
 }
 
@@ -599,7 +528,7 @@
         text-align: center;
     }
 
-    .park4dis-sample .content h1 {
+    .park4dis-sample .content h3 {
         text-align: center;
     }
 
@@ -636,7 +565,7 @@
     .park4dis-sample .draw #p4d-center-circle {
         position: absolute;
         width: 75%;
-        top: 15%;
+        top: 20%;
         left: 5%;
         transform: translate(-50%, -50%);
         z-index: -1;
@@ -680,7 +609,7 @@
         text-align: center;
     }
 
-    .spot4dis-sample .content h1 {
+    .spot4dis-sample .content h3 {
         text-align: center;
     }
 
@@ -696,8 +625,6 @@
         padding-top: 2%;
         justify-content: flex-start;
     }
-    
-
 
     .spot4dis-sample .draw {
         position: relative;
@@ -746,13 +673,6 @@
     }
 
     /* -------------------------
-        OUR GOAL SECTION (our-goal)
-    ------------------------- */
-    .our-goal .title {
-        font-size: 1.3rem;
-    }
-
-    /* -------------------------
         TRANSFORM MUNITIPALITY SECTION (transform-munitipality)
     ------------------------- */
     .transform-munitipality .content {
@@ -778,11 +698,6 @@
     .transform-munitipality .feature-list {
         padding: 10% 10%;
     }
-
-    .transform-munitipality .feature-list .feature-item p {
-        font-size: 1rem;
-    }
-
     /* -------------------------
         PARK4DIS ADMIN SECTION (park4dis-admin)
     ------------------------- */
@@ -799,18 +714,19 @@
     .park4dis-admin .content {
         padding: 0 10%;
     }
-
-    .park4dis-admin .content h1 {
-        font-size: 1.5rem;
-    }
-
-    .park4dis-admin .content h2 {
+    .park4dis-admin .content p {
         padding: 5% 0;
-        font-size: 1rem;
     }
+}
 
-    .park4dis-admin .content button {
-        font-size: 0.6rem;
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* -------------------------
+        SUBHOME SECTION (subhome)
+    ------------------------- */
+    .subhome {
+        display: flex;
+        padding: 7% 0%;
     }
-
 }

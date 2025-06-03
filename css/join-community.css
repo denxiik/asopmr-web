@@ -14,12 +14,7 @@
     color: var(--light-green-aso);
     padding: 6% 10%;
     padding-bottom: 12%;
-    font-size: 1.8rem;
     text-align: center;
-}
-
-.join-community .title h1 {
-    font-weight: 100;
 }
 
 .join-community .content {
@@ -36,8 +31,6 @@
 }
 
 .join-community .content .subtitle h2 {
-    font-weight: 100;
-    font-size: 1.5rem;
     padding-bottom: 10%;
 }
 
@@ -50,8 +43,13 @@
     margin-left: auto;
     margin-right: 4%;
     margin-top: -6%;
-    width: 30%;
+    width: 40%;
     z-index: 1;
+}
+
+.join-community .content button {
+    margin-top: 2rem;
+    background-color: var(--green-aso);
 }
 
 /* Mediums devices (desktops, 1080px and down) */
@@ -66,7 +64,6 @@
     }
 
     .join-community .title {
-        font-size: 1.5rem;
         padding: 8%
     }
 
