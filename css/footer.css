@@ -41,19 +41,20 @@
 }
 
 .site-footer .asoPMR-content-wrapper .contact button {
-  padding: 3% 5%;
-  border: 1px solid var(--white);
+    padding: 3% 5%;
+    border: 1px solid var(--white);
 }
 
 .site-footer .asoPMR-content-wrapper .news {
     width: 20%;
 }
 
-.site-footer .asoPMR-content-wrapper u {
+.site-footer .column a {
     text-decoration: none;
+    color: var(--white);
 }
 
-.site-footer .asoPMR-content-wrapper u:hover {
+.site-footer .column a:hover {
     text-decoration: underline;
 }
 
@@ -116,7 +117,6 @@
     text-decoration: underline;
 }
 
-
 /* Very small devices (phones, 620px and down) */
 @media (max-width: 620px) {
     .site-footer .asoPMR-info .asoPMR-content-wrapper {
@@ -132,16 +132,19 @@
     }
 
     .site-footer .asoPMR-info .logo {
-        width: 100%;
+        width: 100%; 
         align-self: center;
-        padding-right: 10%;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .site-footer .asoPMR-info .logo img {
         content: url("../img/asoPMR-logo-white.webp");
-        padding: auto;
-        width: 70%;
-        height: fit-content;
+        max-width: 100%; 
+        height: auto; 
+        padding: 0; 
     }
 
     .site-footer .asoPMR-content-wrapper .contact,
@@ -160,7 +163,16 @@
     }
 
     .site-footer .policies p {
-        padding: 0 1em;
+        padding: 0 0.1rem;
         text-align: center;
+    }
+
+    .site-footer .policies a {
+        text-decoration: none;
+        font-size: 0.5rem;
+    }
+
+    .site-footer .inscribtion-info .paragraph-normal {
+        font-size: 0.5rem;
     }
 }

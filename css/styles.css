@@ -78,14 +78,14 @@ h3 {
     font-size: 2.625rem;
     /* 42px / 16px = 2.625rem */
     font-weight: 700;
-    letter-spacing: 30%;
+    letter-spacing: 2px;
 }
 
 h4 {
     font-size: 2.125rem;
     /* 34px / 16px = 2.125rem */
     font-weight: 500;
-    letter-spacing: 30%;
+    letter-spacing: 2px;
 }
 
 h5 {
@@ -102,7 +102,6 @@ button,
     /* 22px / 16px = 1.375rem */
     font-weight: 400;
     line-height: 90%;
-    letter-spacing: 34%;
 }
 
 button {
@@ -125,9 +124,7 @@ button {
     font-size: 1.125rem;
     /* 18px / 16px = 1.125rem */
     font-weight: 400;
-    line-height: 28px;
     letter-spacing: 0%;
-
 }
 
 /* Menus */
