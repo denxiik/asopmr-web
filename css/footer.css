@@ -49,11 +49,12 @@
     width: 20%;
 }
 
-.site-footer .asoPMR-content-wrapper u {
+.site-footer .column a {
     text-decoration: none;
+    color: var(--white);
 }
 
-.site-footer .asoPMR-content-wrapper u:hover {
+.site-footer .column a:hover {
     text-decoration: underline;
 }
 
@@ -141,7 +142,7 @@
         content: url("../img/asoPMR-logo-white.webp");
         padding: auto;
         width: 70%;
-        height: fit-content;
+        max-height: max-content;
     }
 
     .site-footer .asoPMR-content-wrapper .contact,
