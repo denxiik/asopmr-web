@@ -61,28 +61,32 @@
 
 .service-left-image .image {
     width: 30%;
+    max-height: 650px;
 }
 
 .service-left-image .content {
     padding-left: 5%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.service-left-image .content h1 {
+.service-left-image .content h3 {
     color: var(--dark-oranje-aso);
     padding-top: 8%;
     padding-bottom: 1.5rem;
+    text-align: left;
 }
 
 .service-left-image .content .feature-item {
     padding-top: 5%;
+    text-align: left;
 }
 
-.service-left-image .content button {
+.service-left-image button {
     background-color: var(--dark-oranje-aso);
-    margin-left: 50%;
     margin-top: 10%;
-    transform: translate(-50%, 0%);
-}
+    align-self: center;}
 
 /* -------------------------
     TECHNOLOGY SOLUTION SECTION (technology-solution)
@@ -99,13 +103,14 @@
     text-align: center;
 }
 
-.technology-solution .head h1 {
+.technology-solution .head h3 {
     color: var(--dark-oranje-aso);
 }
 
-.technology-solution .head h2 {
+.technology-solution .head h5 {
     padding-top: 2rem;
     color: var(--green-aso);
+    line-height: 150%;
 }
 
 .technology-solution .solutions {
@@ -160,7 +165,8 @@
     height: 100%;
 }
 
-.technology-solution .solutions .item h1 {
+.technology-solution .solutions .item h3,
+.technology-solution .solutions .item h5 {
     margin: 0;
     color: var(--green-aso);
 }
@@ -179,12 +185,12 @@
     text-align: center;
 }
 
-.PMR-courses h1 {
+.PMR-courses h3 {
     color: var(--dark-oranje-aso);
 }
 
-.PMR-courses h2 {
-    padding: 5% 15%;
+.PMR-courses h5 {
+    padding: 5% 20%;
 }
 
 .PMR-courses button {
@@ -209,7 +215,7 @@
     padding-right: 3%;
 }
 
-.service-right-image .content h1 {
+.service-right-image .content h3 {
     color: var(--dark-oranje-aso);
     padding-bottom: 1.5rem;
 }
@@ -270,13 +276,12 @@
         padding-top: 5%;
     }
 
-    .service-left-image .content .feature-item p {
-        text-align: left;
+    .service-left-image .content h3 {
+        text-align: center;
     }
 
-    .service-left-image .content button {
-        margin-left: auto;
-        transform: translate(0%, 0%);
+    .service-left-image .content .feature-item p {
+        text-align: left;
     }
 
     /* -------------------------
@@ -295,19 +300,20 @@
     /* -------------------------
         PMR COURSES SECTION (PMR-courses)
     ------------------------- */
-    .PMR-courses h2 {
+    .PMR-courses h5 {
         padding: 10% 0%;
     }
 
     /* -------------------------
-    SERVICE RIGHT IMAGE SECTION (service-right-image)
-------------------------- */
+        SERVICE RIGHT IMAGE SECTION (service-right-image)
+    ------------------------- */
     .service-right-image {
         flex-direction: column;
         align-items: center;
     }
 
     .service-right-image .image {
+        padding-top: 10%;
         width: 70%;
     }
 
@@ -315,7 +321,7 @@
         padding: 0%;
     }
 
-    .service-right-image .content h1 {
+    .service-right-image .content h3 {
         text-align: center;
     }
 }
