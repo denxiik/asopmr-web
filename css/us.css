@@ -175,7 +175,7 @@
 .president .content img {
     min-width: 40%;
     height:min-content;
-    border-radius: 300px;
+    border-radius: 100%;
 }
 
 .president .content .overview {

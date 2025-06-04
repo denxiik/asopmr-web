@@ -21,7 +21,6 @@ h3 {
     max-width: 75%;
     color: var(--white);
     letter-spacing: 3px;
-    z-index: 1;
 }
 
 .home .images {
