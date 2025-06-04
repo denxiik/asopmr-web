@@ -14,7 +14,7 @@
 }
 
 .service .content .title {
-    padding-top: 10%;
+    padding: 12% 0%;
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -26,9 +26,10 @@
 
 .service .content img {
     position: static;
-    padding-top: 4%;
+    height: 100%;
     margin-bottom: -2%;
-    width: 25%;
+    margin-top: auto;
+    width: 30%;
     z-index: 1;
 }
 
@@ -96,7 +97,7 @@
 
 .service-left-image .content img {
     margin-left: 8%;
-    margin-right: 8%;
+    margin-right: 20%;
 }
 
 .service-left-image .features {
@@ -128,7 +129,9 @@
     position: static;
     margin-left: auto;
     width: 40%;
+    height: 100%;
     margin-bottom: -5%;
+    margin-top: auto;
 }
 
 /* -------------------------
@@ -235,7 +238,7 @@
         margin-right: auto;
         width: 70%;
         margin-top: 10%;
-        margin-bottom: 0%;
+        margin-bottom: 5%;
     }
 
     /* -------------------------

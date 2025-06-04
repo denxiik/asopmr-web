@@ -31,7 +31,7 @@
 }
 
 .nav-bar {
-    margin-left: auto;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
 }
@@ -147,6 +147,7 @@
 
     /* Position the initially hidden navigation bar */
     .nav-bar {
+        margin-left: auto;
         position: absolute;
         top: 6rem;
         /* Below the header */
