@@ -142,7 +142,7 @@
         content: url("../img/asoPMR-logo-white.webp");
         padding: auto;
         width: 70%;
-        max-height: max-content;
+        max-height: 80px;
     }
 
     .site-footer .asoPMR-content-wrapper .contact,
