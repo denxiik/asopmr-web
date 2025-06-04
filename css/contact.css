@@ -1,0 +1,125 @@
+@import url('styles.css');
+
+/* -------------------------
+    CONTACT SECTION (contact)
+------------------------- */
+.contact {
+    display: flex; /* Makes it a flex container */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: center; /* Centers content when it wraps or there's extra space */
+    align-items: flex-start; /* Aligns items to the top */
+    padding: 50px 20px; /* Adjust overall section padding */
+    gap: 40px; /* Space between the info and form columns */
+    background-color: var(--light-gray-aso); /* Example background color */
+}
+
+.contact-info {
+    padding-top: 5%;
+    flex: 1; /* Allows this column to grow */
+    min-width: 300px; /* Ensures it doesn't get too narrow */
+    max-width: 500px; /* Limits its maximum width */
+    color: var(--dark-blue-aso); /* Example text color */
+    text-align: center;
+}
+
+.contact-info .paragraph-bold {
+    color: var(--green-aso); /* Example heading color */
+    margin-bottom: 0%;
+    margin-top: 4%;
+}
+
+.contact-info .title {
+    letter-spacing: 0.3rem;
+}
+
+.contact-info h3 {
+    color: var(--dark-oranje-aso); /* Example subheading color */
+    margin-bottom: 2%;
+}
+
+
+.contact-info button {
+    background-color: var(--green-aso);
+    margin: 3% 0%;
+    letter-spacing: 0;
+}
+
+.contact-form-container {
+    flex: 1; /* Allows the form container to grow */
+    min-width: 300px; /* Ensures it doesn't get too narrow */
+    max-width: 500px; /* Limits its maximum width */
+    background-color: var(--green-aso); /* Form background */
+    padding: 50px 30px;
+    border-radius: 15px; /* Rounded corners for the form */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--white); /* Example label color */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--light-gray-aso);
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--green-aso); /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--green-aso-rgb), 0.2); /* Soft focus ring */
+}
+
+.contact-form button {
+    background-color: var(--dark-oranje-aso);
+    margin-top: 1rem;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center; /* Center items when stacked */
+        padding: 30px 15px;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        max-width: 100%; /* Allow them to take full width */
+        width: 100%; /* Ensure they stretch */
+        padding: 25px;
+    }
+
+    .contact-info h4 {
+        text-align: center;
+    }
+
+    .contact-info p,
+    .contact-info h3 {
+        text-align: center;
+    }
+
+    .contact-info .button-mail {
+        display: block; /* Make the button full width */
+        width: fit-content; /* Adjust width to content */
+        margin-left: auto; /* Center button */
+        margin-right: auto; /* Center button */
+    }
+}
