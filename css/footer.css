@@ -132,16 +132,19 @@
     }
 
     .site-footer .asoPMR-info .logo {
-        width: 100%;
+        width: 100%; 
         align-self: center;
-        padding-right: 10%;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .site-footer .asoPMR-info .logo img {
         content: url("../img/asoPMR-logo-white.webp");
-        padding: auto;
-        width: 80px;
-        height: 50px;
+        max-width: 100%; 
+        height: auto; 
+        padding: 0; 
     }
 
     .site-footer .asoPMR-content-wrapper .contact,
