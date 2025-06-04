@@ -188,6 +188,7 @@
 .president .content .overview h3 {
     font-size: 1.5rem;
     /* 24px / 16px = 1.5rem */
+    font-weight: 400;
 }
 
 .president .content .overview button {
