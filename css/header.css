@@ -112,7 +112,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    height: 3rem;
+    font-size: 1.5rem;
     order: 1;
     margin-left: auto;
 }
