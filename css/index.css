@@ -13,39 +13,41 @@ h3 {
     min-height: calc(80vh);
     background-color: var(--green-aso);
     position: relative;
-    margin-bottom: 10rem;
 }
 
-
 .home .title {
-    position: static;
     margin-top: 1%;
     margin-left: 10%;
     max-width: 75%;
     color: var(--white);
     letter-spacing: 3px;
+    z-index: 1;
 }
 
 .home .images {
     display: flex;
-    position: static;
     padding-top: 2%;
+    position: relative;
+    margin-top: auto;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .home .image {
-    position: static;
-    margin-bottom: -50%;
+    margin-bottom: -5%;
     width: 55%;
     height: 30%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .home .subimage {
-    position: absolute;
-    padding: auto;
-    bottom: 10%;
-    right: 10%;
+    position: static;
     max-width: 22rem;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
 }
 
 /* -------------------------
@@ -53,22 +55,29 @@ h3 {
 ------------------------- */
 .subhome {
     display: flex;
-    padding: 2% 0%;
+    padding: 7% 0%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .subhome .title {
-    position: static;
     color: var(--green-aso);
     margin-left: 6%;
-    margin-top: 8%;
+    flex: 1;
+    min-width: 200px;
+    max-width: 50%;
 }
 
 .subhome .image {
-    position: absolute;
-    padding-left: 20rem;
-    width: 65%;
+    width: 40%;
+    max-width: 650px;
     height: auto;
-    right: 0%;
+    object-fit: cover;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 0%;
 }
 
 /* -------------------------
@@ -76,7 +85,6 @@ h3 {
 ------------------------- */
 .service-benefits {
     display: flex;
-    padding-top: 15%;
     justify-content: center;
     flex-direction: column;
 }
@@ -126,7 +134,7 @@ h3 {
     margin-top: 0;
 }
 
-.grid-item-center h3 {
+.grid-item-center .paragraph-bold {
     background-color: var(--slightly-darker-orange-aso);
 }
 
@@ -244,16 +252,18 @@ h3 {
 }
 
 .spot4dis-sample .content .feature-list {
-    margin-top: 0.5rem;
+    margin-top: 0;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 120%;
 }
 
 .spot4dis-sample .content .feature-item {
-    padding-top: 0%;
+    padding-top: 1rem;
 }
 
-.spot4dis-sample .content .feature-item:not(:first-child) {
-    padding-left: 4%;
+.spot4dis-sample .content .feature-item {
+    padding-right: 4%;
 }
 
 .spot4dis-sample .content .feature-item img {
@@ -398,6 +408,7 @@ h3 {
 .park4dis-admin img {
     padding-top: 5%;
     width: 50%;
+    height: 100%;
 }
 
 .park4dis-admin .content {
@@ -517,7 +528,6 @@ h3 {
         flex-direction: column;
         padding-bottom: 15%;
         overflow: visible;
-        /* Allow overflow for better mobile layout */
     }
 
     .park4dis-sample .content {
@@ -617,7 +627,7 @@ h3 {
         margin-top: 1rem;
         flex-direction: column;
         align-items: center;
-        /* This centers the block of feature items */
+        width: 100%;
     }
 
     .spot4dis-sample .content .feature-item {
@@ -716,17 +726,5 @@ h3 {
     }
     .park4dis-admin .content p {
         padding: 5% 0;
-    }
-}
-
-/* Large devices (desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-    /* -------------------------
-        SUBHOME SECTION (subhome)
-    ------------------------- */
-    .subhome {
-        display: flex;
-        padding: 7% 0%;
     }
 }
