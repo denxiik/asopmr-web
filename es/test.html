@@ -1,356 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awards Carousel</title>
-    <style>
-        :root {
-            --green-aso: #4CAF50; /* Example color, replace with your actual green */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        /* -------------------------
-            AWARDS SECTION (awards)
-        ------------------------- */
-        .awards-section {
-            text-align: center;
-            padding: 20px;
-        }
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        .awards-section h2 {
-            letter-spacing: 5px;
-            padding: 5% 25%;
-            color: var(--green-aso);
-        }
-
-        /* New Wrapper for Carousel and Buttons */
-        .carousel-wrapper {
-            display: flex; /* Use flexbox to align buttons and container horizontally */
-            align-items: center; /* Vertically center buttons and container */
-            justify-content: center; /* Center the whole carousel horizontally */
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative; /* This is the new positioning context for buttons */
-        }
-
-        .carousel-container {
-            width: calc(100% - 120px); /* Adjust width to make space for buttons */
-            margin: 0 60px; /* Provide explicit margin for button space */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .awards-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-
-        .award-item {
-            flex: 0 0 25%;
-            max-width: 25%;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 10vw;
-            max-height: 180px;
-            min-height: 100px;
-            overflow: hidden;
-            padding: 10px;
-        }
-
-        .award-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .carousel-button {
-            background-color: var(--green-aso);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            border-radius: 5px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        .carousel-button:hover {
-            opacity: 1;
-        }
-
-        .carousel-button.prev {
-            left: 0;
-        }
-
-        .carousel-button.next {
-            right: 0;
-        }
-
-        .carousel-pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .pagination-dot {
-            height: 10px;
-            width: 10px;
-            background-color: #bbb;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .pagination-dot.active {
-            background-color: var(--green-aso);
-        }
-
-        /* Responsive adjustments */
-        /* Tablet and below: 1 item */
-        @media (max-width: 768px) {
-            .carousel-wrapper {
-                width: 95%; /* Adjust wrapper width for smaller screens */
-            }
-            .carousel-container {
-                width: calc(100% - 100px); /* Adjust width to make space for buttons */
-                margin: 0 50px;
-            }
-            .award-item {
-                flex: 0 0 100%; /* Show 1 item on tablets and below */
-                max-width: 100%;
-            }
-            .carousel-button {
-                padding: 8px 12px;
-            }
-        }
-
-        /* Further adjustments for very small screens (phones) - mostly button sizing */
-        @media (max-width: 480px) {
-            .carousel-wrapper {
-                width: 98%;
-            }
-            .carousel-container {
-                width: calc(100% - 80px); /* Adjust width for buttons */
-                margin: 0 40px;
-            }
-            /* award-item remains 100% due to the 768px breakpoint */
-            .carousel-button {
-                padding: 6px 10px;
-            }
-        }
-    </style>
+  <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+  <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
+
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
+
 <body>
+  <section class="contact">
+    <div class="contact-info">
+      <p class="paragraph-bold title">Pongámonos en contacto.</p>
+      <h3>¡Nos gusta ver que has llegado hasta aquí!</h3>
 
-    <section class="awards-section">
-        <h2>PREMIOS QUE RECONOCEN NUESTRA LABOR</h2>
-        <div class="carousel-wrapper">
-            <button class="carousel-button prev" aria-label="Previous award">&#10094;</button>
-            <div class="carousel-container">
-                <div class="awards-track">
-                    <div class="award-item">
-                        <img src="../img/us/awards/touristic_destiny.webp" alt="Premio 1, destino turistico">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/zero-project-award-win.webp" alt="Premio 2, zero project ganador 2022">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/google-support.webp" alt="Premio 3, apoyo de Google">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/ia-madrid.webp"
-                            alt="Premio 4, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/50_plus.webp"
-                            alt="Premio 5, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/barcelona-council.webp"
-                            alt="Premio 6, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/bvalue.webp"
-                            alt="Premio 7, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/entrepreneurs.webp"
-                            alt="Premio 8, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/innovoevia.webp"
-                            alt="Premio 9, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/renault.webp"
-                            alt="Premio 10, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                    <div class="award-item">
-                        <img src="../img/us/awards/madrid.webp"
-                            alt="Premio 11, Intaligencia Artificial y Tecnologias Avanzadas 2024">
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" aria-label="Next award">&#10095;</button>
+      <div class="address">
+        <p class="paragraph-bold">Direcciónes:</p>
+        <p class="paragraph-normal">Granvia 630, 4ª planta 08007 Barcelona.</p>
+        <p class="paragraph-normal">Joan Verdeguer, 16, 46024 València</p>
+      </div>
+
+      <p class="paragraph-bold">¿Tienes alguna duda?</p>
+      <p class="paragraph-normal">Manda un correo</p>
+      <a href="mailto:asopmr@asopmr.org">
+        <button>
+          asopmr@asopmr.org
+        </button>
+      </a>
+      <p class="paragraph-normal">O rellena el formulario y nos pondremos en contacto en breve!</p>
+    </div>
+
+    <div class="contact-form-container">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="27e72e1c-2c4d-4694-a829-48e715744028">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
         </div>
-        <div class="carousel-pagination">
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
         </div>
-    </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.querySelector('.awards-track');
-            const items = Array.from(track.children);
-            const prevButton = document.querySelector('.carousel-button.prev');
-            const nextButton = document.querySelector('.carousel-button.next');
-            const paginationContainer = document.querySelector('.carousel-pagination');
-
-            const totalOriginalItems = items.length;
-            const maxItemsPerPage = 4; // Max items visible at once (desktop breakpoint)
-
-            // Clone `maxItemsPerPage` items from start and end for infinite scroll
-            // This ensures smooth transitions even when `itemsVisible` is 1.
-            for (let i = totalOriginalItems - maxItemsPerPage; i < totalOriginalItems; i++) {
-                const clone = items[i].cloneNode(true);
-                track.prepend(clone);
-            }
-            for (let i = 0; i < maxItemsPerPage; i++) {
-                const clone = items[i].cloneNode(true);
-                track.appendChild(clone);
-            }
-
-            const allCarouselItems = Array.from(track.children);
-            const totalCarouselItems = allCarouselItems.length;
-
-            // `currentIndex` tracks the absolute position in the cloned track.
-            // It starts at the first original item (after the leading clones).
-            let currentIndex = maxItemsPerPage;
-
-            // Function to determine how many items should be visible based on screen width
-            function getItemsVisible() {
-                const width = window.innerWidth;
-                if (width <= 768) { // For tablets and phones: 1 item
-                    return 1;
-                } else { // For desktops: 4 items
-                    return maxItemsPerPage; // Which is 4
-                }
-            }
-
-            const updateCarousel = (animate = true) => {
-                const itemsVisible = getItemsVisible(); // Get current number of items to show
-                // Calculate the percentage translation based on `currentIndex` and `itemsVisible`
-                const offsetPercentage = -(currentIndex * (100 / itemsVisible));
-
-                if (animate) {
-                    track.style.transition = 'transform 0.5s ease-in-out';
-                } else {
-                    track.style.transition = 'none';
-                }
-                track.style.transform = `translateX(${offsetPercentage}%)`;
-
-                updatePagination(); // Update pagination dots whenever carousel moves
-            };
-
-            // Event listener for snapping back when reaching end/beginning of cloned track
-            track.addEventListener('transitionend', () => {
-                if (currentIndex >= totalCarouselItems - maxItemsPerPage) {
-                    // If scrolled past the last original item into the trailing clones
-                    currentIndex = maxItemsPerPage; // Snap back to the first original item
-                    updateCarousel(false); // No animation for the snap
-                } else if (currentIndex < maxItemsPerPage) {
-                    // If scrolled before the first original item into the leading clones
-                    currentIndex = totalCarouselItems - (maxItemsPerPage * 2); // Snap back to the last original item
-                    updateCarousel(false); // No animation for the snap
-                }
-            });
-
-            // Navigation handlers
-            const goToNext = () => {
-                currentIndex++;
-                updateCarousel();
-            };
-
-            const goToPrev = () => {
-                currentIndex--;
-                updateCarousel();
-            };
-
-            prevButton.addEventListener('click', goToPrev);
-            nextButton.addEventListener('click', goToNext);
-
-            // Pagination logic
-            const createPaginationDots = () => {
-                paginationContainer.innerHTML = ''; // Clear existing dots
-                const itemsVisible = getItemsVisible();
-                // Number of "pages" is based on original items divided by currently visible items
-                const numPages = Math.ceil(totalOriginalItems / itemsVisible);
-
-                for (let i = 0; i < numPages; i++) {
-                    const dot = document.createElement('div');
-                    dot.classList.add('pagination-dot');
-                    dot.dataset.page = i;
-                    dot.addEventListener('click', () => {
-                        // When a dot is clicked, we calculate the target `currentIndex`
-                        // `i * itemsVisible` gets the starting index of the desired logical page
-                        // We add `maxItemsPerPage` to account for the leading clones in the `track`
-                        currentIndex = (i * itemsVisible) + maxItemsPerPage;
-                        updateCarousel();
-                    });
-                    paginationContainer.appendChild(dot);
-                }
-            };
-
-            const updatePagination = () => {
-                // Re-create dots on each update to ensure they match current itemsVisible count.
-                // This is especially important on resize when `itemsVisible` changes.
-                createPaginationDots();
-
-                const itemsVisible = getItemsVisible();
-                // Calculate the current logical page based on the `currentIndex`
-                // `currentIndex - maxItemsPerPage` gives the effective index within original items
-                let currentOriginalItemIndex = currentIndex - maxItemsPerPage;
-                // Handle cases where `currentIndex` is in the cloned sections for accurate pagination
-                if (currentOriginalItemIndex < 0) {
-                    currentOriginalItemIndex += totalOriginalItems;
-                } else if (currentOriginalItemIndex >= totalOriginalItems) {
-                    currentOriginalItemIndex -= totalOriginalItems;
-                }
-
-                // Determine which "page" this item belongs to
-                const activePage = Math.floor(currentOriginalItemIndex / itemsVisible);
-
-                // Get fresh dots after recreation
-                const dots = document.querySelectorAll('.pagination-dot');
-                dots.forEach((dot, index) => {
-                    if (index === activePage) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            };
-
-            // Initial setup when the page loads
-            updateCarousel(false); // Position the carousel without animation
-            createPaginationDots(); // Create initial pagination dots
-
-            // Event listener for window resize to adjust carousel and pagination
-            window.addEventListener('resize', () => {
-                // Re-calculate position and re-render dots.
-                // `createPaginationDots` is called within `updatePagination`.
-                updateCarousel(false);
-            });
-        });
-    </script>
+        <div class="form-group">
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6Lek6ggqAAAAAON9Eu_PkdxzD3vdBthUyBzmAU4U"></div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
 </body>
+
+<script>
+  function loadHTML(filename, elementId) {
+    return fetch(filename)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+        }
+        return response.text();
+      })
+      .then(html => {
+        document.getElementById(elementId).innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error loading HTML:', error);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const headerPromise = loadHTML('header.html', 'header-placeholder');
+
+    Promise.all([headerPromise, footerPromise, joinCommunityPromise])
+      .then(() => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navBar = document.querySelector('.nav-bar');
+
+        if (menuToggle && navBar) {
+          menuToggle.addEventListener('click', function () {
+            navBar.classList.toggle('active');
+          });
+        } else {
+          console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
+        }
+      });
+  });
+</script>
+
 </html>
