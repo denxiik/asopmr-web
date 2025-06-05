@@ -291,7 +291,7 @@
 }
 
 /* -------------------------
-    MISSION AND VISION SECTION (sponsorship-benefits)
+    SPONSORSHIP BENEFITS SECTION (sponsorship-benefits)
 ------------------------- */
 .sponsorship-benefits {
     display: flex;
@@ -341,6 +341,107 @@
     right: 15%;
 }
 
+/* -------------------------
+    SPONSORSHIP FORM SECTION (sponsorship-form)
+------------------------- */
+.sponsorship-form {
+    background-color: var(--green-aso);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 3%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.sponsorship-form h1 {
+    color: var(--light-green-aso);
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.sponsorship-form h5 {
+    color: var(--white);
+    margin-bottom: 3%;
+    padding: 0% 20%;
+    line-height: 1.6;
+}
+
+.contact-form-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-row input {
+    flex: 1;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-row input::placeholder {
+    color: #888;
+    font-weight: normal;
+}
+
+.privacy-consent {
+    display: flex;
+    align-self: flex-start;
+    gap: 10px;
+    margin-top: 3%;
+    color: #D3D3D3;
+    font-size: 0.95em;
+}
+
+.privacy-consent input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #008080;
+    cursor: pointer;
+}
+
+.g-recaptcha {
+    margin: 4% 0%;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: scale(1.5);
+}
+
+.contact-form button {
+    background-color: var(--white);
+    color: #2F4F4F;
+}
+
+
+.sponsorship-form .down-h5 {
+    padding: 0% 25%;
+    padding-top: 5%;
+    color: var(--light-green-aso);
+}
+
 
 /* Mediums devices (desktops, 768px and down) */
 @media (max-width: 768px) {
@@ -374,7 +475,7 @@
     }
 
     /* -------------------------
-        MISSION AND VISION SECTION (sponsorship-benefits)
+        SPONSORSHIP BENEFITS SECTION (sponsorship-benefits)
     ------------------------- */
     .sponsorship-benefits {
         flex-direction: column;
@@ -405,6 +506,43 @@
         left: auto;
         right: auto;
         padding: 1rem;
+    }
+
+    /* -------------------------
+        SPONSORSHIP FORM SECTION (sponsorship-form)
+    ------------------------- */
+    .sponsorship-form h1 {
+        font-size: 2.2rem;
+    }
+
+    .sponsorship-form h5 {
+        font-size: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-row input {
+        font-size: 1.4rem;
+    }
+
+    .contact-form-container {
+        padding: 0;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+
+    .sponsorship-form .contact-form-container h5 {
+        font-size: 1.2rem;
+    }
+
+    .g-recaptcha {
+        transform: scale(1);
     }
 }
 

@@ -263,6 +263,7 @@ button:hover {
     margin: 0;
 }
 
+
 /* Very small devices (phones, 620px and down) */
 @media (max-width: 620px) {
     .contact-button {
