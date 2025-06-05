@@ -34,10 +34,6 @@
     margin-bottom: -5%;
 }
 
-.page-wrapper {
-    position: relative;
-}
-
 /* -------------------------
     LEFT IMAGE CONTENT SECTION (left-image-content)
 ------------------------- */
@@ -90,6 +86,7 @@
     flex-direction: column;
     color: var(--green-aso);
     text-align: left;
+    width: 50%;
     padding: 15% 8%;
 }
 
@@ -102,14 +99,6 @@
 .fiscal-benefits .content h3 {
     color: var(--dark-oranje-aso);
     padding: 5% 0%;
-}
-
-.fiscal-benefits img {
-    width: 45%;
-    height: 55%;
-    padding: 8% 0%;
-    z-index: 2;
-    align-self: center;
 }
 
 .fiscal-benefits .draw {
@@ -143,16 +132,32 @@
 }
 
 /* -------------------------
-    GLOBALLY POSITIONED BOTTOM CUT CIRCLE
+    GLOBALLY POSITIONED BOTTOM CUT CIRCLE AN IMG
 ------------------------- */
+.page-wrapper {
+    position: relative;
+}
+
+
 #fiscal-benefits-bottom-cut-circle {
     position: absolute;
     width: 40rem;
     height: 40rem;
-    bottom: 40%;
+    top: 25%;
     left: auto;
     right: 0%;
-    z-index: 0;
+    z-index: 1;
+}
+
+img[alt="Una mano mirando papeles en una carpeta de archivos"] {
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    width: 40%;
+    height: 45%;
+    padding: 8% 0%;
+    z-index: 2;
+    align-self: center;
 }
 
 /* -------------------------

@@ -74,14 +74,13 @@
                     Dedúcete un 80% de los primeros 150€ donados y un 40% sobre la cantidad restante(*)
                 </h5>
             </div>
-            <img src="../img/colaborate/documents-folder.webp"
-                alt="Una mano mirando papeles en una carpeta de archivos">
+
             <div class="draw">
                 <canvas id="fiscal-benefits-center-circle"></canvas>
             </div>
         </section>
 
-
+        <img src="../img/colaborate/documents-folder.webp" alt="Una mano mirando papeles en una carpeta de archivos">
         <canvas id="fiscal-benefits-bottom-cut-circle"></canvas>
 
         <!-- DONATION SECTION (left-image-content) -->
@@ -305,7 +304,7 @@
         // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-        
+
         // These paths are relative to 'es/index.html'
         // They are in a subdirectory of 'es/', so you go INTO 'overlays/'
         const cookieBannerPromise = loadHTML('./overlays/cookie-banner.html', 'cookie-banner-placeholder');
