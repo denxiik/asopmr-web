@@ -305,8 +305,7 @@
         // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-        const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
-
+        
         // These paths are relative to 'es/index.html'
         // They are in a subdirectory of 'es/', so you go INTO 'overlays/'
         const cookieBannerPromise = loadHTML('./overlays/cookie-banner.html', 'cookie-banner-placeholder');
