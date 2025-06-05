@@ -442,10 +442,8 @@
     color: var(--light-green-aso);
 }
 
-
 /* Mediums devices (desktops, 768px and down) */
 @media (max-width: 768px) {
-
     /* -------------------------
         SPONSORSHIP MAPPING SECTION (sponsorship-mapping)
     ------------------------- */
