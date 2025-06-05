@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/overlays/overlay.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<section id="cookies-overlay" class="overlay">
+    <div id="details-content">
+        <span class="close-button cookie-close-button"> &times;</span>
+
+        <div class="tab-buttons">
+            <button class="tab-button" data-tab="cookie-policy">Política de cookies</button>
+            <button class="tab-button" data-tab="cookie-settings">Cookies de terceros</button>
+        </div>
+
+        <div id="cookie-settings" class="tab-content active">
+            <p class="paragraph-bold">Cookies de terceros</p>
+            <p class="paragraph-normal">
+                Esta web utiliza Google Analytics para recopilar información anónima tal como el número de
+                visitantes del sitio, o las páginas más populares.
+                <br><br>
+                Dejar esta cookie activa nos permite mejorar nuestra web.
+                <br><br>
+            </p>
+
+            <label class="switch" for="essentialCookies"> <input type="checkbox" id="essentialCookies" checked disabled>
+                <span class="slider"></span>
+            </label>
+            <span class="switch-label">Cookies essenciales (Siempre activos)</span><br>
+
+            <label class="switch" for="analyticsCookies"> <input type="checkbox" id="analyticsCookies">
+                <span class="slider"></span>
+            </label>
+            <span class="switch-label">Google Analytics</span><br>
+            <br>
+            <button id="save-cookie-settings">Gurdar cambios</button>
+        </div>
+
+        <div id="cookie-policy" class="tab-content">
+            <p class="paragraph-bold">Política de cookies</p>
+
+            <p class="paragraph-bold">¿Qué son las cookies?</p>
+            <p class="paragraph-normal">
+                Las cookies son pequeños ficheros de texto, los cuales son insertados de forma automática en aquellos
+                dispositivos telemáticos empleados por el usuario cuando efectúa una visita al sitio web. Estos archivos
+                que se descargan pueden almacenar datos que podrán ser actualizados y recuperados por la entidad
+                responsable de su instalación. Estos archivos permiten conocer, con fines estadísticos, de mejora del
+                servicio y adaptación de éste a sus preferencias, cuál es su comportamiento al navegar por la web. Las
+                cookies se asocian únicamente a su navegador y no proporcionan por sí mismas datos personales. Las
+                cookies utilizadas en este sitio web no contienen virus ni otros componentes dañinos, y no suponen por
+                sí mismas un riesgo para los dispositivos del usuario.
+            </p>
+
+            <p class="paragraph-bold">Este sitio Web utiliza las siguientes cookies:</p>
+            <p class="paragraph-bold">Tipos de cookies según la entidad que las gestiona:</p>
+            <ul>
+                <li class="paragraph-normal"><strong>Cookies propias:</strong> Son aquellas establecidas por el sitio
+                    web visitado por el usuario. Los datos que se recopilan mediante estas cookies se utilizan para
+                    fines como el cálculo de páginas vistas, sesiones y número de usuarios.</li>
+                <li class="paragraph-normal"><strong>Cookies de terceros:</strong> Son aquellas que se envían al equipo
+                    terminal del usuario desde un equipo o dominio que no es gestionado por el editor, sino por otra
+                    entidad que trata los datos obtenidos a través de cookies, o cookies instaladas desde un equipo o
+                    dominio gestionado por el propio editor, pero la información que se recoge es gestionada por un
+                    tercero.</li>
+            </ul>
+
+            <p class="paragraph-bold">Tipos de cookies según su finalidad:</p>
+            <ul>
+                <li class="paragraph-normal"><strong>Cookies técnicas/necesarias:</strong> Son aquellas que permiten al
+                    usuario realizar las funciones básicas como la navegación en la página y el acceso a áreas seguras
+                    de la página web. La página web no puede funcionar adecuadamente sin estas cookies, por lo que su
+                    instalación es obligatoria.</li>
+                <li class="paragraph-normal"><strong>Cookies publicitarias:</strong> Son aquéllas que, bien tratadas por
+                    esta web o por terceros, permiten gestionar de la forma más eficaz posible la oferta de los espacios
+                    publicitarios que hay en la página web, adecuando el contenido del anuncio al contenido del servicio
+                    solicitado o al uso que realice de nuestra página web. Para ello podemos analizar sus hábitos de
+                    navegación en Internet y podemos mostrarle publicidad relacionada con su perfil de navegación.</li>
+                <li class="paragraph-normal"><strong>Cookies de publicidad comportamental:</strong> Son aquéllas que
+                    permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso,
+                    el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio
+                    solicitado. Este tipo de cookies almacenan información del comportamiento de los visitantes obtenida
+                    a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un
+                    perfil específico para mostrar avisos publicitarios en función del mismo.</li>
+            </ul>
+
+            <p class="paragraph-bold">A continuación, se muestra un cuadro resumen de las cookies instaladas en nuestro
+                Sitio Web:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Finalidad</th>
+                        <th>Proveedor</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>__Secure-ENID</td>
+                        <td>Técnica. Recordar preferencias del usuario.</td>
+                        <td>Google</td>
+                        <td>1 mes</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-3PSIDTS</td>
+                        <td>Publicitaria comportamental. Personaliza anuncios según intereses del usuario.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-3PSID</td>
+                        <td>Publicitaria comportamental. Seguridad y personalización de contenido publicitario.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-3PSIDCC</td>
+                        <td>Publicitaria comportamental. Gestión de publicidad basada en comportamiento.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-3PAPISID</td>
+                        <td>Publicitaria comportamental. Mostrar publicidad personalizada según perfil.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-1PSIDTS</td>
+                        <td>Publicitaria comportamental. Personaliza anuncios que puedan ser de interés.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-1PSID</td>
+                        <td>Técnica. Autenticación y protección de la sesión de usuario.</td>
+                        <td>Google</td>
+                        <td>2 años</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-1PSIDCC</td>
+                        <td>Técnica. Seguridad y personalización de la experiencia del usuario.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>__Secure-1PAPISID</td>
+                        <td>Técnica. Seguridad, autenticación y personalización de anuncios.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>SSID</td>
+                        <td>Técnica. Garantiza la seguridad de la sesión del usuario.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>SIDCC</td>
+                        <td>Técnica. Seguridad. Identificación de tráfico web confiable.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>SID</td>
+                        <td>Publicitaria. Personalización de anuncios según navegación.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>SEARCH_SAMESITE</td>
+                        <td>Técnica. Asegura que cookies se envíen correctamente entre sitios.</td>
+                        <td>Google</td>
+                        <td>1 mes</td>
+                    </tr>
+                    <tr>
+                        <td>SAPISID</td>
+                        <td>Publicitaria. Mostrar anuncios personalizados.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>NID</td>
+                        <td>Publicitaria. Almacena preferencias del usuario y personaliza anuncios.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>HSID</td>
+                        <td>Técnica. Prevención del fraude en servicios de Google.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>APISID</td>
+                        <td>Publicitaria. Servicios y personalización anónima de navegación.</td>
+                        <td>Google</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>AEC</td>
+                        <td>Técnica. Detección de spam, fraudes y abusos.</td>
+                        <td>Google</td>
+                        <td>6 meses</td>
+                    </tr>
+                    <tr>
+                        <td>__cf_bm</td>
+                        <td>Técnica. Distingue entre tráfico legítimo y automatizado (bots) para proteger el sitio web.
+                        </td>
+                        <td>Twitter/X</td>
+                        <td>Sesión</td>
+                    </tr>
+                    <tr>
+                        <td>guest_id</td>
+                        <td>Publicitaria. Identifica usuarios para permitir seguimiento desde Twitter.</td>
+                        <td>Twitter/X</td>
+                        <td>1 mes</td>
+                    </tr>
+                    <tr>
+                        <td>guest_id_ads</td>
+                        <td>Publicitaria. Identifica usuarios para mostrar anuncios y medir campañas publicitarias.</td>
+                        <td>Twitter/X</td>
+                        <td>4 meses</td>
+                    </tr>
+                    <tr>
+                        <td>guest_id_marketing</td>
+                        <td>Publicitaria. Identifica usuarios para segmentación y personalización avanzada de
+                            publicidad.</td>
+                        <td>Twitter/X</td>
+                        <td>4 meses</td>
+                    </tr>
+                    <tr>
+                        <td>personalization_id</td>
+                        <td>Publicitaria. Personaliza anuncios de Twitter Ads y hace un seguimiento entre sitios.</td>
+                        <td>Twitter/X</td>
+                        <td>2 meses</td>
+                    </tr>
+                    <tr>
+                        <td>twid</td>
+                        <td>Técnica. Identifica y mantiene la sesión activa del usuario en la plataforma Twitter/X.</td>
+                        <td>Twitter/X</td>
+                        <td>1 año</td>
+                    </tr>
+                    <tr>
+                        <td>moove_gdpr_popup</td>
+                        <td>Técnica. Guarda el estado del consentimiento del usuario sobre las cookies.</td>
+                        <td>Propia</td>
+                        <td>1 año</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="paragraph-bold">CONSENTIMIENTO</p>
+            <p class="paragraph-normal">
+                Podrá prestar su consentimiento mediante la aceptación de la instalación de cookies a través del banner
+                informativo que se le mostró al acceder a nuestro sitio web, o mediante la configuración de las cookies
+                a través del panel de configuración.
+            </p>
+
+            <p class="paragraph-bold">REVOCACIÓN DEL CONSENTIMIENTO</p>
+            <p class="paragraph-normal">
+                En cualquier caso, le informamos de que, dado que determinadas “cookies” no son necesarias para el uso
+                del Sitio Web, usted puede revocar su consentimiento para su uso en cualquier momento rechazando su
+                utilización en el panel de configuración de la presente política, o bloqueándolos a través de la
+                configuración de su navegador (véanse más detalles abajo).
+            </p>
+            <p class="paragraph-normal">
+                La práctica mayoría de los navegadores permiten advertir de la presencia de “cookies” o rechazarlas
+                automáticamente. Si las rechaza, podrá seguir usando nuestro Sitio Web, aunque el uso de algunos de sus
+                servicios podrá ser limitado. No obstante, es preciso señalar que si usa las configuraciones de su
+                navegador para bloquear todas las tecnologías de almacenamiento (incluidas “cookies” fundamentales)
+                puede que no tenga acceso a la totalidad o parte de nuestro Sitio Web.
+            </p>
+            <p class="paragraph-normal">
+                También podrá suprimir “cookies” en cualquier momento mediante las configuraciones de navegación de su
+                navegador.
+            </p>
+
+            <p class="paragraph-normal">Para más información sobre la forma de gestionar las “cookies” o de revocar el
+                consentimiento para el uso de las mismas, le remitimos al enlace pertinente:</p>
+            <ul>
+                <li>Google Chrome: <a
+                        href="https://support.google.com/chrome/answer/95647?hl=es">https://support.google.com/chrome/answer/95647?hl=es</a>
+                </li>
+                <li>Microsoft Edge: <a
+                        href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09">https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09</a>
+                </li>
+                <li>Firefox: <a
+                        href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias">https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias</a>
+                </li>
+                <li>Safari: <a
+                        href="https://support.apple.com/es-es/guide/safari/sfri11471/mac">https://support.apple.com/es-es/guide/safari/sfri11471/mac</a>
+                </li>
+                <li>Opera: <a
+                        href="https://help.opera.com/en/latest/web-preferences/#cookies">https://help.opera.com/en/latest/web-preferences/#cookies</a>
+                </li>
+            </ul>
+
+            <div style="text-align: right;">
+                <p><br>Última actualización: mayo de 2025</p>
+            </div>
+        </div>
+
+    </div>
+</section>

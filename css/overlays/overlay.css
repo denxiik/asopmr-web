@@ -1,0 +1,139 @@
+/* -------------------------
+    Basic styling for overlays
+------------------------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.overlay .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#details-content {
+    position: relative;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+.tab-buttons {
+    display: flex;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.tab-button .active {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content .paragraph-bold {
+    padding-top: 2%;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Style for the cookie details list */
+#cookie-details-list li {
+    margin-bottom: 10px;
+}
+
+#cookie-details-list strong {
+    font-weight: bold;
+}
+
+/* Style for the cookie cookie-settings */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1.7rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 0.1rem #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1.5rem);
+    -ms-transform: translateX(1.5rem);
+    transform: translateX(1.5rem);
+}
+
+.switch-label {
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 0.9rem;
+}

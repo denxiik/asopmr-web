@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/us.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Script -->
+    <script src="../script/script.js"></script>
 
     <!-- Hreflang tags (for SEO) -->
     <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
@@ -228,22 +233,6 @@
 <footer id="footer-placeholder"></footer>
 
 <script>
-    function loadHTML(filename, elementId) {
-        return fetch(filename)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
-                }
-                return response.text();
-            })
-            .then(html => {
-                document.getElementById(elementId).innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading HTML:', error);
-            });
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
         // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
@@ -288,7 +277,7 @@
             });
     });
 
-    // Optimización para visibilidad
+    // Visibility optimization
     document.addEventListener('visibilitychange', () => {
         const track = document.getElementById('awardsTrack');
         if (document.hidden) {
