@@ -13,7 +13,6 @@
     <!-- Script -->
     <script src="../script/script.js"></script>
 
-    <!-- Hre
     <!-- Hreflang tags (for SEO) -->
     <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
     <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
@@ -263,14 +262,28 @@
 <!-- FOOTER SECTION (footer) -->
 <footer id="footer-placeholder"></footer>
 
+<!-- COOKIE BANNER SECTION (cookie-banner) -->
+<section id="cookie-banner-placeholder"></section>
+
+<!-- OVERLAYS SECTIONS (overlay) -->
+<section id="cookie-overlay-placeholder"></section>
+<section id="legal-overlay-placeholder"></section>
+<section id="privacy-overlay-placeholder"></section>
+<section id="gender-overlay-placeholder"></section>
+
 <script>
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
         // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
+        const cookieBannerPromise = loadHTML('/es/overlays/cookie-banner.html', 'cookie-banner-placeholder');
+        const cookieOverlayPromise = loadHTML('/es/overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
+        const legalOverlayPromise = loadHTML('/es/overlays/legal-overlay.html', 'legal-overlay-placeholder');
+        const privacyOverlayPromise = loadHTML('/es/overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
+        const genderOverlayPromise = loadHTML('/es/overlays/gender-overlay.html', 'gender-overlay-placeholder');
 
-        Promise.all([headerPromise, footerPromise])
+        Promise.all([headerPromise, footerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
@@ -288,6 +301,9 @@
                 } else {
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
+
+                 initializeOverlayHandlers();
+
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);

@@ -1,100 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-  <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
-  <link rel="stylesheet" href="../css/contact.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-  <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
-  <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
-</head>
-
-<!-- HEADER SECTION (header) -->
-<header id="header-placeholder"></header>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page</title>
+    </head>
 <body>
-  <section class="contact">
-    <div class="contact-info">
-      <p class="paragraph-bold title">Pongámonos en contacto.</p>
-      <h3>¡Nos gusta ver que has llegado hasta aquí!</h3>
 
-      <div class="address">
-        <p class="paragraph-bold">Direcciónes:</p>
-        <p class="paragraph-normal">Granvia 630, 4ª planta 08007 Barcelona.</p>
-        <p class="paragraph-normal">Joan Verdeguer, 16, 46024 València</p>
-      </div>
+    <div id="header-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+    <div id="cookie-overlay-placeholder"></div>
+    <div id="legal-overlay-placeholder"></div>
+    <div id="privacy-overlay-placeholder"></div>
+    <div id="gender-overlay-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    <div id="join-community-placeholder"></div>
 
-      <p class="paragraph-bold">¿Tienes alguna duda?</p>
-      <p class="paragraph-normal">Manda un correo</p>
-      <a href="mailto:asopmr@asopmr.org">
-        <button>
-          asopmr@asopmr.org
-        </button>
-      </a>
-      <p class="paragraph-normal">O rellena el formulario y nos pondremos en contacto en breve!</p>
-    </div>
+    <script src="main.js"></script>
 
-    <div class="contact-form-container">
-      <form class="contact-form" action="https://formbold.com/s/3VXxZ" method="POST">
-        <div class="form-group">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Mensaje:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <div class="g-recaptcha" data-sitekey="6Lek6ggqAAAAAON9Eu_PkdxzD3vdBthUyBzmAU4U"></div>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
+    <script src="overlay-handlers.js"></script>
 </body>
-
-<script>
-  function loadHTML(filename, elementId) {
-    return fetch(filename)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
-        }
-        return response.text();
-      })
-      .then(html => {
-        document.getElementById(elementId).innerHTML = html;
-      })
-      .catch(error => {
-        console.error('Error loading HTML:', error);
-      });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const headerPromise = loadHTML('header.html', 'header-placeholder');
-
-    Promise.all([headerPromise, footerPromise, joinCommunityPromise])
-      .then(() => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navBar = document.querySelector('.nav-bar');
-
-        if (menuToggle && navBar) {
-          menuToggle.addEventListener('click', function () {
-            navBar.classList.toggle('active');
-          });
-        } else {
-          console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
-        }
-      });
-  });
-</script>
-
 </html>
