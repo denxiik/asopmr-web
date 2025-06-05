@@ -1,0 +1,221 @@
+@import url('styles.css');
+
+/* -------------------------
+    HELP US SECTION (help-us)
+------------------------- */
+.help-us {
+    background-color: var(--green-aso);
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.help-us .content {
+    padding: 8%;
+    padding-top: 5%;
+    color: var(--white);
+    width: 45%;
+}
+
+.help-us .content h4 {
+    color: var(--light-green-aso);
+    letter-spacing: 1rem;
+}
+
+.help-us .content h2 {
+    padding: 10% 0%;
+}
+
+.help-us img {
+    position: static;
+    margin-left: auto;
+    margin-top: auto;
+    width: 55%;
+    margin-bottom: -5%;
+}
+
+/* -------------------------
+    TRANSPARENCY SECTION (transparency)
+------------------------- */
+.transparency {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.transparency img {
+    width: 40%;
+    height: 55%;
+}
+
+.transparency .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 10%;
+}
+
+.transparency .content h3 {
+    color: var(--dark-oranje-aso);
+}
+
+.transparency .content h5 {
+    color: var(--green-aso);
+}
+
+/* -------------------------
+    FISCAL BENEFITS SECTION (fiscal-benefits)
+------------------------- */
+.fiscal-benefits {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--very-light-orange-aso);
+}
+
+.fiscal-benefits .content {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-aso);
+    text-align: left;
+    padding: 15% 8%;
+}
+
+.fiscal-benefits .content img {
+    width: 25%;
+    padding: 0%;
+    align-self: flex-start;
+}
+
+.fiscal-benefits .content h3 {
+    color: var(--dark-oranje-aso);
+    padding: 5% 0%;
+}
+
+.fiscal-benefits img {
+    width: 45%;
+    height: 55%;
+    padding: 8% 0%;
+    z-index: 3;
+    align-self: center;
+}
+
+.fiscal-benefits .draw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    position: absolute;
+
+    /* Position the circles relative to the section */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    justify-content: center;
+    width: 50%;
+    pointer-events: none;
+}
+
+/* Circles */
+.fiscal-benefits .draw canvas {
+    position: absolute;
+}
+
+.fiscal-benefits .draw #fiscal-benefits-center-circle {
+    width: 17rem;
+    height: 17rem;
+    top: 20%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.fiscal-benefits .draw #fiscal-benefits-bottom-cut-circle {
+    width: 40rem;
+    height: 40rem;
+    bottom: -15rem;
+    left: 15%;
+    z-index: 2;
+}
+
+/* Mediums devices (desktops, 1080px and down) */
+@media (max-width: 1080px) {
+
+    /* -------------------------
+        HELP US SECTION (help-us)
+    ------------------------- */
+    .help-us {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .help-us .content {
+        width: 100%;
+    }
+
+
+    .help-us img {
+        margin-right: auto;
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    /* -------------------------
+        TRANSPARENCY SECTION (transparency)
+    ------------------------- */
+    .transparency {
+        flex-direction: column;
+    }
+
+    .transparency img {
+        padding-top: 10%;
+        width: 70%;
+        margin-bottom: 0%;
+    }
+
+    .transparency .content {
+        padding: auto 10%;
+        padding-top: 5%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .transparency .content img {
+        width: 40%;
+    }
+
+    /* -------------------------
+        FISCAL BENEFITS SECTION (fiscal-benefits)
+    ------------------------- */
+    .fiscal-benefits {
+        flex-direction: column;
+    }
+
+
+    .fiscal-benefits .content {
+        align-items: center;
+        text-align: center;
+        padding: 5% 8%;
+    }
+
+    .fiscal-benefits .content img {
+        align-self: center;
+    }
+
+    .fiscal-benefits img {
+        width: 70%;
+    }
+
+    .fiscal-benefits .draw #fiscal-benefits-center-circle {
+        top: 70%;
+        z-index: -1;
+    }
+
+    .fiscal-benefits .draw #fiscal-benefits-bottom-cut-circle {
+        display: none;
+    }
+}

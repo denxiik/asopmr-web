@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colabora</title>
+    <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/colaborate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Script -->
+    <script src="../script/script.js"></script>
+    <script src="../script/drawCircles.js"></script>
+
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
+</head>
+
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
+
+<body>
+    <!-- HELP US SECTION (help-us) -->
+    <section class="help-us">
+        <div class="content">
+            <h4>
+                DONACIONES
+            </h4>
+            <h2>
+                Ayúdanos a mejorar la calidad de ​vida de personas con movilidad reducida
+            </h2>
+            <p class="paragraph-normal">
+                Tu apoyo financiero impulsará nuestras actividades, ofreciendo servicios y recursos ​esenciales para
+                quienes
+                se enfrentan a desafíos de movilidad.
+            </p>
+        </div>
+
+        <img src="../img/colaborate/open-space-two-persons.webp"
+            alt="Personas sentada y dando un refresco a una persona en silla de ruedas">
+    </section>
+
+    <!-- TRANSPARENCY SECTION (transparency) -->
+    <section class="transparency">
+        <img src="../img/colaborate/home-work.webp" alt="Una mujeer trabando en lu laptop desde el sofa">
+
+        <div class="content">
+            <img src="../img/colaborate/zoom-pdf.webp" alt="Lupa con un documento de texto">
+
+            <h3>
+                Total transparencia
+            </h3>
+
+            <h5>
+                Te informaremos de cómo se ha invertido tu donación
+            </h5>
+        </div>
+    </section>
+
+    <!-- FISCAL BENEFITS SECTION (fiscal-benefits) -->
+    <section class="fiscal-benefits">
+        <div class="content">
+            <img src="../img/colaborate/hands-and-coin.webp" alt="Simbolo de manos con una moneda">
+
+            <h3>
+                Beneficios fiscales
+            </h3>
+
+            <h5>
+                Dedúcete un 80% de los primeros 150€ donados y un 40% sobre la cantidad restante(*)
+            </h5>
+        </div>
+
+        <img src="../img/colaborate/documents-folder.webp" alt="Una mano mirando papeles en una carpeta de archivos">
+
+        <div class="draw">
+            <canvas id="fiscal-benefits-center-circle"></canvas>
+            <canvas id="fiscal-benefits-bottom-cut-circle"></canvas>
+        </div>
+
+    </section>
+
+</body>
+
+<!-- FOOTER SECTION (footer) -->
+<footer id="footer-placeholder"></footer>
+
+<!-- COOKIE BANNER SECTION (cookie-banner) -->
+<section id="cookie-banner-placeholder"></section>
+
+<!-- OVERLAYS SECTIONS (overlay) -->
+<section id="cookie-overlay-placeholder"></section>
+<section id="legal-overlay-placeholder"></section>
+<section id="privacy-overlay-placeholder"></section>
+<section id="gender-overlay-placeholder"></section>
+
+<script>
+    // Load with page
+    document.addEventListener('DOMContentLoaded', function () {
+        // Load all HTML fragments first
+        const headerPromise = loadHTML('header.html', 'header-placeholder');
+        const footerPromise = loadHTML('footer.html', 'footer-placeholder');
+        const cookieBannerPromise = loadHTML('/es/overlays/cookie-banner.html', 'cookie-banner-placeholder');
+        const cookieOverlayPromise = loadHTML('/es/overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
+        const legalOverlayPromise = loadHTML('/es/overlays/legal-overlay.html', 'legal-overlay-placeholder');
+        const privacyOverlayPromise = loadHTML('/es/overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
+        const genderOverlayPromise = loadHTML('/es/overlays/gender-overlay.html', 'gender-overlay-placeholder');
+
+        Promise.all([headerPromise, footerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+                    });
+
+                    // Close all dropdowns when the main menu is toggled
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                } else {
+                    console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
+                }
+
+                initializeOverlayHandlers();
+
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load:', error);
+            });
+        // Add click listener to each dropdown for mobile view
+        dropdowns.forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('a');
+            if (dropdownLink) {
+                dropdownLink.addEventListener('click', function (event) {
+                    // Check if we are on a small screen
+                    if (window.innerWidth <= 1080) {
+                        event.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load:', error);
+            });
+    });
+
+
+    // Define the color once
+    const orangeDarkAso = '#FF7733';
+
+    // Resize canvases on load and resize
+    window.addEventListener('load', () => {
+        resizeCanvas('fiscal-benefits-center-circle');
+        resizeCanvas('fiscal-benefits-bottom-cut-circle');
+        drawCircleWithText('fiscal-benefits-center-circle', '', orangeDarkAso);
+        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
+    });
+
+    window.addEventListener('resize', () => {
+        resizeCanvas('fiscal-benefits-center-circle');
+        resizeCanvas('fiscal-benefits-bottom-cut-circle');
+        drawCircleWithText('fiscal-benefits-center-circle', '', orangeDarkAso);
+        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
+    });
+</script>
+
+</html>
