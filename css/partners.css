@@ -86,7 +86,8 @@
 .service-left-image button {
     background-color: var(--dark-oranje-aso);
     margin-top: 10%;
-    align-self: center;}
+    align-self: center;
+}
 
 /* -------------------------
     TECHNOLOGY SOLUTION SECTION (technology-solution)
@@ -295,6 +296,11 @@
 
     .technology-solution .solutions .item {
         width: 100%;
+    }
+
+    .technology-solution .solutions .item:first-child {
+        border-left: none;
+        border-right: none;
     }
 
     /* -------------------------

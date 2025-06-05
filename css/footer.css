@@ -43,6 +43,7 @@
 .site-footer .asoPMR-content-wrapper .contact button {
     padding: 3% 5%;
     border: 1px solid var(--white);
+    letter-spacing: 3px;
 }
 
 .site-footer .asoPMR-content-wrapper .news {

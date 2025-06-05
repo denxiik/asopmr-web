@@ -23,8 +23,8 @@
 <header id="header-placeholder"></header>
 
 <body>
-    <!-- HELP US SECTION (help-us) -->
-    <section class="help-us">
+    <!-- HELP US SECTION (right-image-content) -->
+    <section class="right-image-content">
         <div class="content">
             <h4>
                 DONACIONES
@@ -43,8 +43,8 @@
             alt="Personas sentada y dando un refresco a una persona en silla de ruedas">
     </section>
 
-    <!-- TRANSPARENCY SECTION (transparency) -->
-    <section class="transparency">
+    <!-- TRANSPARENCY SECTION (left-image-content) -->
+    <section class="left-image-content">
         <img src="../img/colaborate/home-work.webp" alt="Una mujeer trabando en lu laptop desde el sofa">
 
         <div class="content">
@@ -60,27 +60,156 @@
         </div>
     </section>
 
-    <!-- FISCAL BENEFITS SECTION (fiscal-benefits) -->
-    <section class="fiscal-benefits">
+    <section class="page-wrapper">
+        <!-- FISCAL BENEFITS SECTION (fiscal-benefits) -->
+        <section class="fiscal-benefits">
+            <div class="content">
+                <img src="../img/colaborate/hands-and-coin.webp" alt="Simbolo de manos con una moneda">
+                <h3>
+                    Beneficios fiscales
+                </h3>
+                <h5>
+                    Dedúcete un 80% de los primeros 150€ donados y un 40% sobre la cantidad restante(*)
+                </h5>
+            </div>
+            <img src="../img/colaborate/documents-folder.webp"
+                alt="Una mano mirando papeles en una carpeta de archivos">
+            <div class="draw">
+                <canvas id="fiscal-benefits-center-circle"></canvas>
+            </div>
+        </section>
+
+
+        <canvas id="fiscal-benefits-bottom-cut-circle"></canvas>
+
+        <!-- DONATION SECTION (left-image-content) -->
+        <section class="left-image-content">
+            <img src="../img/colaborate/robot-vs-human-hands.webp"
+                alt="Una mano de un robot contra una mano de un humano">
+            <div class="content">
+                <img src="../img/colaborate/aplauses.webp" alt="Signo de aplausos con corazon">
+                <h3>
+                    Cada donación cuenta
+                </h3>
+                <h5>
+                    Decide cuánto quieres aportar, nos encargaremos de que tenga el máximo impacto.
+                </h5>
+            </div>
+        </section>
+    </section>
+
+    <!-- WANT TO COLABORATE SECTION (want-to-colaborate) -->
+    <section class="want-to-colaborate">
+        <h5>
+            Cada donación representa un valioso ​respaldo que nos permite ampliar nuestro alcance, mejorar nuestras
+            ​iniciativas y proporcionar un apoyo más sólido a la comunidad.
+        </h5>
+
+        <a href="contact.html">
+            <button>
+                QUIERO COLABORAR
+            </button>
+        </a>
+    </section>
+
+    <!-- SPONSORSHIP SECTION (right-image-content) -->
+    <section class="right-image-content">
         <div class="content">
-            <img src="../img/colaborate/hands-and-coin.webp" alt="Simbolo de manos con una moneda">
-
-            <h3>
-                Beneficios fiscales
-            </h3>
-
-            <h5>
-                Dedúcete un 80% de los primeros 150€ donados y un 40% sobre la cantidad restante(*)
-            </h5>
+            <h4>
+                PATROCINIOS
+            </h4>
+            <h2>
+                Impulsa activamente la accesibilidad urbana.
+            </h2>
+            <p class="paragraph-normal">
+                Invitamos a empresas e instituciones a patrocinar el mapeo completo de una ciudad con nuestra tecnología
+                Park4Dis.
+            </p>
         </div>
 
-        <img src="../img/colaborate/documents-folder.webp" alt="Una mano mirando papeles en una carpeta de archivos">
+        <img src="../img/colaborate/PMR-in-city-center.webp"
+            alt="Personas en silla de ruedas en el centro de una ciudad">
+    </section>
 
-        <div class="draw">
-            <canvas id="fiscal-benefits-center-circle"></canvas>
-            <canvas id="fiscal-benefits-bottom-cut-circle"></canvas>
+    <!-- SPONSORSHIP MAPPING SECTION (sponsorship-mapping) -->
+    <section class="sponsorship-mapping">
+
+        <h4>
+            PATROCINIO CITY MAPPING CON PAK4DIS
+        </h4>
+
+        <div class="solutions">
+            <div class="item">
+                <img src="../img/colaborate/Carlo-and-person-in-vehicle-testing-p4d.webp" alt="">
+            </div>
+
+            <div class="item">
+                <h5>
+                    ¿Qué es City Mapping?
+                </h5>
+
+                <p class="paragraph-normal">
+                    Es una iniciativa del proyecto Park4Dis que busca mapear y digitalizar todas las plazas PMR de una
+                    ciudad, ofreciendo información accesible y actualizada a través de nuestra plataforma. Este proyecto
+                    impulsa la planificación urbana eficiente y facilita la movilidad diaria de personas con
+                    discapacidad.
+                </p>
+            </div>
         </div>
+    </section>
 
+    <!-- SPONSORSHIP MODALITY SOLUTION SECTION (sponsorship-modality) -->
+    <section class="sponsorship-modality">
+
+        <h3>
+            Modalidades de patrocinio
+        </h3>
+
+        <div class="solutions">
+            <div class="item">
+                <h3>
+                    3.500€
+                </h3>
+
+                <h5>
+                    Municipios pequeños
+                </h5>
+
+                <p class="paragraph-normal">
+                    Hasta 10.000 habitantes
+                </p>
+            </div>
+
+
+            <div class="item">
+                <h3>
+                    6.000€
+                </h3>
+
+                <h5>
+                    Municipios medianos
+                </h5>
+
+                <p class="paragraph-normal">
+                    Hasta 20.000 habitantes
+                </p>
+            </div>
+
+
+            <div class="item">
+                <h3>
+                    10.000€
+                </h3>
+
+                <h5>
+                    Municipios grandes
+                </h5>
+
+                <p class="paragraph-normal">
+                    Hasta 45.000 habitantes
+                </p>
+            </div>
+        </div>
     </section>
 
 </body>
@@ -128,25 +257,26 @@
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
 
+                // Add click listener to each dropdown for mobile view
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Check if we are on a small screen
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                })
+                    .catch(error => {
+                        console.error('One or more HTML fragments failed to load:', error);
+                    });
+
                 initializeOverlayHandlers();
 
             })
-            .catch(error => {
-                console.error('One or more HTML fragments failed to load:', error);
-            });
-        // Add click listener to each dropdown for mobile view
-        dropdowns.forEach(dropdown => {
-            const dropdownLink = dropdown.querySelector('a');
-            if (dropdownLink) {
-                dropdownLink.addEventListener('click', function (event) {
-                    // Check if we are on a small screen
-                    if (window.innerWidth <= 1080) {
-                        event.preventDefault();
-                        dropdown.classList.toggle('active');
-                    }
-                });
-            }
-        })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);
             });
@@ -161,14 +291,14 @@
         resizeCanvas('fiscal-benefits-center-circle');
         resizeCanvas('fiscal-benefits-bottom-cut-circle');
         drawCircleWithText('fiscal-benefits-center-circle', '', orangeDarkAso);
-        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
+        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '\n\n\n\n\n\n\n(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
     });
 
     window.addEventListener('resize', () => {
         resizeCanvas('fiscal-benefits-center-circle');
         resizeCanvas('fiscal-benefits-bottom-cut-circle');
         drawCircleWithText('fiscal-benefits-center-circle', '', orangeDarkAso);
-        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
+        drawCircleWithText('fiscal-benefits-bottom-cut-circle', '\n\n\n\n\n\n\n(*) Las donaciones a ONGs tienen desgravaciones fiscales: los primeros 150€ tienen una deducción del 80%. A partir de 150€ tienen una deducción del 40%. Si eres particular, puedes deducirte hasta el 80% de tu ​donación en tu declaración de la renta. Si eres empresa, el porcentaje de deducción en cuota en el Impuesto sobre ​Sociedades puede llegar al 40%. Nos encargamos de facilitar esa información a Hacienda y te enviamos tu certificado ​fiscal por correo electrónico.', orangeDarkAso, '1.2rem');
     });
 </script>
 

@@ -1,32 +1,32 @@
 @import url('styles.css');
 
 /* -------------------------
-    HELP US SECTION (help-us)
+    RIGHT IMAGE CONTENT SECTION (right-image-content)
 ------------------------- */
-.help-us {
+.right-image-content {
     background-color: var(--green-aso);
     padding-top: 5%;
     display: flex;
     flex-direction: row;
 }
 
-.help-us .content {
+.right-image-content .content {
     padding: 8%;
     padding-top: 5%;
     color: var(--white);
     width: 45%;
 }
 
-.help-us .content h4 {
+.right-image-content .content h4 {
     color: var(--light-green-aso);
     letter-spacing: 1rem;
 }
 
-.help-us .content h2 {
+.right-image-content .content h2 {
     padding: 10% 0%;
 }
 
-.help-us img {
+.right-image-content img {
     position: static;
     margin-left: auto;
     margin-top: auto;
@@ -34,31 +34,42 @@
     margin-bottom: -5%;
 }
 
+.page-wrapper {
+    position: relative;
+}
+
 /* -------------------------
-    TRANSPARENCY SECTION (transparency)
+    LEFT IMAGE CONTENT SECTION (left-image-content)
 ------------------------- */
-.transparency {
+.left-image-content {
     display: flex;
+    background-color: #fff4ef;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    z-index: -1;
 }
 
-.transparency img {
-    width: 40%;
-    height: 55%;
+.left-image-content img {
+    width: 45%;
+    height: 45%;
 }
 
-.transparency .content {
+.left-image-content .content {
     display: flex;
     flex-direction: column;
-    padding: 10% 10%;
+    padding: 18% 10%;
 }
 
-.transparency .content h3 {
+.left-image-content .content img {
+    width: 25%;
+}
+
+.left-image-content .content h3 {
     color: var(--dark-oranje-aso);
 }
 
-.transparency .content h5 {
+.left-image-content .content h5 {
     color: var(--green-aso);
 }
 
@@ -68,10 +79,10 @@
 .fiscal-benefits {
     display: flex;
     flex-direction: row;
-    display: flex;
     position: relative;
     overflow: hidden;
     background-color: var(--very-light-orange-aso);
+    z-index: 1;
 }
 
 .fiscal-benefits .content {
@@ -97,7 +108,7 @@
     width: 45%;
     height: 55%;
     padding: 8% 0%;
-    z-index: 3;
+    z-index: 2;
     align-self: center;
 }
 
@@ -118,7 +129,6 @@
     pointer-events: none;
 }
 
-/* Circles */
 .fiscal-benefits .draw canvas {
     position: absolute;
 }
@@ -129,35 +139,211 @@
     top: 20%;
     left: 65%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 1;
 }
 
-.fiscal-benefits .draw #fiscal-benefits-bottom-cut-circle {
+/* -------------------------
+    GLOBALLY POSITIONED BOTTOM CUT CIRCLE
+------------------------- */
+#fiscal-benefits-bottom-cut-circle {
+    position: absolute;
     width: 40rem;
     height: 40rem;
-    bottom: -15rem;
-    left: 15%;
-    z-index: 2;
+    bottom: 40%;
+    left: auto;
+    right: 0%;
+    z-index: 0;
 }
+
+/* -------------------------
+    WANT TO COLABORATE SECTION (want-to-colaborate)
+------------------------- */
+.want-to-colaborate {
+    padding: 8% 25%;
+    text-align: center;
+    align-items: center;
+}
+
+.want-to-colaborate h5 {
+    color: var(--dark-oranje-aso);
+}
+
+.want-to-colaborate button {
+    margin-top: 3rem;
+    background-color: var(--dark-oranje-aso);
+}
+
+/* -------------------------
+    SPONSORSHIP MAPPING SECTION (sponsorship-mapping)
+------------------------- */
+.sponsorship-mapping {
+    background-color: var(--oranje-aso);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+    padding-bottom: 5%;
+}
+
+.sponsorship-mapping h4 {
+    line-height: 1.5;
+    padding: 0 25%;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 5%;
+}
+
+.sponsorship-mapping .solutions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.sponsorship-mapping .solutions .item {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sponsorship-mapping .solutions .item:first-child {
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.sponsorship-mapping .solutions .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+    border-radius: 2.5rem;
+}
+
+.sponsorship-mapping .solutions .item h5 {
+    color: var(--green-aso);
+    margin-top: 5%;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sponsorship-mapping .solutions .item .paragraph-normal {
+    color: var(--green-aso);
+    padding: 0% 12%;
+    padding-top: 5%;
+}
+
+/* -------------------------
+    SPONSORSHIP MODALITY SOLUTION SECTION (sponsorship-modality)
+------------------------- */
+.sponsorship-modality {
+    background-color: var(--very-light-orange-aso);
+    flex-direction: column;
+    align-items: center;
+}
+
+.sponsorship-modality h3 {
+    padding: 0% 20%;
+    padding-top: 8%;
+    text-align: center;
+    color: var(--dark-oranje-aso);
+}
+
+.sponsorship-modality .solutions {
+    padding-top: 5%;
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sponsorship-modality .solutions .item {
+    width: 33%;
+    border: 1px solid var(--green-aso);
+    padding: 0;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sponsorship-modality .solutions .item:first-child {
+    border-left: none;
+}
+
+.sponsorship-modality .solutions .item:last-child {
+    border-right: none;
+}
+
+.sponsorship-modality .solutions .item h5 {
+    padding: 5% 0%;
+    font-weight: 700;
+    color: var(--green-aso);
+}
+
+
+/* Mediums devices (desktops, 768px and down) */
+@media (max-width: 768px) {
+    /* -------------------------
+        SPONSORSHIP MAPPING SECTION (sponsorship-mapping)
+    ------------------------- */
+    .sponsorship-mapping .solutions {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .sponsorship-mapping .solutions .item {
+        margin-bottom: 2rem;
+        padding: 2rem;
+        width: 80%;
+    }
+
+    .sponsorship-mapping .solutions .item:first-child {
+        padding: 0;
+    }
+
+    .sponsorship-mapping h4 {
+        padding: 0 0%;
+        margin-bottom: 2rem;
+    }
+
+    .sponsorship-mapping .solutions .item .paragraph-normal {
+        padding: 0% 0%;
+    }
+}
+
 
 /* Mediums devices (desktops, 1080px and down) */
 @media (max-width: 1080px) {
 
     /* -------------------------
-        HELP US SECTION (help-us)
+        HELP US SECTION (right-image-content)
     ------------------------- */
-    .help-us {
+    .right-image-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .help-us .content {
+    .right-image-content .content {
         width: 100%;
     }
 
+    .right-image-content .content h4 {
+        letter-spacing: 0.4rem;
+    }
 
-    .help-us img {
+    .right-image-content img {
         margin-right: auto;
         width: 70%;
         margin-top: 5%;
@@ -165,26 +351,26 @@
     }
 
     /* -------------------------
-        TRANSPARENCY SECTION (transparency)
+        LEFT IMAGE CONTENT SECTION (left-image-content)
     ------------------------- */
-    .transparency {
+    .left-image-content {
         flex-direction: column;
     }
 
-    .transparency img {
+    .left-image-content img {
         padding-top: 10%;
         width: 70%;
         margin-bottom: 0%;
     }
 
-    .transparency .content {
+    .left-image-content .content {
         padding: auto 10%;
         padding-top: 5%;
         align-items: center;
         text-align: center;
     }
 
-    .transparency .content img {
+    .left-image-content .content img {
         width: 40%;
     }
 
@@ -215,7 +401,34 @@
         z-index: -1;
     }
 
-    .fiscal-benefits .draw #fiscal-benefits-bottom-cut-circle {
+    #fiscal-benefits-bottom-cut-circle {
         display: none;
     }
+
+    /* -------------------------
+        WANT TO COLABORATE SECTION (want-to-colaborate)
+    ------------------------- */
+    .want-to-colaborate {
+        padding: 10%;
+    }
+
+    .want-to-colaborate button {
+        align-self: center;
+    }
+
+    /* -------------------------
+        SPONSORSHIP MODALITY SOLUTION SECTION (sponsorship-modality)
+    ------------------------- */
+    .sponsorship-modality .solutions {
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sponsorship-modality .solutions .item {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
 }

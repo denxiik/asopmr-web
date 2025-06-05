@@ -302,29 +302,31 @@
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
 
-                 initializeOverlayHandlers();
-
+                // Add click listener to each dropdown for mobile view
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Check if we are on a small screen
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);
             });
-        // Add click listener to each dropdown for mobile view
-        dropdowns.forEach(dropdown => {
-            const dropdownLink = dropdown.querySelector('a');
-            if (dropdownLink) {
-                dropdownLink.addEventListener('click', function (event) {
-                    // Check if we are on a small screen
-                    if (window.innerWidth <= 1080) {
-                        event.preventDefault();
-                        dropdown.classList.toggle('active');
-                    }
-                });
-            }
-        });
+
+        initializeOverlayHandlers();
+
     })
         .catch(error => {
             console.error('One or more HTML fragments failed to load:', error);
         });
+
 </script>
 
 </html>
