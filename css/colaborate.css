@@ -290,9 +290,61 @@
     color: var(--green-aso);
 }
 
+/* -------------------------
+    MISSION AND VISION SECTION (sponsorship-benefits)
+------------------------- */
+.sponsorship-benefits {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -5%;
+}
+
+.sponsorship-benefits .content {
+    position: static;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 60%;
+    margin-bottom: 10%;
+}
+
+.sponsorship-benefits h3 {
+    color: var(--dark-oranje-aso);
+    letter-spacing: normal;
+}
+
+.sponsorship-benefits .feature-item p {
+    padding-top: 2%;
+    color: var(--green-aso);
+    font-size: 1.375rem;
+}
+
+.sponsorship-benefits .images {
+    margin-top: 5%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sponsorship-benefits .images .up {
+    position: relative;
+    width: 35%;
+    top: 5%;
+    right: 10%;
+}
+
+.sponsorship-benefits .images .down {
+    position: relative;
+    width: 75%;
+    top: auto;
+    bottom: -5%;
+    right: 15%;
+}
+
 
 /* Mediums devices (desktops, 768px and down) */
 @media (max-width: 768px) {
+
     /* -------------------------
         SPONSORSHIP MAPPING SECTION (sponsorship-mapping)
     ------------------------- */
@@ -319,6 +371,40 @@
 
     .sponsorship-mapping .solutions .item .paragraph-normal {
         padding: 0% 0%;
+    }
+
+    /* -------------------------
+        MISSION AND VISION SECTION (sponsorship-benefits)
+    ------------------------- */
+    .sponsorship-benefits {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 5%;
+    }
+
+    .sponsorship-benefits .content {
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+    }
+
+    .sponsorship-benefits .images {
+        width: 100%;
+        flex-direction: row;
+        align-self: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .sponsorship-benefits .images .up,
+    .sponsorship-benefits .images .down {
+        width: 50%;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        padding: 1rem;
     }
 }
 
