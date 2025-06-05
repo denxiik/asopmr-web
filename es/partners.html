@@ -297,14 +297,34 @@
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
 
                 if (menuToggle && navBar) {
                     menuToggle.addEventListener('click', function () {
                         navBar.classList.toggle('active');
+
+                        // Close all dropdowns when the main menu is toggled
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
                     });
                 } else {
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
+
+                // Add click listener to each dropdown for mobile view
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Check if we are on a small screen
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);

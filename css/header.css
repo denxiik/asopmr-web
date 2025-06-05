@@ -207,6 +207,49 @@
     .dropdown:hover .dropdown-content {
         display: none !important;
     }
+
+    .dropdown>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .dropdown>a::after {
+        content: '▼';
+        font-size: 1rem;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active>a::after {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-content {
+        display: none !important;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .dropdown-content li a {
+        padding-left: 30px;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-content li a:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active .dropdown.active .dropdown-content {
+        display: block !important;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

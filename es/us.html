@@ -178,30 +178,44 @@
         <div class="award-slideshow">
             <div class="awards-track" id="awardsTrack">
                 <!-- Original items -->
-                <div class="award-item"><img src="../img/us/awards/touristic_destiny.webp" alt="Premio 1, destino turistico"></div>
-                <div class="award-item"><img src="../img/us/awards/zero-project-award-win.webp" alt="Premio 2, zero project ganador 2022"></div>
-                <div class="award-item"><img src="../img/us/awards/google-support.webp" alt="Premio 3, apoyo de Google"></div>
-                <div class="award-item"><img src="../img/us/awards/ia-madrid.webp" alt="Premio 4, IA y Tecnologías Avanzadas 2024"></div>
+                <div class="award-item"><img src="../img/us/awards/touristic_destiny.webp"
+                        alt="Premio 1, destino turistico"></div>
+                <div class="award-item"><img src="../img/us/awards/zero-project-award-win.webp"
+                        alt="Premio 2, zero project ganador 2022"></div>
+                <div class="award-item"><img src="../img/us/awards/google-support.webp" alt="Premio 3, apoyo de Google">
+                </div>
+                <div class="award-item"><img src="../img/us/awards/ia-madrid.webp"
+                        alt="Premio 4, IA y Tecnologías Avanzadas 2024"></div>
                 <div class="award-item"><img src="../img/us/awards/50_plus.webp" alt="Premio 5, 50 Plus"></div>
-                <div class="award-item"><img src="../img/us/awards/barcelona-council.webp" alt="Premio 6, Ayuntamiento de Barcelona"></div>
+                <div class="award-item"><img src="../img/us/awards/barcelona-council.webp"
+                        alt="Premio 6, Ayuntamiento de Barcelona"></div>
                 <div class="award-item"><img src="../img/us/awards/bvalue.webp" alt="Premio 7, BValue"></div>
-                <div class="award-item"><img src="../img/us/awards/entrepreneurs.webp" alt="Premio 8, Entrepreneurs"></div>
+                <div class="award-item"><img src="../img/us/awards/entrepreneurs.webp" alt="Premio 8, Entrepreneurs">
+                </div>
                 <div class="award-item"><img src="../img/us/awards/innovoevia.webp" alt="Premio 9, Innovoevía"></div>
                 <div class="award-item"><img src="../img/us/awards/renault.webp" alt="Premio 10, Renault"></div>
-                <div class="award-item"><img src="../img/us/awards/madrid.webp" alt="Premio 11, Ayuntamiento de Madrid"></div>
+                <div class="award-item"><img src="../img/us/awards/madrid.webp" alt="Premio 11, Ayuntamiento de Madrid">
+                </div>
 
                 <!-- Duplicated items -->
-                <div class="award-item"><img src="../img/us/awards/touristic_destiny.webp" alt="Premio 1, destino turistico"></div>
-                <div class="award-item"><img src="../img/us/awards/zero-project-award-win.webp" alt="Premio 2, zero project ganador 2022"></div>
-                <div class="award-item"><img src="../img/us/awards/google-support.webp" alt="Premio 3, apoyo de Google"></div>
-                <div class="award-item"><img src="../img/us/awards/ia-madrid.webp" alt="Premio 4, IA y Tecnologías Avanzadas 2024"></div>
+                <div class="award-item"><img src="../img/us/awards/touristic_destiny.webp"
+                        alt="Premio 1, destino turistico"></div>
+                <div class="award-item"><img src="../img/us/awards/zero-project-award-win.webp"
+                        alt="Premio 2, zero project ganador 2022"></div>
+                <div class="award-item"><img src="../img/us/awards/google-support.webp" alt="Premio 3, apoyo de Google">
+                </div>
+                <div class="award-item"><img src="../img/us/awards/ia-madrid.webp"
+                        alt="Premio 4, IA y Tecnologías Avanzadas 2024"></div>
                 <div class="award-item"><img src="../img/us/awards/50_plus.webp" alt="Premio 5, 50 Plus"></div>
-                <div class="award-item"><img src="../img/us/awards/barcelona-council.webp" alt="Premio 6, Ayuntamiento de Barcelona"></div>
+                <div class="award-item"><img src="../img/us/awards/barcelona-council.webp"
+                        alt="Premio 6, Ayuntamiento de Barcelona"></div>
                 <div class="award-item"><img src="../img/us/awards/bvalue.webp" alt="Premio 7, BValue"></div>
-                <div class="award-item"><img src="../img/us/awards/entrepreneurs.webp" alt="Premio 8, Entrepreneurs"></div>
+                <div class="award-item"><img src="../img/us/awards/entrepreneurs.webp" alt="Premio 8, Entrepreneurs">
+                </div>
                 <div class="award-item"><img src="../img/us/awards/innovoevia.webp" alt="Premio 9, Innovoevía"></div>
                 <div class="award-item"><img src="../img/us/awards/renault.webp" alt="Premio 10, Renault"></div>
-                <div class="award-item"><img src="../img/us/awards/madrid.webp" alt="Premio 11, Ayuntamiento de Madrid"></div>
+                <div class="award-item"><img src="../img/us/awards/madrid.webp" alt="Premio 11, Ayuntamiento de Madrid">
+                </div>
             </div>
         </div>
     </section>
@@ -231,6 +245,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
         const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
@@ -239,14 +254,37 @@
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
 
                 if (menuToggle && navBar) {
                     menuToggle.addEventListener('click', function () {
                         navBar.classList.toggle('active');
+
+                        // Close all dropdowns when the main menu is toggled
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
                     });
                 } else {
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
+
+                // Add click listener to each dropdown for mobile view
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Check if we are on a small screen
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load:', error);
             });
     });
 
