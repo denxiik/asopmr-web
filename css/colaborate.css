@@ -143,7 +143,7 @@
     position: absolute;
     width: 40rem;
     height: 40rem;
-    top: 25%;
+    top: 20%;
     left: auto;
     right: 0%;
     z-index: 1;
@@ -449,6 +449,7 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
 
 /* Mediums devices (desktops, 768px and down) */
 @media (max-width: 768px) {
+
     /* -------------------------
         SPONSORSHIP MAPPING SECTION (sponsorship-mapping)
     ------------------------- */
@@ -606,30 +607,24 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     ------------------------- */
     .fiscal-benefits {
         flex-direction: column;
-    }
-
-
-    .fiscal-benefits .content {
         align-items: center;
         text-align: center;
-        padding: 5% 8%;
+    }
+
+    .fiscal-benefits .content {
+        width: 90%;
+        padding: 10% 5%;
+        text-align: center;
     }
 
     .fiscal-benefits .content img {
         align-self: center;
+        width: 35%;
     }
 
-    .fiscal-benefits img {
-        width: 70%;
-    }
-
-    .fiscal-benefits .draw #fiscal-benefits-center-circle {
-        top: 70%;
-        z-index: -1;
-    }
-
-    #fiscal-benefits-bottom-cut-circle {
-        display: none;
+    img[alt="Una mano mirando papeles en una carpeta de archivos"],
+    .page-wrapper canvas {
+        visibility: hidden;
     }
 
     /* -------------------------
@@ -658,4 +653,19 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
         border-right: none;
     }
 
+}
+
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #fiscal-benefits-bottom-cut-circle {
+        top: 23%;
+    }
+}
+
+/* Very large devices (desktops, 1600px and up) */
+@media (min-width: 1600px) {
+    #fiscal-benefits-bottom-cut-circle {
+        top: 25%;
+    }
 }
