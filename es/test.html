@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colabora</title>
+    <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/colaborate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Script -->
+     <!-- Script -->
+    <script src="../script/script.js"></script>
+    <script src="../script/drawCircles.js"></script>
+
+
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
+</head>
+
+<!-- HEADER SECTION (header) -->
+<header id="header-placeholder"></header>
+
+<body>
+    <!-- HELP US SECTION (help-us) -->
+    <section class="help-us">
+        <div class="content">
+            <h4>
+                DONACIONES
+            </h4>
+            <h2>
+                Ayúdanos a mejorar la calidad de ​vida de personas con movilidad reducida
+            </h2>
+            <p class="paragraph-normal">
+                Tu apoyo financiero impulsará nuestras actividades, ofreciendo servicios y recursos ​esenciales para
+                quienes
+                se enfrentan a desafíos de movilidad.
+            </p>
+        </div>
+
+        <img src="../img/colaborate/open-space-two-persons.webp"
+            alt="Personas sentada y dando un refresco a una persona en silla de ruedas">
+    </section>
+
+    <!-- TRANSPARENCY SECTION (transparency) -->
+    <section class="transparency">
+        <img src="../img/colaborate/home-work.webp" alt="Una mujeer trabando en lu laptop desde el sofa">
+
+        <div class="content">
+            <img src="../img/colaborate/zoom-pdf.webp" alt="Lupa con un documento de texto">
+
+            <h3>
+                Total transparencia
+            </h3>
+
+            <h5>
+                Te informaremos de cómo se ha invertido tu donación
+            </h5>
+        </div>
+    </section>
+
+    <!-- FISCAL BENEFITS SECTION (fiscal-benefits) -->
+    <section class="fiscal-benefits">
+        <div class="content">
+            <img src="../img/colaborate/hands-and-coin.webp" alt="Simbolo de manos con una moneda">
+
+            <h3>
+                Beneficios fiscales
+            </h3>
+
+            <h5>
+                Dedúcete un 80% de los primeros 150€ donados y un 40% sobre la cantidad restante(*)
+            </h5>
+        </div>
+
+        <img src="../img/colaborate/documents-folder.webp" alt="Una mano mirando papeles en una carpeta de archivos">
+
+    </section>
+
+    <!-- PARK4DIS SECTION (park4dis-sample) -->
+    <section class="park4dis-sample" id="park4dis-sample">
+        <div class="content">
+            <h3>
+                Aparca sin complicaciones
+                con <strong>Park4Dis People</strong>
+            </h3>
+
+            <p class="paragraph-normal">
+                Si buscas una plataforma transversal e interurbana para la
+                gestión y el acceso a la ubicación de las plazas reservadas u
+                otros estacionamientos permitidos a nivel europeo, te
+                tenemos cubierto.
+            </p>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <img src="../img/check-symbol.webp" alt="Marca de verificación">
+                    <p>Vista global de plazas PMR</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../img/check-symbol.webp" alt="Marca de verificación">
+                    <p>Normativa local resumida y accesible</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../img/check-symbol.webp" alt="Marca de verificación">
+                    <p>Guiado hasta plazas y comandos de voz</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../img/check-symbol.webp" alt="Marca de verificación">
+                    <p>Reporte sencillo de incidencias y nuevas plazas</p>
+                </div>
+            </div>
+
+            <div class="draw">
+                <img src="../img/index/park4dis-phone-example.webp" alt="Captura de pantalla de la app Park4Dis">
+                <canvas id="p4d-center-circle"></canvas>
+                <canvas id="p4d-bottom-left-circle"></canvas>
+                <canvas id="p4d-bottom-cut-circle"></canvas>
+            </div>
+
+            <div class="download-app-container">
+                <button class="button" disabled>
+                    DESCARGAR &#8594;
+                </button>
+                <div class="images">
+                    <a href="https://play.google.com/store/apps/details?id=com.park4dis.app" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="../img/google-play.webp" alt="Icono de descarga para Android">
+                    </a>
+                    <a href="https://apps.apple.com/es/app/park4dis/id1543884273" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="../img/app-store.webp" alt="Icono de descarga para IOS">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+<script>
+    
+    // Define the color once
+    const orangeAso = '#FF915C';
+    const orangeDarkAso = '#FF7733';
+    const greenAso = '#1E4C50';
+
+    // Resize canvases on load and resize
+    window.addEventListener('load', () => {
+        resizeCanvas('p4d-center-circle');
+        resizeCanvas('p4d-bottom-left-circle');
+        resizeCanvas('p4d-bottom-cut-circle');
+
+        // Call the function for each circle with its respective text and color
+        drawCircleWithText('p4d-center-circle', 'Park4Dis\nPeople', orangeAso);
+        drawCircleWithText('p4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('p4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
+        resizeCanvas('s4d-center-circle');
+        resizeCanvas('s4d-bottom-left-circle');
+        resizeCanvas('s4d-bottom-cut-circle');
+
+        // Call the function for each circle with its respective text and color
+        drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
+        drawCircleWithText('s4d-bottom-cut-circle', '¿Te unes al cambio? \n 📲 Descarga Spot4Dis ahora y únete a una comunidad que trabaja por una mejor accesibilidad.', orangeAso);
+
+    });
+
+    window.addEventListener('resize', () => {
+        resizeCanvas('p4d-center-circle');
+        resizeCanvas('p4d-bottom-left-circle');
+        resizeCanvas('p4d-bottom-cut-circle');
+        drawCircleWithText('p4d-center-circle', 'Park4Dis\nPeople', orangeAso);
+        drawCircleWithText('p4d-bottom-left-circle', '', orangeDarkAso);
+        drawCircleWithText('p4d-bottom-cut-circle', 'Aparcamiento sin complicaciones para personas con movilidad reducida', orangeAso);
+
+        resizeCanvas('s4d-center-circle');
+        resizeCanvas('s4d-bottom-left-circle');
+        resizeCanvas('s4d-bottom-cut-circle');
+        drawCircleWithText('s4d-center-circle', 'Spot4Dis', orangeAso);
+        drawCircleWithText('s4d-bottom-left-circle', '', greenAso);
+        drawCircleWithText('s4d-bottom-cut-circle', '¿Te unes al cambio? \n 📲 Descarga Spot4Dis ahora y únete a una comunidad que trabaja por una mejor accesibilidad.', orangeAso);
+
+    });
+
+</script>
+
+</html>

@@ -1,73 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become a Member</title>
-    <link rel="icon" href="/img/asoPMR-logo-rounded.webp">
+    <title>Hazte socio</title>
+    <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
 
-    <link rel="stylesheet" href="/css/become-partner.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/become-partner.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <script src="/script/script.js"></script>
+    <!-- Script -->
+    <script src="../script/script.js"></script>
 
-    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/become-partner.html" />
-    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/become-partner.html" />
+    <!-- Hreflang tags (for SEO) -->
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
+<!-- HEADER SECTION (header) -->
 <header id="header-placeholder"></header>
 
 <body>
+    <!-- HOME SECTION (home) -->
     <section class="home">
         <div class="head">
             <h1>
-                Become a member for free!
+                ¡Hazte socio gratuitamente!
             </h1>
             <h5>
-                In addition to contributing to the mobility of the PRM collective, you will enjoy:
+                Además de contribuir a la movilidad del colectivo PMR, disfrutarás de:
             </h5>
         </div>
 
         <div class="solutions">
             <div class="item">
                 <div class="image-container">
-                    <img src="/img/become-partners/certificate.webp" alt="Spot4Dis Logo">
+                    <img src="../img/become-partners/certificate.webp" alt="Logo de Spot4Dis">
                 </div>
                 <div class="content">
                     <h5>
-                        Exclusive benefits:
+                        Beneficios exclusivos:
                     </h5>
                     <p class="paragraph-normal">
-                        Monthly newsletter on inclusive mobility, access to webinars, and specialized courses
+                        Newsletter mensual sobre movilidad inclusiva, acceso a webinars y cursos especializados
                     </p>
                 </div>
             </div>
 
             <div class="item">
                 <div class="image-container">
-                    <img src="/img/become-partners/hands-up.webp" alt="Park4Dis Logo">
+                    <img src="../img/become-partners/hands-up.webp" alt="Logo de Park4Dis">
                 </div>
                 <div class="content">
                     <h5>
-                        Active participation
+                        Participación activa
                     </h5>
                     <p class="paragraph-normal">
-                        Your voice and experience are valuable to our collective
+                        Tu voz y experiencia son valiosas para nuestro colectivo
                     </p>
                 </div>
             </div>
 
             <div class="item">
                 <div class="image-container">
-                    <img src="/img/become-partners/conversation.webp" alt="Park4Dis Logo">
+                    <img src="../img/become-partners/conversation.webp" alt="Logo de Park4Dis">
                 </div>
                 <div class="content">
                     <h5>
-                        Support network
+                        Red de apoyo
                     </h5>
                     <p class="paragraph-normal">
-                        You will connect with other members and professionals committed to improving inclusive mobility
+                        Conectarás con otros miembros y profesionales comprometidos con la mejora de la movilidad
+                        inclusiva
                     </p>
                 </div>
             </div>
@@ -77,34 +83,35 @@
 
     <section class="register">
         <h3>
-            Fill out the registration form
+            Rellena el formulario de registro
         </h3>
         <p class="paragraph-normal">
-            You can do it here or download the form in PDF and send it duly completed to
+            Puedes hacerlo aquí o descargar el formulario en pdf y enviarlo debidamente cumplimentado a
             socios@asopmr.org
         </p>
         <div class="button-container">
             <a href="https://tally.so/r/waGJqb">
                 <button>
-                    WEB FORM
+                    FORMULARIO WEB
                 </button>
             </a>
             <button>
-                PDF FORM
+                FORMULARIO EN PDF
             </button>
         </div>
     </section>
 
 </body>
 
-<a href="/es/hazte-socio/index.html" class="language-button">
-    <img class="language-flag" src="/img/es.png" alt="Spanish Flag">
+<!-- Floating buttons -->
+<a href="../en/become-partner.html" class="language-button">
+    <img class="language-flag" src="../img/en.png" alt="English Flag">
 </a>
 
 <script>
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
-        const headerPromise = loadHTML('/en/header.html', 'header-placeholder');
+        const headerPromise = loadHTML('header.html', 'header-placeholder');
 
         Promise.all([headerPromise])
             .then(() => {
@@ -122,7 +129,7 @@
                         });
                     });
                 } else {
-                    console.warn("Menu toggle or nav bar not found. Check your HTML structure.");
+                    console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
                 }
 
                 // Add click listener to each dropdown for mobile view
@@ -140,7 +147,7 @@
                 });
 
                 initializeAccessibility();
-
+                
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);
