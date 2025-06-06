@@ -298,11 +298,11 @@
         // Load all HTML fragments first
         const headerPromise = loadHTML('header.html', 'header-placeholder');
         const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-        const cookieBannerPromise = loadHTML('./es/overlays/cookie-banner.html', 'cookie-banner-placeholder');
-        const cookieOverlayPromise = loadHTML('./es/overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
-        const legalOverlayPromise = loadHTML('./es/overlays/legal-overlay.html', 'legal-overlay-placeholder');
-        const privacyOverlayPromise = loadHTML('./es/overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
-        const genderOverlayPromise = loadHTML('./es/overlays/gender-overlay.html', 'gender-overlay-placeholder');
+        const cookieBannerPromise = loadHTML('./overlays/cookie-banner.html', 'cookie-banner-placeholder');
+        const cookieOverlayPromise = loadHTML('./overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
+        const legalOverlayPromise = loadHTML('./overlays/legal-overlay.html', 'legal-overlay-placeholder');
+        const privacyOverlayPromise = loadHTML('./overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
+        const genderOverlayPromise = loadHTML('./overlays/gender-overlay.html', 'gender-overlay-placeholder');
         const joinCommunityPromise = loadHTML('join-community.html', 'join-community-placeholder');
 
         Promise.all([headerPromise, footerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise, joinCommunityPromise])
