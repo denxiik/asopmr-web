@@ -295,14 +295,14 @@
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
         // Load all HTML fragments first
-        const headerPromise = loadHTML('./header/index.html', 'header-placeholder');
-        const footerPromise = loadHTML('./footer/index.html', 'footer-placeholder');
-        const cookieBannerPromise = loadHTML('./overlays/cookie-banner.html', 'cookie-banner-placeholder');
-        const cookieOverlayPromise = loadHTML('./overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
-        const legalOverlayPromise = loadHTML('./overlays/legal-overlay.html', 'legal-overlay-placeholder');
-        const privacyOverlayPromise = loadHTML('./overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
-        const genderOverlayPromise = loadHTML('./overlays/gender-overlay.html', 'gender-overlay-placeholder');
-        const joinCommunityPromise = loadHTML('./join-community/index.html', 'join-community-placeholder');
+        const headerPromise = loadHTML('../header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../footer/index.html', 'footer-placeholder');
+        const cookieBannerPromise = loadHTML('../overlays/cookie-banner.html', 'cookie-banner-placeholder');
+        const cookieOverlayPromise = loadHTML('../overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
+        const legalOverlayPromise = loadHTML('../overlays/legal-overlay.html', 'legal-overlay-placeholder');
+        const privacyOverlayPromise = loadHTML('../overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
+        const genderOverlayPromise = loadHTML('../overlays/gender-overlay.html', 'gender-overlay-placeholder');
+        const joinCommunityPromise = loadHTML('../join-community/index.html', 'join-community-placeholder');
 
         Promise.all([headerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise, footerPromise, joinCommunityPromise])
             .then(() => {
