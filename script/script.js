@@ -9,8 +9,8 @@ function loadHTML(filename, elementId) {
             console.error('Error loading HTML:', error);
         });
 }
-// overlay-handlers.js
 
+// Overlay-handlers
 function initializeOverlayHandlers() {
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
@@ -207,4 +207,120 @@ function initializeOverlayHandlers() {
             openCookieOverlay();
         });
     }
+}
+
+// Accesibility
+function initializeAccessibility() {
+    const accessibilityButton = document.getElementById('accessibility-button');
+    const accessibilityPanel = document.getElementById('accessibility-panel');
+    const fontSizeBtn = document.getElementById('font-size-btn');
+    const contrastBtn = document.getElementById('contrast-btn');
+    const whiteTextBtn = document.getElementById('white-text-btn');
+    const readableFontBtn = document.getElementById('readable-font-btn');
+    const resetAccessibilityBtn = document.getElementById('reset-accessibility-btn');
+    const body = document.body;
+
+    // --- Null Checks for Robustness ---
+    // It's good practice to check if elements exist before trying to add event listeners to them.
+    if (!accessibilityButton || !accessibilityPanel || !fontSizeBtn || !contrastBtn || !whiteTextBtn || !readableFontBtn || !resetAccessibilityBtn) {
+        console.warn("One or more accessibility elements not found. Accessibility features may not function correctly.");
+        // Optionally, you might want to return or throw an error if critical elements are missing.
+        return;
+    }
+
+
+    // Function to toggle accessibility panel visibility
+    accessibilityButton.addEventListener('click', () => {
+        accessibilityPanel.classList.toggle('active');
+        accessibilityButton.setAttribute('aria-expanded', accessibilityPanel.classList.contains('active'));
+    });
+
+    // Close panel when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!accessibilityPanel.contains(event.target) && !accessibilityButton.contains(event.target)) {
+            accessibilityPanel.classList.remove('active');
+            accessibilityButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Helper to toggle a class on the body and button state
+    function toggleAccessibilityClass(className, button) {
+        body.classList.toggle(className);
+        button.classList.toggle('active', body.classList.contains(className));
+        // Store preference in localStorage
+        localStorage.setItem(className, body.classList.contains(className));
+    }
+
+    // Helper to remove a class from the body and button state
+    function removeAccessibilityClass(className, button) {
+        body.classList.remove(className);
+        button.classList.remove('active');
+        // Remove preference from localStorage
+        localStorage.removeItem(className);
+    }
+
+    // Load saved preferences on page load
+    function loadAccessibilityPreferences() {
+        if (localStorage.getItem('font-large') === 'true') {
+            body.classList.add('font-large');
+            fontSizeBtn.classList.add('active');
+        }
+        if (localStorage.getItem('high-contrast') === 'true') {
+            body.classList.add('high-contrast');
+            contrastBtn.classList.add('active');
+        }
+        if (localStorage.getItem('white-text-mode') === 'true') {
+            body.classList.add('white-text-mode');
+            whiteTextBtn.classList.add('active');
+        }
+        if (localStorage.getItem('readable-font') === 'true') {
+            body.classList.add('readable-font');
+            readableFontBtn.classList.add('active');
+        }
+    }
+
+    // Event Listeners for accessibility options
+    fontSizeBtn.addEventListener('click', () => {
+        toggleAccessibilityClass('font-large', fontSizeBtn);
+        // Ensure white text mode is off if high contrast is active when font size is toggled
+        if (body.classList.contains('white-text-mode')) {
+            removeAccessibilityClass('white-text-mode', whiteTextBtn);
+        }
+    });
+
+    contrastBtn.addEventListener('click', () => {
+        toggleAccessibilityClass('high-contrast', contrastBtn);
+        // Ensure white text mode is off if high contrast is active
+        if (body.classList.contains('high-contrast')) {
+            removeAccessibilityClass('white-text-mode', whiteTextBtn);
+        }
+    });
+
+    whiteTextBtn.addEventListener('click', () => {
+        toggleAccessibilityClass('white-text-mode', whiteTextBtn);
+        // Ensure high contrast is off if white text mode is active
+        if (body.classList.contains('white-text-mode')) {
+            removeAccessibilityClass('high-contrast', contrastBtn);
+        }
+    });
+
+    readableFontBtn.addEventListener('click', () => {
+        toggleAccessibilityClass('readable-font', readableFontBtn);
+    });
+
+    resetAccessibilityBtn.addEventListener('click', () => {
+        // Remove all accessibility classes from the body
+        removeAccessibilityClass('font-large', fontSizeBtn);
+        removeAccessibilityClass('high-contrast', contrastBtn);
+        removeAccessibilityClass('white-text-mode', whiteTextBtn);
+        removeAccessibilityClass('readable-font', readableFontBtn);
+        // Clear all accessibility preferences from localStorage
+        localStorage.removeItem('font-large');
+        localStorage.removeItem('high-contrast');
+        localStorage.removeItem('white-text-mode');
+        localStorage.removeItem('readable-font');
+    });
+
+    // Load preferences when the page loads
+    loadAccessibilityPreferences();
 }

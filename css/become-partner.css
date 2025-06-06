@@ -10,6 +10,11 @@
     align-items: center;
 }
 
+body.high-contrast .home,
+body.white-text-mode .home {
+    background-color: #000 !important;
+}
+
 .home .head {
     padding: 0% 10%;
     padding-top: 3%;
@@ -18,6 +23,11 @@
     flex-direction: column;
     align-items: center;
     color: var(--green-aso);
+}
+
+body.high-contrast .home .head,
+body.white-text-mode .home .head {
+    color: #BDF24B !important;
 }
 
 .home .head h5 {
@@ -69,8 +79,18 @@
     font-weight: 700;
 }
 
+body.high-contrast .home .solutions .item .content h5,
+body.white-text-mode .home .solutions .item .content h5 {
+    color: #FFB793 !important; /* Slightly lighter orange for contrast */
+}
+
 .home .solutions .item .content .paragraph-normal {
     color: #2E2E2E;
+}
+
+body.high-contrast .home .solutions .item .content .paragraph-normal,
+body.white-text-mode .home .solutions .item .content .paragraph-normal {
+    color: #FFF !important;
 }
 
 /* -------------------------
@@ -83,11 +103,22 @@
     text-align: center;
 }
 
+body.high-contrast .register,
+body.white-text-mode .register {
+    background-color: #000 !important;
+}
+
 .register h3 {
     color: var(--dark-oranje-aso);
 }
 
-.register ,.paragraph-normal {
+body.high-contrast .register h3,
+body.white-text-mode .register h3 {
+    color: #FFB793 !important;
+}
+
+.register,
+.paragraph-normal {
     padding: 5% 15%;
 }
 
@@ -100,6 +131,13 @@
 
 .register button {
     background-color: var(--green-aso);
+}
+
+body.high-contrast .register button,
+body.white-text-mode .register button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
 }
 
 /* Small devices (desktops, 768px and down) */
@@ -121,6 +159,11 @@
         width: 100%;
         padding: 5% 0;
         border-bottom: 1px solid var(--green-aso);
+    }
+
+    body.high-contrast .home .solutions .item,
+    body.white-text-mode .home .solutions .item {
+        border-bottom: 1px solid #BDF24B !important;
     }
 
     .home .solutions .item:last-child {
@@ -158,5 +201,10 @@
     .home .solutions .item h1 {
         margin: 0;
         color: var(--green-aso);
+    }
+
+    body.high-contrast .home .solutions .item h1,
+    body.white-text-mode .home .solutions .item h1 {
+        color: #BDF24B !important;
     }
 }

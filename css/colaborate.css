@@ -10,6 +10,11 @@
     flex-direction: row;
 }
 
+body.high-contrast .right-image-content,
+body.white-text-mode .right-image-content {
+    background-color: #000 !important;
+}
+
 .right-image-content .content {
     padding: 8%;
     padding-top: 5%;
@@ -17,9 +22,19 @@
     width: 45%;
 }
 
+body.high-contrast .right-image-content .content,
+body.white-text-mode .right-image-content .content {
+    color: #FFF !important;
+}
+
 .right-image-content .content h4 {
     color: var(--light-green-aso);
     letter-spacing: 1rem;
+}
+
+body.high-contrast .right-image-content .content h4,
+body.white-text-mode .right-image-content .content h4 {
+    color: #BDF24B !important;
 }
 
 .right-image-content .content h2 {
@@ -46,6 +61,11 @@
     z-index: -1;
 }
 
+body.high-contrast .left-image-content,
+body.white-text-mode .left-image-content {
+    background-color: #333 !important;
+}
+
 .left-image-content img {
     width: 45%;
     height: 45%;
@@ -65,8 +85,18 @@
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .left-image-content .content h3,
+body.white-text-mode .left-image-content .content h3 {
+    color: #FFB793 !important;
+}
+
 .left-image-content .content h5 {
     color: var(--green-aso);
+}
+
+body.high-contrast .left-image-content .content h5,
+body.white-text-mode .left-image-content .content h5 {
+    color: #BDF24B !important;
 }
 
 /* -------------------------
@@ -81,6 +111,11 @@
     z-index: 1;
 }
 
+body.high-contrast .fiscal-benefits,
+body.white-text-mode .fiscal-benefits {
+    background-color: #000 !important;
+}
+
 .fiscal-benefits .content {
     display: flex;
     flex-direction: column;
@@ -88,6 +123,11 @@
     text-align: left;
     width: 50%;
     padding: 15% 8%;
+}
+
+body.high-contrast .fiscal-benefits .content,
+body.white-text-mode .fiscal-benefits .content {
+    color: #FFF !important;
 }
 
 .fiscal-benefits .content img {
@@ -99,6 +139,11 @@
 .fiscal-benefits .content h3 {
     color: var(--dark-oranje-aso);
     padding: 5% 0%;
+}
+
+body.high-contrast .fiscal-benefits .content h3,
+body.white-text-mode .fiscal-benefits .content h3 {
+    color: #FFB793 !important;
 }
 
 .fiscal-benefits .draw {
@@ -116,6 +161,11 @@
     justify-content: center;
     width: 50%;
     pointer-events: none;
+}
+
+body.high-contrast .fiscal-benefits .draw,
+body.white-text-mode .fiscal-benefits .draw {
+    color: #FFF !important;
 }
 
 .fiscal-benefits .draw canvas {
@@ -173,9 +223,21 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .want-to-colaborate h5,
+body.white-text-mode .want-to-colaborate h5 {
+    color: #FFB793 !important;
+}
+
 .want-to-colaborate button {
     margin-top: 3rem;
     background-color: var(--dark-oranje-aso);
+}
+
+body.high-contrast .want-to-colaborate button,
+body.white-text-mode .want-to-colaborate button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
 }
 
 /* -------------------------
@@ -190,12 +252,22 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     padding-bottom: 5%;
 }
 
+body.high-contrast .sponsorship-mapping,
+body.white-text-mode .sponsorship-mapping {
+    background-color: #000 !important;
+}
+
 .sponsorship-mapping h4 {
     line-height: 1.5;
     padding: 0 25%;
     text-align: center;
     color: var(--white);
     margin-bottom: 5%;
+}
+
+body.high-contrast .sponsorship-mapping h4,
+body.white-text-mode .sponsorship-mapping h4 {
+    color: #FFF !important;
 }
 
 .sponsorship-mapping .solutions {
@@ -220,6 +292,13 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+body.high-contrast .sponsorship-mapping .solutions .item,
+body.white-text-mode .sponsorship-mapping .solutions .item {
+    background-color: #333 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid #BDF24B !important;
+}
+
 .sponsorship-mapping .solutions .item:first-child {
     padding: 0;
     overflow: hidden;
@@ -241,10 +320,20 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     margin-bottom: 1rem;
 }
 
+body.high-contrast .sponsorship-mapping .solutions .item h5,
+body.white-text-mode .sponsorship-mapping .solutions .item h5 {
+    color: #BDF24B !important;
+}
+
 .sponsorship-mapping .solutions .item .paragraph-normal {
     color: var(--green-aso);
     padding: 0% 12%;
     padding-top: 5%;
+}
+
+body.high-contrast .sponsorship-mapping .solutions .item .paragraph-normal,
+body.white-text-mode .sponsorship-mapping .solutions .item .paragraph-normal {
+    color: #FFF !important;
 }
 
 /* -------------------------
@@ -256,11 +345,21 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     align-items: center;
 }
 
+body.high-contrast .sponsorship-modality,
+body.white-text-mode .sponsorship-modality {
+    background-color: #000 !important;
+}
+
 .sponsorship-modality h3 {
     padding: 0% 20%;
     padding-top: 8%;
     text-align: center;
     color: var(--dark-oranje-aso);
+}
+
+body.high-contrast .sponsorship-modality h3,
+body.white-text-mode .sponsorship-modality h3 {
+    color: #FFB793 !important;
 }
 
 .sponsorship-modality .solutions {
@@ -281,6 +380,11 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     text-align: center;
 }
 
+body.high-contrast .sponsorship-modality .solutions .item,
+body.white-text-mode .sponsorship-modality .solutions .item {
+    border: 1px solid #BDF24B !important;
+}
+
 .sponsorship-modality .solutions .item:first-child {
     border-left: none;
 }
@@ -293,6 +397,11 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     padding: 5% 0%;
     font-weight: 700;
     color: var(--green-aso);
+}
+
+body.high-contrast .sponsorship-modality .solutions .item h5,
+body.white-text-mode .sponsorship-modality .solutions .item h5 {
+    color: #BDF24B !important;
 }
 
 /* -------------------------
@@ -317,10 +426,20 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     letter-spacing: normal;
 }
 
+body.high-contrast .sponsorship-benefits h3,
+body.white-text-mode .sponsorship-benefits h3 {
+    color: #FFB793 !important;
+}
+
 .sponsorship-benefits .feature-item p {
     padding-top: 2%;
     color: var(--green-aso);
     font-size: 1.375rem;
+}
+
+body.high-contrast .sponsorship-benefits .feature-item p,
+body.white-text-mode .sponsorship-benefits .feature-item p {
+    color: #FFF !important;
 }
 
 .sponsorship-benefits .images {
@@ -359,10 +478,20 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     text-align: center;
 }
 
+body.high-contrast .sponsorship-form,
+body.white-text-mode .sponsorship-form {
+    background-color: #000 !important;
+}
+
 .sponsorship-form h1 {
     color: var(--light-green-aso);
     margin-bottom: 3%;
     font-weight: bold;
+}
+
+body.high-contrast .sponsorship-form h1,
+body.white-text-mode .sponsorship-form h1 {
+    color: #BDF24B !important;
 }
 
 .sponsorship-form h5 {
@@ -370,6 +499,11 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     margin-bottom: 3%;
     padding: 0% 20%;
     line-height: 1.6;
+}
+
+body.high-contrast .sponsorship-form h5,
+body.white-text-mode .sponsorship-form h5 {
+    color: #FFF !important;
 }
 
 .contact-form-container {
@@ -407,9 +541,21 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     outline: none;
 }
 
+body.high-contrast .form-row input,
+body.white-text-mode .form-row input {
+    background-color: #555 !important;
+    color: #FFF !important;
+    border: 1px solid #BDF24B !important;
+}
+
 .form-row input::placeholder {
     color: #888;
     font-weight: normal;
+}
+
+body.high-contrast .form-row input::placeholder,
+body.white-text-mode .form-row input::placeholder {
+    color: #CCC !important;
 }
 
 .privacy-consent {
@@ -421,11 +567,21 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     font-size: 0.95em;
 }
 
+body.high-contrast .privacy-consent,
+body.white-text-mode .privacy-consent {
+    color: #FFF !important;
+}
+
 .privacy-consent input[type="checkbox"] {
     width: 20px;
     height: 20px;
     accent-color: #008080;
     cursor: pointer;
+}
+
+body.high-contrast .privacy-consent input[type="checkbox"],
+body.white-text-mode .privacy-consent input[type="checkbox"] {
+    accent-color: #BDF24B !important;
 }
 
 .g-recaptcha {
@@ -440,11 +596,22 @@ img[alt="Una mano mirando papeles en una carpeta de archivos"] {
     color: #2F4F4F;
 }
 
+body.high-contrast .contact-form button,
+body.white-text-mode .contact-form button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
 
 .sponsorship-form .down-h5 {
     padding: 0% 25%;
     padding-top: 5%;
     color: var(--light-green-aso);
+}
+
+body.high-contrast .sponsorship-form .down-h5,
+body.white-text-mode .sponsorship-form .down-h5 {
+    color: #BDF24B !important;
 }
 
 /* Mediums devices (desktops, 768px and down) */

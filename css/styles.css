@@ -281,11 +281,184 @@ button:hover {
     margin: 0;
 }
 
+/* -------------------------
+    ACCESSIBILITY STYLES
+------------------------- */
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
 
+.accessibility-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.accessibility-panel {
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accessibility-panel.active {
+    display: flex;
+}
+
+.accessibility-panel h4 {
+    margin-bottom: 10px;
+    color: var(--green-aso);
+}
+
+.accessibility-panel button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--oranje-aso);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    letter-spacing: normal;
+}
+
+.accessibility-panel button:hover {
+    background-color: var(--dark-oranje-aso);
+    transform: none;
+}
+
+.accessibility-panel button.active {
+    background-color: var(--green-aso);
+}
+
+/* Accessibility Modes */
+body.font-large {
+    font-size: 1.25em;
+}
+
+body.font-large h1 { font-size: 5.9375rem; /* 76 * 1.25 */ }
+body.font-large h2 { font-size: 4.53125rem; /* 58 * 1.25 */ }
+body.font-large h3 { font-size: 3.28125rem; /* 42 * 1.25 */ }
+body.font-large h4 { font-size: 2.65625rem; /* 34 * 1.25 */ }
+body.font-large h5 { font-size: 2.34375rem; /* 30 * 1.25 */ }
+body.font-large button,
+body.font-large .feature-list .feature-item { font-size: 1.71875rem; /* 22 * 1.25 */ }
+body.font-large .paragraph-bold { font-size: 1.5625rem; /* 20 * 1.25 */ }
+body.font-large .paragraph-normal,
+body.font-large .nav-bar li a,
+body.font-large .dropdown-content li a,
+body.font-large .site-footer .asoPMR-info .asoPMR-content-wrapper .column p { font-size: 1.40625rem; /* 18 * 1.25 */ }
+
+
+body.high-contrast {
+    background-color: #000 !important;
+    color: #FFF !important;
+}
+
+body.high-contrast a {
+    color: #BDF24B !important; /* Light green for links */
+}
+
+body.high-contrast button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
+
+body.high-contrast .accessibility-panel {
+    background-color: #333 !important;
+    border-color: #BDF24B !important;
+}
+
+body.high-contrast .accessibility-panel h4 {
+    color: #BDF24B !important; /* Ensure visibility for header in high contrast */
+}
+
+body.white-text-mode {
+    background-color: #000 !important;
+    color: #FFF !important;
+}
+
+/* Target all elements that might have text color and override them for white text mode */
+body.white-text-mode h1,
+body.white-text-mode h2,
+body.white-text-mode h3,
+body.white-text-mode h4,
+body.white-text-mode h5,
+body.white-text-mode h6,
+body.white-text-mode p,
+body.white-text-mode span,
+body.white-text-mode a,
+body.white-text-mode li,
+body.white-text-mode div:not(.accessibility-panel),
+body.white-text-mode .feature-item img { /* Added img to ensure proper icon visibility if needed */
+    color: #FFF !important;
+}
+
+/* Specifically target elements within the accessibility panel for white text mode to ensure contrast */
+body.white-text-mode .accessibility-panel {
+    background-color: #FFF !important; /* White background for the panel */
+    border-color: #333 !important; /* Darker border for contrast */
+}
+
+body.white-text-mode .accessibility-panel h4 {
+    color: #333 !important; /* Dark text for the header */
+}
+
+body.white-text-mode .accessibility-panel button {
+    background-color: #555 !important; /* Darker buttons */
+    color: #FFF !important; /* White text on buttons */
+}
+
+body.white-text-mode .accessibility-panel button.active {
+    background-color: #1E4C50 !important; /* Green for active button */
+}
+
+
+body.readable-font {
+    font-family: Arial, sans-serif !important;
+}
+
+
+/* Media queries for responsiveness */
 /* Very small devices (phones, 620px and down) */
 @media (max-width: 620px) {
     .contact-button {
         font-size: 1rem;
+    }
+
+    .accessibility-button {
+        top: 10px;
+        left: 10px;
+    }
+
+    .accessibility-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .accessibility-panel {
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        width: auto;
     }
 }
 
@@ -331,7 +504,6 @@ button:hover {
     /* Buttons and Feature Lists */
     button,
     .feature-list .feature-item {
-        /* Assuming these are classes or relevant elements */
         font-size: 1rem;
         /* 22px / 16px = 1.375rem */
     }
@@ -370,5 +542,9 @@ button:hover {
     .download-app-container .images {
         flex-direction: column;
         align-items: center;
+    }
+
+    body.font-large {
+        font-size: 1.1em;
     }
 }

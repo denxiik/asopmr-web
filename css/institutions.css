@@ -41,9 +41,19 @@
     padding-right: 10%;
 }
 
+body.high-contrast .service .features,
+body.white-text-mode .service .features {
+    background-color: #333 !important;
+}
+
 .service .features h3 {
     padding-top: 8%;
     text-align: center;
+}
+
+body.high-contrast .service .features h3,
+body.white-text-mode .service .features h3 {
+    color: #BDF24B !important;
 }
 
 /* service right image (type 1 of services) */
@@ -55,12 +65,27 @@
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .service-right-image .content .title .paragraph-bold,
+body.white-text-mode .service-right-image .content .title .paragraph-bold {
+    color: #FFB793 !important;
+}
+
 .service-right-image .content .title h3 {
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .service-right-image .content .title h3,
+body.white-text-mode .service-right-image .content .title h3 {
+    color: #FFB793 !important;
+}
+
 .service-right-image .content .title h4 {
     color: var(--green-aso);
+}
+
+body.high-contrast .service-right-image .content .title h4,
+body.white-text-mode .service-right-image .content .title h4 {
+    color: #BDF24B !important;
 }
 
 .service-right-image .content img {
@@ -73,8 +98,18 @@
     background-color: var(--very-light-orange-aso);
 }
 
+body.high-contrast .service-right-image .features,
+body.white-text-mode .service-right-image .features {
+    background-color: #333 !important;
+}
+
 .service-right-image .features h3 {
     color: var(--dark-oranje-aso);
+}
+
+body.high-contrast .service-right-image .features h3,
+body.white-text-mode .service-right-image .features h3 {
+    color: #FFB793 !important;
 }
 
 /* service left image (type 2 of services) */
@@ -87,12 +122,27 @@
     color: var(--green-aso);
 }
 
+body.high-contrast .service-left-image .content .title .paragraph-bold,
+body.white-text-mode .service-left-image .content .title .paragraph-bold {
+    color: #BDF24B !important;
+}
+
 .service-left-image .content .title h3 {
     color: var(--green-aso);
 }
 
+body.high-contrast .service-left-image .content .title h3,
+body.white-text-mode .service-left-image .content .title h3 {
+    color: #BDF24B !important;
+}
+
 .service-left-image .content .title h4 {
     color: var(--dark-oranje-aso);
+}
+
+body.high-contrast .service-left-image .content .title h4,
+body.white-text-mode .service-left-image .content .title h4 {
+    color: #FFB793 !important;
 }
 
 .service-left-image .content img {
@@ -104,8 +154,18 @@
     background-color: #e9eeee;
 }
 
+body.high-contrast .service-left-image .features,
+body.white-text-mode .service-left-image .features {
+    background-color: #555 !important;
+}
+
 .service-left-image .features h3 {
     color: var(--green-aso);
+}
+
+body.high-contrast .service-left-image .features h3,
+body.white-text-mode .service-left-image .features h3 {
+    color: #BDF24B !important;
 }
 
 /* -------------------------
@@ -117,12 +177,22 @@
     flex-direction: row;
 }
 
+body.high-contrast .services,
+body.white-text-mode .services {
+    background-color: #000 !important;
+}
+
 .services h2 {
     width: 55%;
     padding-left: 10%;
     padding-top: 8%;
     color: var(--green-aso);
     padding-bottom: 5%;
+}
+
+body.high-contrast .services h2,
+body.white-text-mode .services h2 {
+    color: #BDF24B !important;
 }
 
 .services img {
@@ -143,11 +213,23 @@
     padding-bottom: 5%;
 }
 
+body.high-contrast .improve-mobility,
+body.white-text-mode .improve-mobility {
+    background-color: #333 !important;
+    border-top: 1px solid #BDF24B !important;
+    border-bottom: 1px solid #BDF24B !important;
+}
+
 .improve-mobility h4 {
     color: var(--light-green-aso);
     text-align: center;
     letter-spacing: 10px;
     margin: 0 5%;
+}
+
+body.high-contrast .improve-mobility h4,
+body.white-text-mode .improve-mobility h4 {
+    color: #FFF !important; /* Adjusted for high contrast */
 }
 
 /* -------------------------
@@ -158,10 +240,21 @@
     align-items: center;
 }
 
+body.high-contrast .contact-section,
+body.white-text-mode .contact-section {
+    background-color: #000 !important;
+    border-top: 1px solid #BDF24B !important;
+}
+
 .contact-section h1 {
     color: var(--light-green-aso);
     padding: 6% 10%;
     text-align: center;
+}
+
+body.high-contrast .contact-section h1,
+body.white-text-mode .contact-section h1 {
+    color: #FFF !important; /* Adjusted for high contrast */
 }
 
 .contact-section button {
@@ -170,6 +263,12 @@
     margin-bottom: 6%;
 }
 
+body.high-contrast .contact-section button,
+body.white-text-mode .contact-section button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
 
 /* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {

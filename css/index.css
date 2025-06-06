@@ -2,7 +2,6 @@
 
 h3 {
     font-weight: 400 !important;
-    ;
 }
 
 /* -------------------------
@@ -16,12 +15,22 @@ h3 {
     position: relative;
 }
 
+body.high-contrast .home,
+body.white-text-mode .home {
+    background-color: #000 !important;
+}
+
 .home .title {
     margin-top: 1%;
     margin-left: 10%;
     max-width: 75%;
     color: var(--white);
     letter-spacing: 3px;
+}
+
+body.high-contrast .home .title,
+body.white-text-mode .home .title {
+    color: #FFF !important;
 }
 
 .home .images {
@@ -62,12 +71,22 @@ h3 {
     gap: 2rem;
 }
 
+body.high-contrast .subhome,
+body.white-text-mode .subhome {
+    background-color: #000 !important;
+}
+
 .subhome .title {
     color: var(--green-aso);
     margin-left: 6%;
     flex: 1;
     min-width: 200px;
     max-width: 50%;
+}
+
+body.high-contrast .subhome .title,
+body.white-text-mode .subhome .title {
+    color: #BDF24B !important;
 }
 
 .subhome .image {
@@ -89,12 +108,24 @@ h3 {
     flex-direction: column;
 }
 
+body.high-contrast .service-benefits,
+body.white-text-mode .service-benefits {
+    background-color: #000 !important;
+}
+
 .service-benefits .title {
     width: 100%;
     padding: 3rem;
     text-align: center;
     background-color: var(--dark-oranje-aso);
     color: var(--white);
+}
+
+body.high-contrast .service-benefits .title,
+body.white-text-mode .service-benefits .title {
+    background-color: #333 !important;
+    color: #FFF !important;
+    border-bottom: 1px solid #BDF24B !important;
 }
 
 .grid-container {
@@ -134,8 +165,20 @@ h3 {
     margin-top: 0;
 }
 
+body.high-contrast .grid-item .paragraph-bold,
+body.white-text-mode .grid-item .paragraph-bold {
+    background-color: #555 !important;
+    color: #FFF !important;
+    border-top: 1px solid #BDF24B !important;
+}
+
 .grid-item-center .paragraph-bold {
     background-color: var(--slightly-darker-orange-aso);
+}
+
+body.high-contrast .grid-item-center .paragraph-bold,
+body.white-text-mode .grid-item-center .paragraph-bold {
+    background-color: #777 !important;
 }
 
 /* -------------------------
@@ -149,6 +192,11 @@ h3 {
     padding-bottom: 10%;
 }
 
+body.high-contrast .park4dis-sample,
+body.white-text-mode .park4dis-sample {
+    background-color: #000 !important;
+}
+
 .park4dis-sample .content {
     margin-left: 10%;
     max-width: 45%;
@@ -158,8 +206,18 @@ h3 {
     color: var(--green-aso);
 }
 
+body.high-contrast .park4dis-sample h3,
+body.white-text-mode .park4dis-sample h3 {
+    color: #BDF24B !important;
+}
+
 .park4dis-sample .paragraph-normal {
     margin-top: 2rem;
+}
+
+body.high-contrast .park4dis-sample .paragraph-normal,
+body.white-text-mode .park4dis-sample .paragraph-normal {
+    color: #FFF !important;
 }
 
 .park4dis-sample .content .feature-list {
@@ -226,7 +284,7 @@ h3 {
 }
 
 /* -------------------------
-    SPOT4DIS SECTION (spot4dis-sample)
+    SPOT4DIS SECTION (spot4dis-sample)
 ------------------------- */
 .spot4dis-sample {
     background-color: var(--very-light-orange-aso);
@@ -238,6 +296,11 @@ h3 {
     padding-bottom: 10%;
 }
 
+body.high-contrast .spot4dis-sample,
+body.white-text-mode .spot4dis-sample {
+    background-color: #333 !important;
+}
+
 .spot4dis-sample .content {
     margin-right: 10%;
     max-width: 45%;
@@ -247,8 +310,18 @@ h3 {
     color: var(--green-aso);
 }
 
+body.high-contrast .spot4dis-sample h3,
+body.white-text-mode .spot4dis-sample h3 {
+    color: #BDF24B !important;
+}
+
 .spot4dis-sample .paragraph-normal {
     margin-top: 2rem;
+}
+
+body.high-contrast .spot4dis-sample .paragraph-normal,
+body.white-text-mode .spot4dis-sample .paragraph-normal {
+    color: #FFF !important;
 }
 
 .spot4dis-sample .content .feature-list {
@@ -333,6 +406,13 @@ h3 {
     background-color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .spot4dis-sample .download-app-container button,
+body.white-text-mode .spot4dis-sample .download-app-container button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
+}
+
 /* -------------------------
     OUR GOAL SECTION (our-goal)
 ------------------------- */
@@ -341,10 +421,22 @@ h3 {
     flex-direction: column;
 }
 
+body.high-contrast .our-goal,
+body.white-text-mode .our-goal {
+    background-color: #000 !important;
+}
+
 .our-goal .title {
     text-align: center;
     color: var(--white);
     background-color: var(--green-aso);
+}
+
+body.high-contrast .our-goal .title,
+body.white-text-mode .our-goal .title {
+    background-color: #333 !important;
+    color: #FFF !important;
+    border-bottom: 1px solid #BDF24B !important;
 }
 
 .our-goal .title h2 {
@@ -358,6 +450,11 @@ h3 {
     display: flex;
     flex-direction: column;
     padding-top: 5%;
+}
+
+body.high-contrast .transform-munitipality,
+body.white-text-mode .transform-munitipality {
+    background-color: #000 !important;
 }
 
 .transform-munitipality .content {
@@ -377,8 +474,18 @@ h3 {
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .transform-munitipality .content .title .paragraph-bold,
+body.white-text-mode .transform-munitipality .content .title .paragraph-bold {
+    color: #FFB793 !important;
+}
+
 .transform-munitipality .content .title h3 {
     padding: 25px 0px;
+}
+
+body.high-contrast .transform-munitipality .content .title h3,
+body.white-text-mode .transform-munitipality .content .title h3 {
+    color: #BDF24B !important;
 }
 
 .transform-munitipality .content img {
@@ -397,12 +504,22 @@ h3 {
     padding-bottom: 10%;
 }
 
+body.high-contrast .transform-munitipality .feature-list,
+body.white-text-mode .transform-munitipality .feature-list {
+    background-color: #333 !important;
+}
+
 /* -------------------------
     PARK4DIS ADMIN SECTION (park4dis-admin)
 ------------------------- */
 .park4dis-admin {
     display: flex;
     padding: 10% 5%;
+}
+
+body.high-contrast .park4dis-admin,
+body.white-text-mode .park4dis-admin {
+    background-color: #000 !important;
 }
 
 .park4dis-admin img {
@@ -419,13 +536,30 @@ h3 {
     color: var(--dark-oranje-aso);
 }
 
+body.high-contrast .park4dis-admin .content h3,
+body.white-text-mode .park4dis-admin .content h3 {
+    color: #FFB793 !important;
+}
+
 .park4dis-admin .content p {
     padding: 10% 0;
+}
+
+body.high-contrast .park4dis-admin .content p,
+body.white-text-mode .park4dis-admin .content p {
+    color: #FFF !important;
 }
 
 .park4dis-admin .content button {
     margin-top: 10%;
     background-color: var(--green-aso);
+}
+
+body.high-contrast .park4dis-admin .content button,
+body.white-text-mode .park4dis-admin .content button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
 }
 
 /* Small devices (phones, 768px and down) */

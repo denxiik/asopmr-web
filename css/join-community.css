@@ -9,12 +9,24 @@
     padding: 5% 0%;
 }
 
+body.high-contrast .join-community,
+body.white-text-mode .join-community {
+    background-color: #000 !important;
+}
+
 .join-community .title {
     background-color: var(--green-aso);
     color: var(--light-green-aso);
     padding: 6% 10%;
     padding-bottom: 12%;
     text-align: center;
+}
+
+body.high-contrast .join-community .title,
+body.white-text-mode .join-community .title {
+    background-color: #333 !important;
+    color: #FFF !important; /* Adjusted for high contrast */
+    border-bottom: 1px solid #BDF24B !important;
 }
 
 .join-community .content {
@@ -34,8 +46,18 @@
     padding-bottom: 10%;
 }
 
+body.high-contrast .join-community .content .subtitle h2,
+body.white-text-mode .join-community .content .subtitle h2 {
+    color: #BDF24B !important;
+}
+
 .join-community .content .subtitle .highlight {
     color: var(--dark-oranje-aso);
+}
+
+body.high-contrast .join-community .content .subtitle .highlight,
+body.white-text-mode .join-community .content .subtitle .highlight {
+    color: #FFB793 !important;
 }
 
 .join-community .content img {
@@ -50,6 +72,13 @@
 .join-community .content button {
     margin-top: 2rem;
     background-color: var(--green-aso);
+}
+
+body.high-contrast .join-community .content button,
+body.white-text-mode .join-community .content button {
+    background-color: #BDF24B !important;
+    color: #000 !important;
+    border: 1px solid #BDF24B !important;
 }
 
 /* Mediums devices (desktops, 1080px and down) */
