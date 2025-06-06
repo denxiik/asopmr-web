@@ -287,7 +287,7 @@
         const legalOverlayPromise = loadHTML('./overlays/legal-overlay.html', 'legal-overlay-placeholder');
         const privacyOverlayPromise = loadHTML('./overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
         const genderOverlayPromise = loadHTML('./overlays/gender-overlay.html', 'gender-overlay-placeholder');
-
+        
         Promise.all([headerPromise, footerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
@@ -297,11 +297,11 @@
                 if (menuToggle && navBar) {
                     menuToggle.addEventListener('click', function () {
                         navBar.classList.toggle('active');
-                    });
 
-                    // Close all dropdowns when the main menu is toggled
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
+                        // Close all dropdowns when the main menu is toggled
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
                     });
                 } else {
                     console.warn("Menu toggle o nav bar no encontrados. Revisa tu estructura HTML.");
@@ -320,18 +320,15 @@
                         });
                     }
                 });
+
+                initializeOverlayHandlers();
+                initializeAccessibility();
+
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);
             });
-
-        initializeOverlayHandlers();
-        initializeAccessibility();
-
-    })
-        .catch(error => {
-            console.error('One or more HTML fragments failed to load:', error);
-        });
+    });
 
 </script>
 
