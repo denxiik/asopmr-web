@@ -191,7 +191,7 @@ body.white-text-mode .site-footer .policies p {
     }
 
     .site-footer .asoPMR-info .logo img {
-        content: url("../../img/asoPMR-logo-white.webp");
+        content: url("../img/asoPMR-logo-white.webp");
         max-width: 100%;
         height: auto;
         padding: 0;
