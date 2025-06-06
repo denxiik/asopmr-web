@@ -445,7 +445,7 @@ body.readable-font {
     }
 
     .accessibility-button {
-        top: 10px;
+        bottom: 10px;
         left: 10px;
     }
 
