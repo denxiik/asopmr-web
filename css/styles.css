@@ -170,6 +170,24 @@ body {
 /* -------------------------
     BUTTONS
 ------------------------- */
+.language-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.language-button img {
+    width: 30px;
+    height: 20px;
+}
+
+
 button {
     background-color: transparent;
     color: var(--white);
