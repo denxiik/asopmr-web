@@ -199,7 +199,8 @@ body.white-text-mode .fiscal-benefits .draw {
     z-index: 1;
 }
 
-img[alt="Una mano mirando papeles en una carpeta de archivos"] {
+img[alt="Una mano mirando papeles en una carpeta de archivos"],
+img[alt="A hand looking at papers in a file folder"] {
     position: absolute;
     top: 2%;
     right: 0%;

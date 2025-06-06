@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collaborate</title>
-    <link rel="icon" href="../img/asoPMR-logo-rounded.webp">
+    <link rel="icon" href="/img/asoPMR-logo-rounded.webp">
 
-    <link rel="stylesheet" href="../css/colaborate.css" />
+    <link rel="stylesheet" href="/css/colaborate.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <script src="../script/script.js"></script>
-    <script src="../script/drawCircles.js"></script>
+    <script src="/script/script.js"></script>
+    <script src="/script/drawCircles.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <link rel="alternate" hreflang="en" href="https://asopmr.org/en/colaborate.html" />
@@ -36,15 +36,15 @@
             </p>
         </div>
 
-        <img src="../img/colaborate/open-space-two-persons.webp"
+        <img src="/img/colaborate/open-space-two-persons.webp"
             alt="People sitting and offering a drink to a person in a wheelchair">
     </section>
 
     <section class="left-image-content">
-        <img src="../img/colaborate/home-work.webp" alt="A woman working on her laptop from the sofa">
+        <img src="/img/colaborate/home-work.webp" alt="A woman working on her laptop from the sofa">
 
         <div class="content">
-            <img src="../img/colaborate/zoom-pdf.webp" alt="Magnifying glass with a text document">
+            <img src="/img/colaborate/zoom-pdf.webp" alt="Magnifying glass with a text document">
 
             <h3>
                 Total transparency
@@ -59,7 +59,7 @@
     <section class="page-wrapper">
         <section class="fiscal-benefits">
             <div class="content">
-                <img src="../img/colaborate/hands-and-coin.webp" alt="Symbol of hands with a coin">
+                <img src="/img/colaborate/hands-and-coin.webp" alt="Symbol of hands with a coin">
                 <h3>
                     Tax benefits
                 </h3>
@@ -73,14 +73,14 @@
             </div>
         </section>
 
-        <img src="../img/colaborate/documents-folder.webp" alt="A hand looking at papers in a file folder">
+        <img src="/img/colaborate/documents-folder.webp" alt="A hand looking at papers in a file folder">
         <canvas id="fiscal-benefits-bottom-cut-circle"></canvas>
 
         <section class="left-image-content">
-            <img src="../img/colaborate/robot-vs-human-hands.webp"
+            <img src="/img/colaborate/robot-vs-human-hands.webp"
                 alt="A robot's hand against a human's hand">
             <div class="content">
-                <img src="../img/colaborate/aplauses.webp" alt="Applause sign with a heart">
+                <img src="/img/colaborate/aplauses.webp" alt="Applause sign with a heart">
                 <h3>
                     Every donation counts
                 </h3>
@@ -97,7 +97,7 @@
             initiatives, and provide stronger support to the community.
         </h5>
 
-        <a href="contact.html">
+        <a href="/contact/index.html">
             <button>
                 I WANT TO COLLABORATE
             </button>
@@ -118,7 +118,7 @@
             </p>
         </div>
 
-        <img src="../img/colaborate/PMR-in-city-center.webp"
+        <img src="/img/colaborate/PMR-in-city-center.webp"
             alt="People in wheelchairs in a city center">
     </section>
 
@@ -130,7 +130,7 @@
 
         <div class="solutions">
             <div class="item">
-                <img src="../img/colaborate/Carlo-and-person-in-vehicle-testing-p4d.webp" alt="Carlo and a person in a vehicle testing Park4Dis">
+                <img src="/img/colaborate/Carlo-and-person-in-vehicle-testing-p4d.webp" alt="Carlo and a person in a vehicle testing Park4Dis">
             </div>
 
             <div class="item">
@@ -208,29 +208,29 @@
             </h3>
 
             <div class="feature-item">
-                <img src="../img/check-symbol.webp" alt="Checkmark">
+                <img src="/img/check-symbol.webp" alt="Checkmark">
                 <p> <strong>Visibility and recognition:</strong> Prominent appearance as a sponsor in
                     communications, social media, and events.</p>
             </div>
             <div class="feature-item">
-                <img src="../img/check-symbol.webp" alt="Checkmark">
+                <img src="/img/check-symbol.webp" alt="Checkmark">
                 <p> <strong>Social impact:</strong> Strengthen your Corporate Social Responsibility by demonstrating your
                     commitment to accessibility.</p>
             </div>
             <div class="feature-item">
-                <img src="../img/check-symbol.webp" alt="Checkmark">
+                <img src="/img/check-symbol.webp" alt="Checkmark">
                 <p> <strong>Strategic collaboration:</strong> Generate key alliances with public administrations and
                     relevant stakeholders.</p>
             </div>
             <div class="feature-item">
-                <img src="../img/check-symbol.webp" alt="Checkmark">
+                <img src="/img/check-symbol.webp" alt="Checkmark">
                 <p> <strong>Official certification:</strong> Formal recognition by AsoPMR.</p>
             </div>
         </div>
         <div class="images">
-            <img class="up" src="../img/colaborate/eclipse_4.webp"
+            <img class="up" src="/img/colaborate/eclipse_4.webp"
                 alt="Person using the Park4Dis app on their tablet">
-            <img class="down" src="../img/colaborate/eclipse_3.webp" alt="Person helping a PRM person">
+            <img class="down" src="/img/colaborate/eclipse_3.webp" alt="Person helping a PRM person">
         </div>
     </section>
 
@@ -274,8 +274,8 @@
 
 <footer id="footer-placeholder"></footer>
 
-<a href="../es/colaborate.html" class="language-button">
-    <img class="language-flag" src="../img/es.png" alt="Spanish Flag">
+<a href="/es/colabora/index.html" class="language-button">
+    <img class="language-flag" src="/img/es.png" alt="Spanish Flag">
 </a>
 
 <section id="cookie-banner-placeholder"></section>
@@ -289,16 +289,13 @@
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
         // Load all HTML fragments first
-        const headerPromise = loadHTML('header.html', 'header-placeholder');
-        const footerPromise = loadHTML('footer.html', 'footer-placeholder');
-
-        // These paths are relative to 'es/index.html'
-        // They are in a subdirectory of 'es/', so you go INTO 'overlays/'
-        const cookieBannerPromise = loadHTML('./overlays/cookie-banner.html', 'cookie-banner-placeholder');
-        const cookieOverlayPromise = loadHTML('./overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
-        const legalOverlayPromise = loadHTML('./overlays/legal-overlay.html', 'legal-overlay-placeholder');
-        const privacyOverlayPromise = loadHTML('./overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
-        const genderOverlayPromise = loadHTML('./overlays/gender-overlay.html', 'gender-overlay-placeholder');
+        const headerPromise = loadHTML('/en/header.html', 'header-placeholder');
+        const footerPromise = loadHTML('/en/footer.html', 'footer-placeholder');
+        const cookieBannerPromise = loadHTML('/en/overlays/cookie-banner.html', 'cookie-banner-placeholder');
+        const cookieOverlayPromise = loadHTML('/en/overlays/cookies-overlay.html', 'cookie-overlay-placeholder');
+        const legalOverlayPromise = loadHTML('/en/overlays/legal-overlay.html', 'legal-overlay-placeholder');
+        const privacyOverlayPromise = loadHTML('/en/overlays/privacy-overlay.html', 'privacy-overlay-placeholder');
+        const genderOverlayPromise = loadHTML('/en/overlays/gender-overlay.html', 'gender-overlay-placeholder');
 
         Promise.all([headerPromise, cookieBannerPromise, cookieOverlayPromise, legalOverlayPromise, privacyOverlayPromise, genderOverlayPromise, footerPromise])
             .then(() => {
