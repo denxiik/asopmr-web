@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="../../img/asoPMR-logo-rounded.webp">
+
+    <link rel="stylesheet" href="../../css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="/script/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/contact.html" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/contact.html" />
+</head>
+
+<header id="header-placeholder"></header>
+
+<body>
+    <section class="contact">
+        <div class="contact-info">
+            <p class="paragraph-bold title">Let's get in touch.</p>
+            <h3>We're glad you made it this far!</h3>
+
+            <div class="address">
+                <p class="paragraph-bold">Addresses:</p>
+                <p class="paragraph-normal">Granvia 630, 4th floor 08007 Barcelona.</p>
+                <p class="paragraph-normal">Joan Verdeguer, 16, 46024 València</p>
+            </div>
+
+            <p class="paragraph-bold">Do you have any questions?</p>
+            <p class="paragraph-normal">Send an email</p>
+            <a href="mailto:asopmr@asopmr.org">
+                <button>
+                    asopmr@asopmr.org
+                </button>
+            </a>
+            <p class="paragraph-normal">Or fill out the form and we'll get back to you shortly!</p>
+        </div>
+
+        <div class="contact-form-container">
+            <form class="contact-form" action="https://formbold.com/s/3VXxZ" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name:" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email:" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="g-recaptcha-wrapper">
+                    <div class="g-recaptcha" data-sitekey="6Lek6ggqAAAAAON9Eu_PkdxzD3vdBthUyBzmAU4U"></div>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+<a href="/es/contacto/index.html" class="language-button">
+    <img class="language-flag" src="../../img/es.png" alt="Spanish Flag">
+</a>
+
+<script>
+    // Load with page
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerPromise = loadHTML('../../en/header/index.html', 'header-placeholder');
+
+        Promise.all([headerPromise])
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navBar = document.querySelector('.nav-bar');
+                const dropdowns = document.querySelectorAll('.nav-bar .dropdown');
+
+                if (menuToggle && navBar) {
+                    menuToggle.addEventListener('click', function () {
+                        navBar.classList.toggle('active');
+
+                        // Close all dropdowns when the main menu is toggled
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    });
+                } else {
+                    console.warn("Menu toggle or nav bar not found. Check your HTML structure.");
+                }
+
+                // Add click listener to each dropdown for mobile view
+                dropdowns.forEach(dropdown => {
+                    const dropdownLink = dropdown.querySelector('a');
+                    if (dropdownLink) {
+                        dropdownLink.addEventListener('click', function (event) {
+                            // Check if we are on a small screen
+                            if (window.innerWidth <= 1080) {
+                                event.preventDefault();
+                                dropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                });
+
+                initializeAccessibility();
+                
+            })
+            .catch(error => {
+                console.error('One or more HTML fragments failed to load:', error);
+            });
+    });
+</script>
+
+</html>
