@@ -469,6 +469,13 @@ body.readable-font {
         font-size: 0.8rem;
         padding: 8px 10px;
     }
+
+
+    .language-button img,
+    .accessibility-button img
+    {
+        opacity: 70%;
+    }
 }
 
 /* Media query for small screens (1080px and below) */

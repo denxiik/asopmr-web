@@ -257,7 +257,6 @@ body.white-text-mode .menu-toggle {
 
     /* Colaborate button on small screens */
     .nav-bar .colaborate-button {
-        display: block;
         margin: 1.5rem 1rem 1rem 1rem;
         order: 1;
         padding: 1rem;
@@ -309,7 +308,7 @@ body.white-text-mode .menu-toggle {
 
     .dropdown-content li a {
         padding-left: 30px;
-        text-align: left;
+        text-align: center;
         background-color: rgba(0, 0, 0, 0.1);
     }
 
