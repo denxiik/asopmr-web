@@ -403,7 +403,7 @@ body.white-text-mode .spot4dis-sample .paragraph-normal {
 }
 
 .spot4dis-sample .download-app-container button {
-    background-color: var(--dark-oranje-aso);
+    color: var(--dark-oranje-aso);
 }
 
 body.high-contrast .spot4dis-sample .download-app-container button,

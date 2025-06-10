@@ -225,16 +225,17 @@ button:hover {
     align-items: center;
 }
 
-.download-app-container .button {
+.download-app-container button {
     margin-top: 3rem;
-    background-color: var(--green-aso);
+    background-color: transparent;
+    color: var(--green-aso);
 }
 
-.download-app-container .button:hover {
+.download-app-container button:hover {
     transform: none;
 }
 
-.download-app-container .button[disabled] {
+.download-app-container button[disabled] {
     cursor: default;
 }
 
@@ -549,7 +550,7 @@ body.readable-font {
         margin-top: 0rem;
     }
 
-    .download-app-container .button {
+    .download-app-container button {
         font-size: 1rem;
     }
 
