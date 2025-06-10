@@ -18,7 +18,7 @@ function drawCircleWithText(canvasId, text, fillColor, fontSize = '1.5rem') {
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'white';
 
-    const lineHeight = 20;
+    const lineHeight = 25;
     const paddingVertical = 10;
     const availableWidth = radius * 2 - 2 * paddingVertical;
 

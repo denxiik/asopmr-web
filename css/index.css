@@ -220,7 +220,7 @@ body.white-text-mode .park4dis-sample .paragraph-normal {
     color: #FFF !important;
 }
 
-.park4dis-sample .content .feature-list {
+.park4dis-sample .content .features {
     margin-top: 1rem;
 }
 
@@ -324,7 +324,7 @@ body.white-text-mode .spot4dis-sample .paragraph-normal {
     color: #FFF !important;
 }
 
-.spot4dis-sample .content .feature-list {
+.spot4dis-sample .content .features {
     margin-top: 0;
     flex-direction: row;
     flex-wrap: wrap;
@@ -497,15 +497,15 @@ body.white-text-mode .transform-munitipality .content .title h3 {
     z-index: 1;
 }
 
-.transform-munitipality .feature-list {
+.transform-munitipality .features {
     background-color: var(--very-light-orange-aso);
     padding-left: 12%;
     padding-top: 5%;
     padding-bottom: 10%;
 }
 
-body.high-contrast .transform-munitipality .feature-list,
-body.white-text-mode .transform-munitipality .feature-list {
+body.high-contrast .transform-munitipality .features,
+body.white-text-mode .transform-munitipality .features {
     background-color: #333 !important;
 }
 
@@ -681,7 +681,7 @@ body.white-text-mode .park4dis-admin .content button {
         text-align: center;
     }
 
-    .park4dis-sample .feature-list {
+    .park4dis-sample .features {
         margin-top: 2rem;
     }
 
@@ -762,7 +762,7 @@ body.white-text-mode .park4dis-admin .content button {
         text-align: center;
     }
 
-    .spot4dis-sample .content .feature-list {
+    .spot4dis-sample .content .features {
         margin-top: 1rem;
         flex-direction: column;
         align-items: center;
@@ -844,7 +844,7 @@ body.white-text-mode .park4dis-admin .content button {
         margin-bottom: 0%;
     }
 
-    .transform-munitipality .feature-list {
+    .transform-munitipality .features {
         padding: 10% 10%;
     }
 

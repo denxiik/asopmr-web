@@ -42,7 +42,7 @@ h3 34
 h4 30
 
 buttons 22
-feature-lists 22
+featuress 22
 
 parraf negrita 20
 parraf normal 18
@@ -96,7 +96,7 @@ h5 {
 
 /* Buttons and Feature Lists */
 button,
-.feature-list .feature-item {
+.features .feature-item p {
     /* Assuming these are classes or relevant elements */
     font-size: 1.375rem;
     /* 22px / 16px = 1.375rem */
@@ -195,7 +195,7 @@ button {
     padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
-    font: borna;
+    font-family: 'Borna';
     transition: transform 0.2s ease-in-out;
     transform-origin: center;
     width: fit-content;
@@ -256,9 +256,16 @@ button:hover {
 }
 
 /* -------------------------
+    CONTACT FORMS
+------------------------- */
+.contact-form-container input {
+    font-family: 'Borna';
+}
+
+/* -------------------------
     FEATURES LISTS
 ------------------------- */
-.feature-list {
+.features {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -359,7 +366,7 @@ body.font-large h3 { font-size: 3.28125rem; /* 42 * 1.25 */ }
 body.font-large h4 { font-size: 2.65625rem; /* 34 * 1.25 */ }
 body.font-large h5 { font-size: 2.34375rem; /* 30 * 1.25 */ }
 body.font-large button,
-body.font-large .feature-list .feature-item { font-size: 1.71875rem; /* 22 * 1.25 */ }
+body.font-large .features .feature-item { font-size: 1.71875rem; /* 22 * 1.25 */ }
 body.font-large .paragraph-bold { font-size: 1.5625rem; /* 20 * 1.25 */ }
 body.font-large .paragraph-normal,
 body.font-large .nav-bar li a,
@@ -510,7 +517,7 @@ body.readable-font {
 
     /* Buttons and Feature Lists */
     button,
-    .feature-list .feature-item {
+    .features .feature-item {
         font-size: 1rem;
         /* 22px / 16px = 1.375rem */
     }
