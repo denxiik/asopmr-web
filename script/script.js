@@ -35,6 +35,8 @@ function initializeOverlayHandlers() {
     const closeLegalButton = document.querySelector('.legal-close-button');
     const closePrivacyButton = document.querySelector('.privacy-close-button');
     const closeGenderButton = document.querySelector('.gender-close-button');
+    const readMoreLink = document.getElementById('read-more-link');
+    const moreText = document.getElementById('more-text');
 
     // Check localStorage *immediately*
     let consentCookie = localStorage.getItem('cookie_consent');
@@ -77,6 +79,19 @@ function initializeOverlayHandlers() {
             localStorage.setItem('cookie_consent', JSON.stringify(cookie_settings));
 
             closeCookieOverlay();
+        });
+    }
+
+    if (readMoreLink) {
+        readMoreLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            if (moreText.classList.contains('hidden-text')) {
+                moreText.classList.remove('hidden-text');
+                readMoreLink.textContent = 'Mostrar menos'; // Optional: change link text
+            } else {
+                moreText.classList.add('hidden-text');
+                readMoreLink.textContent = 'Seguir leyendo'; // Optional: change link text back
+            }
         });
     }
 
