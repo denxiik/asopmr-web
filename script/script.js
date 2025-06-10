@@ -83,14 +83,38 @@ function initializeOverlayHandlers() {
     }
 
     if (readMoreLink) {
+
+        const htmlLang = document.documentElement.lang;
+        const isSpanish = htmlLang === 'es';
+
+
+        const linkTexts = {
+            spanish: {
+                readMore: 'seguir leyendo',
+                showLess: 'mostrar menos'
+            },
+            english: {
+                readMore: 'read more',
+                showLess: 'show less'
+            }
+        };
+
+        if (isSpanish) {
+            readMoreLink.textContent = linkTexts.spanish.readMore;
+        } else {
+            readMoreLink.textContent = linkTexts.english.readMore;
+        }
+
+
         readMoreLink.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
+
             if (moreText.classList.contains('hidden-text')) {
                 moreText.classList.remove('hidden-text');
-                readMoreLink.textContent = 'Mostrar menos'; // Optional: change link text
+                readMoreLink.textContent = isSpanish ? linkTexts.spanish.showLess : linkTexts.english.showLess;
             } else {
                 moreText.classList.add('hidden-text');
-                readMoreLink.textContent = 'Seguir leyendo'; // Optional: change link text back
+                readMoreLink.textContent = isSpanish ? linkTexts.spanish.readMore : linkTexts.english.readMore;
             }
         });
     }
