@@ -13,6 +13,7 @@
 
     <!-- Script -->
     <script src="../../script/script.js"></script>
+    <script src="../../script/contactForm.js"></script>
     <script src="../../script/drawCircles.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -259,7 +260,7 @@
         </h5>
 
         <div class="contact-form-container">
-            <form class="contact-form" action="https://formbold.com/s/3VXxZ" method="POST">
+            <form class="contact-form" id="contactForm">
                 <div class="form-row">
                     <input type="text" id="name" name="name" placeholder="Nombre y Apellidos" required>
                 </div>
@@ -274,7 +275,6 @@
                 <div class="g-recaptcha" data-sitekey="6LdJMlsrAAAAAF-UCCWgAE-11JA8W7qBb8A0tlMz"></div>
                 <button type="submit">ENVIAR</button>
             </form>
-
 
         </div>
 
@@ -350,6 +350,7 @@
 
                 initializeOverlayHandlers();
                 initializeAccessibility();
+                initContactForm('contactForm', 'es', 'Contacto'); 
 
             })
             .catch(error => {

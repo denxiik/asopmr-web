@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <script src="../../script/script.js"></script>
+    <script src="../../script/contactForm.js"></script>
     <script src="../../script/drawCircles.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -238,7 +239,7 @@
         </h5>
 
         <div class="contact-form-container">
-            <form class="contact-form" action="https://formbold.com/s/3VXxZ" method="POST">
+            <form class="contact-form">
                 <div class="form-row">
                     <input type="text" id="name" name="name" placeholder="Name and Surnames" required>
                 </div>
@@ -325,6 +326,7 @@
 
                 initializeOverlayHandlers();
                 initializeAccessibility();
+                initContactForm('contactForm', 'en', 'Contact'); 
 
             })
             .catch(error => {
