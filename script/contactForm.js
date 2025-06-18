@@ -2,8 +2,8 @@
 
 // --- Configuración Constante ---
 const CLOUD_FUNCTION_URL = 'https://us-central1-websites-functionalities.cloudfunctions.net/sendEmail';
-const SENDER_EMAIL = 'denys@park4dis.org';
-const RECIPIENT_EMAIL = 'denys@asopmr.org';
+const SENDER_EMAIL = 'developers@asopmr.org';
+const RECIPIENT_EMAIL = 'asopmr@asopmr.org';
 const BASE_SUBJECT = 'AsoPMR Formulario'; // Asunto base
 
 
