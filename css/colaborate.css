@@ -593,7 +593,7 @@ body.white-text-mode .privacy-consent input[type="checkbox"] {
 }
 
 .contact-form button {
-    background-color: var(--white);
+    background-color: var(--dark-oranje-aso);
     color: #2F4F4F;
 }
 
