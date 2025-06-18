@@ -259,6 +259,22 @@ function initializeAccessibility() {
     const resetAccessibilityBtn = document.getElementById('reset-accessibility-btn');
     const body = document.body;
 
+    const mainButton = document.getElementById('language-main-button');
+    const languageOptions = document.getElementById('language-options');
+
+    mainButton.addEventListener('click', function(event) {
+        languageOptions.classList.toggle('show');
+        event.stopPropagation();
+    });
+
+    // Close the language options if the user clicks anywhere outside of the selector
+    document.addEventListener('click', function(event) {
+        const isClickInside = languageOptions.contains(event.target) || mainButton.contains(event.target);
+        if (!isClickInside && languageOptions.classList.contains('show')) {
+            languageOptions.classList.remove('show');
+        }
+    });
+
     // --- Null Checks for Robustness ---
     // It's good practice to check if elements exist before trying to add event listeners to them.
     if (!accessibilityButton || !accessibilityPanel || !fontSizeBtn || !contrastBtn || !whiteTextBtn || !readableFontBtn || !resetAccessibilityBtn) {
