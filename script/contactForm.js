@@ -10,7 +10,7 @@ function initContactForm(formId, lang = 'es', subjectPrefix = '') {
         return;
     }
 
-    const messages = {
+   const messages = {
         es: {
             sending: 'Enviando...',
             verifyRobot: 'Por favor, verifica que no eres un robot.',
@@ -30,6 +30,26 @@ function initContactForm(formId, lang = 'es', subjectPrefix = '') {
             sendError: 'Error sending message:',
             connectionError: 'A connection error occurred. Please try again.',
             pleaseTryAgain: 'Please try again.'
+        },
+        ca: {
+            sending: 'Enviant...',
+            verifyRobot: 'Si us plau, verifica que no ets un robot.',
+            privacyConsent: 'Has d\'acceptar la política de privadesa per enviar el formulari.',
+            alertSuccess: 'El teu missatge ha estat enviat amb èxit! Ens posarem en contacte amb tu aviat.',
+            sentSuccess: 'Missatge enviat amb èxit!',
+            sendError: 'Error en enviar el missatge:',
+            connectionError: 'Hi ha hagut un error de connexió. Si us plau, torna-ho a intentar.',
+            pleaseTryAgain: 'Si us plau, torna-ho a intentar.'
+        },
+        va: {
+            sending: 'Enviant...',
+            verifyRobot: 'Per favor, verifica que no eres un robot.',
+            privacyConsent: 'Has d\'acceptar la política de privacitat per a enviar el formulari.',
+            alertSuccess: 'El teu missatge ha sigut enviat amb èxit! Ens posarem en contacte amb tu prompte.',
+            sentSuccess: 'Missatge enviat amb èxit!',
+            sendError: 'Error en enviar el missatge:',
+            connectionError: 'Hi ha hagut un error de connexió. Per favor, torna a intentar-ho.',
+            pleaseTryAgain: 'Per favor, torna a intentar-ho.'
         }
     };
     const currentMessages = messages[lang] || messages.es;
