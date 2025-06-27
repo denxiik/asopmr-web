@@ -66,13 +66,17 @@
 <!-- COOKIE BANNER SECTION (cookie-banner) -->
 <section id="cookie-banner-placeholder"></section>
 
+<!-- FOOTER SECTION (footer) -->
+<footer id="footer-placeholder"></footer>
+
 <script>
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
         const headerPromise = loadHTML('../../es/header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../../es/footer/index.html', 'footer-placeholder');
         const cookieBannerPromise = loadHTML('../../es/overlays/cookie-banner.html', 'cookie-banner-placeholder');
 
-        Promise.all([headerPromise, cookieBannerPromise])
+        Promise.all([headerPromise, footerPromise, cookieBannerPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');

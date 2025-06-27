@@ -2,117 +2,110 @@
 <html lang="en">
 
 <head>
-       
     <meta charset="UTF-8" />
-       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Become a Member</title>
-       
+    <title>Become a Member</title>
     <link rel="icon" href="../../img/asoPMR-logo-rounded.webp">
 
-       
     <link rel="stylesheet" href="../../css/become-partner.css" />
-       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-       
     <script src="../../script/script.js"></script>
 
-       
-    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/become-partner.html" />
-       
-    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/become-partner.html" />
+    <link rel="alternate" hreflang="en" href="https://asopmr.org/en/" />
+    <link rel="alternate" hreflang="es" href="https://asopmr.org/es/" />
 </head>
 
 <header id="header-placeholder"></header>
 
 <body>
-        <section class="home">
-                <div class="head">
-                        <h1>
-                                Become a member for free!
-                            </h1>
-                        <h5>
-                                In addition to supporting inclusive mobility, you will enjoy:
-                            </h5>
-                    </div>
+    <section class="home">
+        <div class="head">
+            <h1>
+                Become a Member for Free!
+            </h1>
+            <h5>
+                In addition to contributing to the mobility of the PRM community, you will enjoy:
+            </h5>
+        </div>
 
-                <div class="solutions">
-                        <div class="item">
-                                <div class="image-container">
-                                        <img src="../../img/become-partners/certificate.webp" alt="Spot4Dis Logo">
-                                    </div>
-                                <div class="content">
-                                        <h5>
-                                                Exclusive benefits:
-                                            </h5>
-                                        <p class="paragraph-normal">
-                                                Monthly newsletter on inclusive mobility, plus access to webinars and
-                        specialized courses
-                                            </p>
-                                    </div>
-                            </div>
+        <div class="solutions">
+            <div class="item">
+                <div class="image-container">
+                    <img src="../../img/become-partners/certificate.webp" alt="Spot4Dis Logo">
+                </div>
+                <div class="content">
+                    <h5>
+                        Exclusive benefits:
+                    </h5>
+                    <p class="paragraph-normal">
+                        Monthly newsletter on inclusive mobility, access to webinars and specialized courses
+                    </p>
+                </div>
+            </div>
 
-                        <div class="item">
-                                <div class="image-container">
-                                        <img src="../../img/become-partners/hands-up.webp" alt="Park4Dis Logo">
-                                    </div>
-                                <div class="content">
-                                        <h5>
-                                                Active participation
-                                            </h5>
-                                        <p class="paragraph-normal">
-                                                Your voice and experience are valuable to our community
-                                            </p>
-                                    </div>
-                            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img src="../../img/become-partners/hands-up.webp" alt="Park4Dis Logo">
+                </div>
+                <div class="content">
+                    <h5>
+                        Active participation
+                    </h5>
+                    <p class="paragraph-normal">
+                        Your voice and experience are valuable to our community
+                    </p>
+                </div>
+            </div>
 
-                        <div class="item">
-                                <div class="image-container">
-                                        <img src="../../img/become-partners/conversation.webp" alt="Park4Dis Logo">
-                                    </div>
-                                <div class="content">
-                                        <h5>
-                                                Support network
-                                            </h5>
-                                        <p class="paragraph-normal">
-                                                You will connect with other members and professionals committed to
-                        improving inclusive mobility
-                                            </p>
-                                    </div>
-                            </div>
-                    </div>
+            <div class="item">
+                <div class="image-container">
+                    <img src="../../img/become-partners/conversation.webp" alt="Park4Dis Logo">
+                </div>
+                <div class="content">
+                    <h5>
+                        Support network
+                    </h5>
+                    <p class="paragraph-normal">
+                        You will connect with other members and professionals committed to improving inclusive mobility
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            </section>
+    </section>
 
-        <section class="register">
-                <h3>
-                        Fill out the registration form
-                    </h3>
-                <p class="paragraph-normal">
-                        You can fill out the registration form online or download the PDF and email the completed
-            version to socios@asopmr.org
-                    </p>
-                <div class="button-container">
-                        <a href="https://tally.so/r/waGJqb" target="_blank">
-                                <button>
-                                        WEB FORM
-                                    </button>
-                            </a>
-                        <button>
-                                PDF FORM
-                            </button>
-                    </div>
-            </section>
+    <section class="register">
+        <h3>
+            Fill out the registration form
+        </h3>
+        <p class="paragraph-normal">
+            You can do it here or download the form in PDF and send it duly completed to
+            socios@asopmr.org
+        </p>
+        <div class="button-container">
+            <a href="https://tally.so/r/waGJqb" target="_blank">
+                <button>
+                    WEB FORM
+                </button>
+            </a>
+            <button>
+                PDF FORM
+            </button>
+        </div>
+    </section>
 
 </body>
+
+<footer id="footer-placeholder"></footer>
 
 <script>
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
-        const headerPromise = loadHTML('../../en/header/index.html', 'header-placeholder');
+        const headerPromise = loadHTML('../../es/header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../../es/footer/index.html', 'footer-placeholder');
 
-        Promise.all([headerPromise])
+        Promise.all([headerPromise, footerPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
@@ -146,7 +139,7 @@
                 });
 
                 initializeAccessibility();
-
+                
             })
             .catch(error => {
                 console.error('One or more HTML fragments failed to load:', error);

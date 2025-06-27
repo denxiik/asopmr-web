@@ -118,7 +118,8 @@ body.white-text-mode .register h3 {
 }
 
 .register,
-.paragraph-normal {
+.home .paragraph-normal,
+.register .paragraph-normal {
     padding: 5% 15%;
 }
 

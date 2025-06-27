@@ -103,12 +103,16 @@
 
 </body>
 
+<!-- FOOTER SECTION (footer) -->
+<footer id="footer-placeholder"></footer>
+
 <script>
     // Load with page
     document.addEventListener('DOMContentLoaded', function () {
         const headerPromise = loadHTML('../../es/header/index.html', 'header-placeholder');
+        const footerPromise = loadHTML('../../es/footer/index.html', 'footer-placeholder');
 
-        Promise.all([headerPromise])
+        Promise.all([headerPromise, footerPromise])
             .then(() => {
                 const menuToggle = document.querySelector('.menu-toggle');
                 const navBar = document.querySelector('.nav-bar');
