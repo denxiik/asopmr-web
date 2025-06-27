@@ -300,7 +300,8 @@ button:hover {
 /* -------------------------
     CONTACT FORMS
 ------------------------- */
-.contact-form-container input {
+.contact-form-container input,
+.contact-form-container textarea {
     font-family: 'Borna';
 }
 
